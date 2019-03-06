@@ -26,5 +26,14 @@
     <ClInclude Include="yxlArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="yxlSegmentTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yxlList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yxlChain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
