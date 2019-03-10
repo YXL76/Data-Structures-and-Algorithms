@@ -20,10 +20,10 @@ public:
 
     virtual bool empty() const = 0;
     virtual unsigned size() const = 0;
-    virtual int index_of(const T& element) const = 0;
+    virtual int index_of(const T& value) const = 0;
     virtual void clear() = 0;
     virtual void erase(const unsigned& index) = 0;
-    virtual void insert(const unsigned& index, const T& element) = 0;
+    virtual void insert(const unsigned& index, const T& value) = 0;
 
     yxlList& operator=(const yxlList& right) = default;
     yxlList& operator=(yxlList&& right) = default ;

@@ -1,6 +1,6 @@
 /**
  * \Author: YXL
- * \LastUpdated: 2018/03/06 22:04:30
+ * \LastUpdated: 2018/03/10 14:48:10
  * \description:
  */
 
@@ -14,22 +14,22 @@
 
 #include "yxlList.h"
 
-template <typename T, unsigned N = 1<<10>
+template <typename T, unsigned N = 1 << 10>
 class yxlArray final : public yxlList<T>
 {
 public:
-    explicit yxlArray();
+    yxlArray();
     explicit yxlArray(const T& initial_value);
-    explicit yxlArray(yxlArray<T, N>& that) = default;
-    explicit yxlArray(yxlArray<T, N>&& that) noexcept = default;
+    yxlArray(yxlArray<T, N>& that) = default;
+    yxlArray(yxlArray<T, N>&& that) noexcept;
     ~yxlArray() override = default;
 
     bool empty() const override;
     unsigned size() const override;
-    int index_of(const T& element) const override;
+    int index_of(const T& value) const override;
     void clear() override;
     void erase(const unsigned& index) override;
-    void insert(const unsigned& index, const T& element) override;
+    void insert(const unsigned& index, const T& value) override;
 
     class Iterator;
     Iterator begin();
@@ -65,10 +65,10 @@ public:
     using reference = T &;
 
 
-    explicit Iterator() = default;
+    Iterator() = default;
     explicit Iterator(T* that);
-    Iterator(const Iterator& that) = default;
-    Iterator(Iterator&& that) noexcept = default;
+    Iterator(const Iterator& that);
+    Iterator(Iterator&& that) noexcept;
     ~Iterator() = default;
 
     T& operator*() const;
@@ -89,8 +89,8 @@ public:
     bool operator!=(const Iterator& right) const;
     bool operator==(const Iterator& right) const;
 
-    Iterator& operator=(const Iterator& right);
-    Iterator& operator=(Iterator&& right) noexcept;
+    Iterator& operator=(const Iterator& right) = default;
+    Iterator& operator=(Iterator&& right) noexcept = default;
     Iterator& operator+=(const int& right);
     Iterator& operator-=(const int& right);
 
@@ -118,6 +118,17 @@ yxlArray<T, N>::yxlArray(const T& initial_value): yxlList<T>()
 }
 
 template <typename T, unsigned N>
+yxlArray<T, N>::yxlArray(yxlArray<T, N>&& that) noexcept
+{
+    size_ = that.size_;
+    max_size_ = that.max_size_;
+    array_ = that.array_;
+    that.size_ = 0;
+    that.max_size_ = 0;
+    that.array_ = nullptr;
+}
+
+template <typename T, unsigned N>
 bool yxlArray<T, N>::empty() const
 {
     return size_ == 0;
@@ -130,11 +141,11 @@ unsigned yxlArray<T, N>::size() const
 }
 
 template <typename T, unsigned N>
-int yxlArray<T, N>::index_of(const T& element) const
+int yxlArray<T, N>::index_of(const T& value) const
 {
     for (unsigned i = 0; i < size_; ++i)
     {
-        if (array_[i] == element) { return i; }
+        if (array_[i] == value) { return i; }
     }
     return -1;
 }
@@ -165,7 +176,7 @@ void yxlArray<T, N>::erase(const unsigned& index)
 }
 
 template <typename T, unsigned N>
-void yxlArray<T, N>::insert(const unsigned& index, const T& element)
+void yxlArray<T, N>::insert(const unsigned& index, const T& value)
 {
     if (check_index(index))
     {
@@ -177,7 +188,7 @@ void yxlArray<T, N>::insert(const unsigned& index, const T& element)
         {
             array_[i + 1] = array_[i];
         }
-        array_[index] = element;
+        array_[index] = value;
         ++size_;
     }
 }
@@ -224,6 +235,19 @@ template <typename T, unsigned N>
 yxlArray<T, N>::Iterator::Iterator(T* that)
 {
     position_ = that;
+}
+
+template <typename T, unsigned N>
+yxlArray<T, N>::Iterator::Iterator(const Iterator& that)
+{
+    position_ = that.position_;
+}
+
+template <typename T, unsigned N>
+yxlArray<T, N>::Iterator::Iterator(Iterator&& that) noexcept
+{
+    position_ = that.position_;
+    that.position_ = nullptr;
 }
 
 template <typename T, unsigned N>
@@ -321,34 +345,16 @@ bool yxlArray<T, N>::Iterator::operator==(const Iterator& right) const
 }
 
 template <typename T, unsigned N>
-typename yxlArray<T, N>::Iterator& yxlArray<T, N>::Iterator::operator=(const Iterator& right)
-{
-    if (this != &right) position_ == right.position_;
-    return *this;
-}
-
-template <typename T, unsigned N>
-typename yxlArray<T, N>::Iterator& yxlArray<T, N>::Iterator::operator=(Iterator&& right) noexcept
-{
-    if (this != &right)
-    {
-        position_ == right.position_;
-        right.position_ = nullptr;
-    }
-    return *this;
-}
-
-template <typename T, unsigned N>
 typename yxlArray<T, N>::Iterator& yxlArray<T, N>::Iterator::operator+=(const int& right)
 {
-    this->position_ += right;
+    position_ += right;
     return *this;
 }
 
 template <typename T, unsigned N>
 typename yxlArray<T, N>::Iterator& yxlArray<T, N>::Iterator::operator-=(const int& right)
 {
-    this->position_ -= right;
+    position_ -= right;
     return *this;
 }
 
