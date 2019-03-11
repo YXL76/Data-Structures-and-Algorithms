@@ -33,8 +33,8 @@ public:
 
     T& operator[](const unsigned& index);
 
-    yxlChain& operator=(const yxlChain& right);
-    yxlChain& operator=(yxlChain&& right) noexcept;
+    yxlChain& operator=(const yxlChain<T>& right);
+    yxlChain& operator=(yxlChain<T>&& right) noexcept;
 
     template <typename Tt>
     friend std::ostream& operator<<(std::ostream& out, const yxlChain<Tt>& item);
@@ -241,7 +241,7 @@ T& yxlChain<T>::operator[](const unsigned& index)
 }
 
 template <typename T>
-yxlChain<T>& yxlChain<T>::operator=(const yxlChain& right)
+yxlChain<T>& yxlChain<T>::operator=(const yxlChain<T>& right)
 {
     size_ = right.size_;
     head_node_ = new Node(right.head_node_->value);
@@ -260,7 +260,7 @@ yxlChain<T>& yxlChain<T>::operator=(const yxlChain& right)
 }
 
 template <typename T>
-yxlChain<T>& yxlChain<T>::operator=(yxlChain&& right) noexcept
+yxlChain<T>& yxlChain<T>::operator=(yxlChain<T>&& right) noexcept
 {
     size_ = right.size_;
     head_node_ = right.head_node_;

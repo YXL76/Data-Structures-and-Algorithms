@@ -162,6 +162,7 @@
     <ClInclude Include="yxlArrayQueue.h" />
     <ClInclude Include="yxlArrayStack.h" />
     <ClInclude Include="yxlChain.h" />
+    <ClInclude Include="yxlLinearContainer.h" />
     <ClInclude Include="yxlList.h" />
     <ClInclude Include="yxlQueue.h" />
     <ClInclude Include="yxlSegmentTree.h" />

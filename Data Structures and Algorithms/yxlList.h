@@ -9,24 +9,26 @@
 #ifndef YXL_LIST_H
 #define YXL_LIST_H
 
+#include "yxlLinearContainer.h"
+
 template <typename T>
-class yxlList
+class yxlList : public yxlLinearContainer<T>
 {
 public:
     yxlList() = default;
     virtual ~yxlList() = default;
-    yxlList(yxlList& that) noexcept = default;
-    yxlList(yxlList&& that) noexcept = default;
+    yxlList(yxlList<T>& that) noexcept = default;
+    yxlList(yxlList<T>&& that) noexcept = default;
 
-    virtual bool empty() const = 0;
-    virtual unsigned size() const = 0;
+    virtual bool empty() const override = 0;
+    virtual unsigned size() const override = 0;
     virtual int index_of(const T& value) const = 0;
-    virtual void clear() = 0;
+    virtual void clear() override = 0;
     virtual void erase(const unsigned& index) = 0;
     virtual void insert(const unsigned& index, const T& value) = 0;
 
-    yxlList& operator=(const yxlList& right) = default;
-    yxlList& operator=(yxlList&& right) noexcept = default ;
+    yxlList& operator=(const yxlList<T>& right) = default;
+    yxlList& operator=(yxlList<T>&& right) noexcept = default ;
 };
 
 #endif // !YXL_LIST_H
