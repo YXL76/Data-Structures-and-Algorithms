@@ -159,9 +159,13 @@
   <ItemGroup>
     <ClInclude Include="yxlAlgorithm.h" />
     <ClInclude Include="yxlArray.h" />
+    <ClInclude Include="yxlArrayQueue.h" />
+    <ClInclude Include="yxlArrayStack.h" />
     <ClInclude Include="yxlChain.h" />
     <ClInclude Include="yxlList.h" />
+    <ClInclude Include="yxlQueue.h" />
     <ClInclude Include="yxlSegmentTree.h" />
+    <ClInclude Include="yxlStack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

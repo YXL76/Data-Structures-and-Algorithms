@@ -1,6 +1,6 @@
 /**
  * \Author: YXL
- * \LastUpdated: 2018/03/10 14:48:10
+ * \LastUpdated: 2018/03/11 16:00:00
  * \description:
  */
 
@@ -20,7 +20,7 @@ class yxlArray final : public yxlList<T>
 public:
     yxlArray();
     explicit yxlArray(const T& initial_value);
-    yxlArray(yxlArray<T, N>& that) = default;
+    yxlArray(yxlArray<T, N>& that);
     yxlArray(yxlArray<T, N>&& that) noexcept;
     ~yxlArray() override = default;
 
@@ -37,8 +37,8 @@ public:
 
     T& operator[](const unsigned& index);
 
-    yxlArray& operator=(const yxlArray<T, N>& right) = default;
-    yxlArray& operator=(yxlArray<T, N>&& right) noexcept = default;
+    yxlArray& operator=(const yxlArray<T, N>& right);
+    yxlArray& operator=(yxlArray<T, N>&& right) noexcept;
 
     template <typename Tt, unsigned Nn>
     friend std::ostream& operator<<(std::ostream& out, const yxlArray<Tt, Nn>& item);
@@ -48,7 +48,7 @@ private:
     unsigned size_;
     unsigned max_size_;
 
-    void chang_size(const unsigned& new_size);
+    void change_size(const unsigned& new_size);
     bool check_index(const unsigned& index) const;
 };
 
@@ -99,7 +99,7 @@ private:
 };
 
 template <typename T, unsigned N>
-yxlArray<T, N>::yxlArray(): yxlList<T>()
+yxlArray<T, N>::yxlArray()
 {
     size_ = 0;
     max_size_ = N;
@@ -107,13 +107,25 @@ yxlArray<T, N>::yxlArray(): yxlList<T>()
 }
 
 template <typename T, unsigned N>
-yxlArray<T, N>::yxlArray(const T& initial_value): yxlList<T>()
+yxlArray<T, N>::yxlArray(const T& initial_value)
 {
     size_ = max_size_ = N;
     array_ = new T[max_size_];
     for (auto& i : *this)
     {
         i = initial_value;
+    }
+}
+
+template <typename T, unsigned N>
+yxlArray<T, N>::yxlArray(yxlArray<T, N>& that)
+{
+    size_ = that.size_;
+    max_size_ = that.max_size_;
+    array_ = new T[max_size_];
+    for (unsigned i = 0; i < size_; ++i)
+    {
+        array_[i] = that.array_[i];
     }
 }
 
@@ -170,7 +182,7 @@ void yxlArray<T, N>::erase(const unsigned& index)
         array_[size_--].~T();
         if (size_ < (max_size_ >> 1))
         {
-            chang_size(max_size_ >> 1);
+            change_size(max_size_ >> 1);
         }
     }
 }
@@ -182,7 +194,7 @@ void yxlArray<T, N>::insert(const unsigned& index, const T& value)
     {
         if (size_ == max_size_)
         {
-            chang_size(max_size_ << 1);
+            change_size(max_size_ << 1);
         }
         for (auto i = index; i < size_; ++i)
         {
@@ -213,7 +225,32 @@ T& yxlArray<T, N>::operator[](const unsigned& index)
 }
 
 template <typename T, unsigned N>
-void yxlArray<T, N>::chang_size(const unsigned& new_size)
+yxlArray<T, N>& yxlArray<T, N>::operator=(const yxlArray<T, N>& right)
+{
+    size_ = right.size_;
+    max_size_ = right.max_size_;
+    array_ = new T[max_size_];
+    for (unsigned i = 0; i < size_; ++i)
+    {
+        array_[i] = right.array_[i];
+    }
+    return *this;
+}
+
+template <typename T, unsigned N>
+yxlArray<T, N>& yxlArray<T, N>::operator=(yxlArray<T, N>&& right) noexcept
+{
+    size_ = right.size_;
+    max_size_ = right.max_size_;
+    array_ = right.array_;
+    right.size_ = 0;
+    right.max_size_ = 0;
+    right.array_ = nullptr;
+    return *this;
+}
+
+template <typename T, unsigned N>
+void yxlArray<T, N>::change_size(const unsigned& new_size)
 {
     T* temp = new T[new_size];
     for (unsigned i = 0; i < size_; ++i)

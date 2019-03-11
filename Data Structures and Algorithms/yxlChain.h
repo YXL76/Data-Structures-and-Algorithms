@@ -1,6 +1,6 @@
 /**
  * \Author: YXL
- * \LastUpdated: 2018/03/10 16:41:30
+ * \LastUpdated: 2018/03/11 16:01:40
  * \description:
  */
 
@@ -33,8 +33,8 @@ public:
 
     T& operator[](const unsigned& index);
 
-    yxlChain& operator=(const yxlChain& right) = default;
-    yxlChain& operator=(yxlChain&& right) noexcept = default;
+    yxlChain& operator=(const yxlChain& right);
+    yxlChain& operator=(yxlChain&& right) noexcept;
 
     template <typename Tt>
     friend std::ostream& operator<<(std::ostream& out, const yxlChain<Tt>& item);
@@ -172,7 +172,11 @@ void yxlChain<T>::clear()
     }
     delete previous_node;
     delete current_node;
-    yxlChain();
+    size_ = 0;
+    head_node_ = new Node();
+    rear_node_ = new Node();
+    rear_node_->next = head_node_;
+    head_node_->next = rear_node_;
 }
 
 template <typename T>
@@ -234,6 +238,37 @@ T& yxlChain<T>::operator[](const unsigned& index)
         return current_node->value;
     }
     return head_node_->value;
+}
+
+template <typename T>
+yxlChain<T>& yxlChain<T>::operator=(const yxlChain& right)
+{
+    size_ = right.size_;
+    head_node_ = new Node(right.head_node_->value);
+    rear_node_ = new Node(right.rear_node_->value);
+    rear_node_->next = head_node_;
+    head_node_->next = rear_node_;
+    Node* this_node = head_node_;
+    Node* that_node = right.head_node_;
+    for (unsigned i = 0; i < size_; ++i)
+    {
+        that_node = that_node->next;
+        this_node->next = new Node(that_node->value, this_node->next);
+        this_node = this_node->next;
+    }
+    return *this;
+}
+
+template <typename T>
+yxlChain<T>& yxlChain<T>::operator=(yxlChain&& right) noexcept
+{
+    size_ = right.size_;
+    head_node_ = right.head_node_;
+    rear_node_ = right.rear_node_;
+    right.size_ = 0;
+    right.head_node_ = nullptr;
+    right.rear_node_ = nullptr;
+    return *this;
 }
 
 template <typename T>
@@ -343,7 +378,7 @@ template <typename T>
 std::ostream& operator<<(std::ostream& out, const yxlChain<T>& item)
 {
     typename yxlChain<T>::template Node* current_node = item.head_node_->next;
-    for (unsigned i = 0; i < item.size_; ++i)
+    for (unsigned i = 0; i < item.max_size_; ++i)
     {
         out << current_node->value << ' ';
         current_node = current_node->next;

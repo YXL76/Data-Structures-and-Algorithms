@@ -35,5 +35,17 @@
     <ClInclude Include="yxlChain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="yxlQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yxlArrayQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yxlStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="yxlArrayStack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -26,7 +26,7 @@ public:
     virtual void insert(const unsigned& index, const T& value) = 0;
 
     yxlList& operator=(const yxlList& right) = default;
-    yxlList& operator=(yxlList&& right) = default ;
+    yxlList& operator=(yxlList&& right) noexcept = default ;
 };
 
 #endif // !YXL_LIST_H
