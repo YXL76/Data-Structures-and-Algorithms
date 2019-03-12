@@ -20,34 +20,34 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="yxlAlgorithm.h">
+    <ClInclude Include="include\yxlAlgorithm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlArray.h">
+    <ClInclude Include="include\yxlSegmentTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlSegmentTree.h">
+    <ClInclude Include="include\array\yxlArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlList.h">
+    <ClInclude Include="include\array\yxlList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlChain.h">
+    <ClInclude Include="include\chain\yxlChain.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlQueue.h">
+    <ClInclude Include="include\chain\yxlList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlArrayQueue.h">
+    <ClInclude Include="include\queue\yxlArrayQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlStack.h">
+    <ClInclude Include="include\queue\yxlQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlArrayStack.h">
+    <ClInclude Include="include\stack\yxlArrayStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="yxlLinearContainer.h">
+    <ClInclude Include="include\stack\yxlStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

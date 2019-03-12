@@ -9,7 +9,7 @@
 #ifndef YXL_ARRAY_QUEUE_H
 #define YXL_ARRAY_QUEUE_H
 
-#include "../yxlQueue.h"
+#include "yxlQueue.h"
 
 template <typename T>
 class yxlArrayQueue final : public yxlQueue<T>
@@ -81,7 +81,7 @@ bool yxlArrayQueue<T>::empty() const
 template <typename T>
 unsigned yxlArrayQueue<T>::size() const
 {
-    return (back_ - front_ + size_) % size_;
+    return static_cast<unsigned int>((back_ - front_ + size_) % size_);
 }
 
 template <typename T>

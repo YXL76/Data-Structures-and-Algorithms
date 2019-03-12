@@ -9,7 +9,7 @@
 #ifndef YXL_CHAIN_H
 #define YXL_CHAIN_H
 
-#include "../yxlList.h"
+#include "yxlList.h"
 
 template <typename T>
 class yxlChain final : public yxlList<T>
@@ -80,7 +80,7 @@ public:
     Node* operator->() const;
 
     Iterator& operator++();
-    Iterator operator++(int);
+    const Iterator operator++(int);
 
     Iterator operator+(const int& right) const;
 
@@ -94,6 +94,8 @@ public:
 private:
     Node* position_;
 };
+
+class Node;
 
 template <typename T>
 yxlChain<T>::yxlChain(): size_(0)
@@ -334,7 +336,7 @@ typename yxlChain<T>::Iterator& yxlChain<T>::Iterator::operator++()
 }
 
 template <typename T>
-typename yxlChain<T>::Iterator yxlChain<T>::Iterator::operator++(int)
+const typename yxlChain<T>::Iterator yxlChain<T>::Iterator::operator++(int)
 {
     Iterator old = *this;
     position_ = position_->next;
@@ -377,7 +379,7 @@ typename yxlChain<T>::Iterator& yxlChain<T>::Iterator::operator+=(const int& rig
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const yxlChain<T>& item)
 {
-    typename yxlChain<T>::template Node* current_node = item.head_node_->next;
+    auto current_node = item.head_node_->next;
     for (unsigned i = 0; i < item.max_size_; ++i)
     {
         out << current_node->value << ' ';

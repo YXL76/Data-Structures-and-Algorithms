@@ -9,7 +9,7 @@
 #ifndef YXL_ARRAY_STACK_H
 #define YXL_ARRAY_STACK_H
 
-#include "../yxlStack.h"
+#include "yxlStack.h"
 
 template <typename T>
 class yxlArrayStack final : public yxlStack<T>
@@ -76,7 +76,7 @@ bool yxlArrayStack<T>::empty() const
 template <typename T>
 unsigned yxlArrayStack<T>::size() const
 {
-    return top_ + 1;
+    return static_cast<unsigned int>(top_ + 1);
 }
 
 template <typename T>

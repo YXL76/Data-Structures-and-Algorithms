@@ -12,7 +12,7 @@
 #include <cstddef>
 #include <ostream>
 
-#include "../yxlList.h"
+#include "yxlList.h"
 
 template <typename T, unsigned N = 1 << 10>
 class yxlArray final : public yxlList<T>
@@ -75,9 +75,9 @@ public:
     T* operator->() const;
 
     Iterator& operator++();
-    Iterator operator++(int);
+    const Iterator operator++(int);
     Iterator& operator--();
-    Iterator operator--(int);
+    const Iterator operator--(int);
 
     Iterator operator+(const int& right) const;
     Iterator operator-(const int& right) const;
@@ -307,7 +307,7 @@ typename yxlArray<T, N>::Iterator& yxlArray<T, N>::Iterator::operator++()
 }
 
 template <typename T, unsigned N>
-typename yxlArray<T, N>::Iterator yxlArray<T, N>::Iterator::operator++(int)
+const typename yxlArray<T, N>::Iterator yxlArray<T, N>::Iterator::operator++(int)
 {
     Iterator old = *this;
     ++position_;
@@ -322,7 +322,7 @@ typename yxlArray<T, N>::Iterator& yxlArray<T, N>::Iterator::operator--()
 }
 
 template <typename T, unsigned N>
-typename yxlArray<T, N>::Iterator yxlArray<T, N>::Iterator::operator--(int)
+const typename yxlArray<T, N>::Iterator yxlArray<T, N>::Iterator::operator--(int)
 {
     Iterator old = *this;
     --position_;

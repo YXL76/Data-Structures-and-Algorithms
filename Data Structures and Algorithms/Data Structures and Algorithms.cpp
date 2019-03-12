@@ -1,14 +1,14 @@
 #include <iostream>
 
-#include "yxlArray.h"
-#include "yxlChain.h"
-#include "yxlArrayQueue.h"
-#include "yxlArrayStack.h"
+#include "include/array/yxlArray.h"
+#include "include/chain/yxlChain.h"
+#include "include/queue/yxlArrayQueue.h"
+#include "include/stack/yxlArrayStack.h"
 
 yxlArray<int, 10> a(10);
 yxlChain<int> b;
 yxlArrayQueue<int> c;
-yxlArrayQueue<int> d;
+yxlArrayStack<int> d;
 
 int main()
 {
