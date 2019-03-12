@@ -12,7 +12,7 @@
 #include <cstddef>
 #include <ostream>
 
-#include "yxlList.h"
+#include "../yxlList.h"
 
 template <typename T, unsigned N = 1 << 10>
 class yxlArray final : public yxlList<T>

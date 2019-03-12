@@ -9,7 +9,7 @@
 #ifndef YXL_CHAIN_H
 #define YXL_CHAIN_H
 
-#include "yxlList.h"
+#include "../yxlList.h"
 
 template <typename T>
 class yxlChain final : public yxlList<T>

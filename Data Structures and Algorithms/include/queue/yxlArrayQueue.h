@@ -9,7 +9,7 @@
 #ifndef YXL_ARRAY_QUEUE_H
 #define YXL_ARRAY_QUEUE_H
 
-#include "yxlQueue.h"
+#include "../yxlQueue.h"
 
 template <typename T>
 class yxlArrayQueue final : public yxlQueue<T>

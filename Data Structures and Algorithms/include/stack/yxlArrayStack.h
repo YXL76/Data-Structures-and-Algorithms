@@ -9,7 +9,7 @@
 #ifndef YXL_ARRAY_STACK_H
 #define YXL_ARRAY_STACK_H
 
-#include "yxlStack.h"
+#include "../yxlStack.h"
 
 template <typename T>
 class yxlArrayStack final : public yxlStack<T>
