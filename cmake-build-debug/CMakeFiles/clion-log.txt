@@ -1,4 +1,4 @@
-C:\Users\chenx\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\183.5429.37\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\chenx\source\repos\Data-Structures-and-Algorithms
+C:\Users\chenx\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-1\191.6183.6\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\chenx\source\repos\Data-Structures-and-Algorithms
 -- The C compiler identification is GNU 8.2.1
 -- The CXX compiler identification is GNU 8.2.1
 -- Check for working C compiler: C:/msys64/mingw64/bin/gcc.exe

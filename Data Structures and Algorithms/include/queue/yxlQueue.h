@@ -24,7 +24,8 @@ public:
     virtual T& back() const = 0;
     virtual void clear() = 0;
     virtual void pop() = 0;
-    virtual void push(const T& value) = 0;
+    virtual void push_front(const T &value) = 0;
+    virtual void push_back(const T &value) = 0;
 
     yxlQueue& operator=(const yxlQueue<T>& right) = default;
     yxlQueue& operator=(yxlQueue<T>&& right) noexcept = default;

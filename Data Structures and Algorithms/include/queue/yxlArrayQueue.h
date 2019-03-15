@@ -1,6 +1,6 @@
 /**
  * \Author: YXL
- * \LastUpdated: 2018/03/11 16:06:20
+ * \LastUpdated: 2018/03/15 14:19:10
  * \description:
  */
 
@@ -26,7 +26,8 @@ public:
     T& back() const override;
     void clear() override;
     void pop() override;
-    void push(const T& value) override;
+    void push_front(const T &value) override;
+    void push_back(const T &value) override;
 
     yxlArrayQueue& operator=(const yxlArrayQueue<T>& right);
     yxlArrayQueue& operator=(yxlArrayQueue<T>&& right) noexcept;
@@ -113,7 +114,15 @@ void yxlArrayQueue<T>::pop()
 }
 
 template <typename T>
-void yxlArrayQueue<T>::push(const T& value)
+void yxlArrayQueue<T>::push_front(const T &value)
+{
+    if ((back_ + 1) % size_ == front_) { change_size(); }
+    array_[front_] = value;
+    front_ = (front_ + size_ - 1) % size_;
+}
+
+template <typename T>
+void yxlArrayQueue<T>::push_back(const T &value)
 {
     if ((back_ + 1) % size_ == front_) { change_size(); }
     back_ = (back_ + 1) % size_;
@@ -151,15 +160,15 @@ yxlArrayQueue<T>& yxlArrayQueue<T>::operator=(yxlArrayQueue<T>&& right) noexcept
 template <typename T>
 void yxlArrayQueue<T>::change_size()
 {
-    size_ <<= 1;
     auto index = 0;
-    T* temp = new T[size_];
+    T* temp = new T[size_<<1];
     while (front_ != back_)
     {
         front_ = (front_ + 1) % size_;
         temp[++index] = array_[front_];
     }
     delete[] array_;
+    size_ <<= 1;
     array_ = temp;
     front_ = 0;
     back_ = index;
