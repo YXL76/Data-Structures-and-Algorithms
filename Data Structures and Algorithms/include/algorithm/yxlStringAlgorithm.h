@@ -64,18 +64,18 @@ void yxlKMP::initialize(T& pattern_string)
 	string_ = new char [size_];
 	for (auto i = 0; i < size_; ++i) { string_[i] = pattern_string[i]; }
 	next_[0] = -1;
-	auto prefix = -1;
-	auto suffix = 0;
-	while (suffix < size_ - 1)
+	auto left = -1;
+	auto right = 0;
+	while (right < size_ - 1)
 	{
-		if (prefix == -1 || string_[suffix] == string_[prefix])
+		if (left == -1 || string_[right] == string_[left])
 		{
-			++suffix;
-			++prefix;
-			if (string_[suffix] != string_[prefix]) { next_[suffix] = prefix; }
-			else { next_[suffix] = next_[prefix]; }
+			++right;
+			++left;
+			if (string_[right] != string_[left]) { next_[right] = left; }
+			else { next_[right] = next_[left]; }
 		}
-		else { prefix = next_[prefix]; }
+		else { left = next_[left]; }
 	}
 	is_initialize_ = true;
 }
