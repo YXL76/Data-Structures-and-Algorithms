@@ -11,8 +11,8 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../Data Structures and Algorithms/include"
-  "../Data Structures and Algorithms/include/array"
-  "../Data Structures and Algorithms/include/chain"
+  "../Data Structures and Algorithms/include/algorithm"
+  "../Data Structures and Algorithms/include/list"
   "../Data Structures and Algorithms/include/queue"
   "../Data Structures and Algorithms/include/stack"
   )

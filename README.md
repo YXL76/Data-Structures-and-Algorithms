@@ -1,6 +1,6 @@
 # 数据结构与算法    Data Structures and Algorithms
 
-## 描述    Description
+## 概述    Overview
 
 **Integrated Development Environment** : 
 

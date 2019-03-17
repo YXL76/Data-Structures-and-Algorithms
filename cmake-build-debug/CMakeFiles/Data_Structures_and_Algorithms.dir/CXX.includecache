@@ -9,28 +9,32 @@
 C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/Data Structures and Algorithms.cpp
 iostream
 -
-include/array/yxlArray.h
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/array/yxlArray.h
-include/chain/yxlChain.h
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/chain/yxlChain.h
+include/list/yxlArray.h
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlArray.h
+include/list/yxlChain.h
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlChain.h
 include/queue/yxlArrayQueue.h
 C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue/yxlArrayQueue.h
 include/stack/yxlArrayStack.h
 C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/stack/yxlArrayStack.h
+include/algorithm/yxlAlgorithm.h
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm/yxlAlgorithm.h
 
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/array/yxlArray.h
-cstddef
--
-ostream
--
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm/yxlAlgorithm.h
+yxlStringAlgorithm.h
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h
+
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h
+
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlArray.h
 yxlList.h
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/array/yxlList.h
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlList.h
 
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/array/yxlList.h
-
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/chain/yxlChain.h
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlChain.h
 yxlList.h
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/chain/yxlList.h
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlList.h
+
+C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlList.h
 
 C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue/yxlArrayQueue.h
 yxlQueue.h

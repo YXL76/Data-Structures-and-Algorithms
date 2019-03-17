@@ -136,7 +136,7 @@ yxlArrayStack<T>& yxlArrayStack<T>::operator=(yxlArrayStack<T>&& right) noexcept
 template <typename T>
 void yxlArrayStack<T>::change_size()
 {
-    T* temp = new T[size_ << 1];
+    T* temp = new T[size_ * 2];
     for (auto i = 0; i < size_; ++i)
     {
         temp[i] = array_[i];

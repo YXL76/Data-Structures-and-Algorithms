@@ -161,8 +161,8 @@ template <typename T>
 void yxlArrayQueue<T>::change_size()
 {
     auto index = 0;
-    T* temp = new T[size_<<1];
-    while (front_ != back_)
+    T* temp = new T[size_* 2];
+    while (front_ != back_ && index < size_ * 2 - 1)
     {
         front_ = (front_ + 1) % size_;
         temp[++index] = array_[front_];

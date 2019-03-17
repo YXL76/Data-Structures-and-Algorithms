@@ -3,9 +3,11 @@
 
 CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj
  C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/Data Structures and Algorithms.cpp
- C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/array/yxlArray.h
- C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/array/yxlList.h
- C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/chain/yxlChain.h
+ C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm/yxlAlgorithm.h
+ C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h
+ C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlArray.h
+ C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlChain.h
+ C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlList.h
  C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue/yxlArrayQueue.h
  C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue/yxlQueue.h
  C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/stack/yxlArrayStack.h
