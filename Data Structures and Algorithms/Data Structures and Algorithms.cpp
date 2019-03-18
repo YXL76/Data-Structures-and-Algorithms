@@ -13,8 +13,8 @@ yxlArrayStack<int> d;
 
 yxlArray<char> aa;
 
-std::string sss = "123";
-std::string ssss = "3";
+std::string sss = "ababababca";
+std::string ssss = "abababca";
 
 yxlKMP dd(ssss);
 

@@ -68,15 +68,17 @@ void yxlKMP::initialize(T& pattern_string)
 	auto right = 0;
 	while (right < size_ - 1)
 	{
-		if (left == -1 || string_[right] == string_[left])
+		if (left == -1 || string_[left] == string_[right])
 		{
-			++right;
 			++left;
-			if (string_[right] != string_[left]) { next_[right] = left; }
+			++right;
+			if (string_[left] != string_[right]) { next_[right] = left; }
 			else { next_[right] = next_[left]; }
 		}
 		else { left = next_[left]; }
 	}
+	/*for (auto i = 0 ; i < size_; ++i)
+		std::cout << next_[i] << ' ';*/
 	is_initialize_ = true;
 }
 
@@ -84,19 +86,21 @@ template <typename T>
 int yxlKMP::search(T& text_string)
 {
 	check_type(text_string);
+
+	auto jj = 0;
 	auto index_pattern = 0;
 	auto index_text = 0;
 	const int text_size = text_string.size();
-	while (index_pattern < text_size && index_text < size_)
+	while (index_text < text_size && index_pattern < size_)
 	{
-		if (index_text == -1 || text_string[index_pattern] == string_[index_text])
+		if (index_pattern == -1 || text_string[index_text] == string_[index_pattern])
 		{
 			++index_pattern;
 			++index_text;
 		}
-		else { index_text = next_[index_text]; }
+		else { index_pattern = next_[index_pattern]; }
 	}
-	if (index_text == size_) { return index_pattern - index_text; }
+	if (index_pattern == size_) { return index_text - index_pattern; }
 	return -1;
 }
 
