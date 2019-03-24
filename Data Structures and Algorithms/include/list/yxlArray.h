@@ -39,6 +39,8 @@ public:
 
     template <typename Tt>
     friend std::ostream& operator<<(std::ostream& out, const yxlArray<Tt>& item);
+    template <typename Tt>
+    friend std::ostream& operator<<(std::ostream& out, const yxlArray<Tt>&& item);
 
 private:
     T* array_;
@@ -390,6 +392,16 @@ typename yxlArray<T>::Iterator& yxlArray<T>::Iterator::operator-=(const int& rig
 
 template <typename T>
 std::ostream& operator<<(std::ostream& out, const yxlArray<T>& item)
+{
+    for (unsigned i = 0; i < item.size_; ++i)
+    {
+        out << item.array_[i] << ' ';
+    }
+    return out;
+}
+
+template <typename T>
+std::ostream& operator<<(std::ostream& out, const yxlArray<T>&& item)
 {
     for (unsigned i = 0; i < item.size_; ++i)
     {

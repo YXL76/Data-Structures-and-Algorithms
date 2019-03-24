@@ -38,6 +38,8 @@ public:
 
     template <typename Tt>
     friend std::ostream& operator<<(std::ostream& out, const yxlChain<Tt>& item);
+    template <typename Tt>
+    friend std::ostream& operator<<(std::ostream& out, const yxlChain<Tt>&& item);
 
     struct Node
     {
@@ -80,7 +82,7 @@ public:
     Node* operator->() const;
 
     Iterator& operator++();
-    const Iterator operator++(int);
+    Iterator operator++(int);
 
     Iterator operator+(const int& right) const;
 
@@ -336,7 +338,7 @@ typename yxlChain<T>::Iterator& yxlChain<T>::Iterator::operator++()
 }
 
 template <typename T>
-const typename yxlChain<T>::Iterator yxlChain<T>::Iterator::operator++(int)
+typename yxlChain<T>::Iterator yxlChain<T>::Iterator::operator++(int)
 {
     Iterator old = *this;
     position_ = position_->next;
@@ -380,7 +382,19 @@ template <typename T>
 std::ostream& operator<<(std::ostream& out, const yxlChain<T>& item)
 {
     auto current_node = item.head_node_->next;
-    for (unsigned i = 0; i < item.max_size_; ++i)
+    for (unsigned i = 0; i < item.size_; ++i)
+    {
+        out << current_node->value << ' ';
+        current_node = current_node->next;
+    }
+    return out;
+}
+
+template <typename T>
+std::ostream& operator<<(std::ostream& out, const yxlChain<T>&& item)
+{
+    auto current_node = item.head_node_->next;
+    for (unsigned i = 0; i < item.size_; ++i)
     {
         out << current_node->value << ' ';
         current_node = current_node->next;

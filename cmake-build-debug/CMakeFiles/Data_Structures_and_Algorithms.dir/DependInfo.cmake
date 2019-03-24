@@ -13,6 +13,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../Data Structures and Algorithms/include"
   "../Data Structures and Algorithms/include/algorithm"
   "../Data Structures and Algorithms/include/list"
+  "../Data Structures and Algorithms/include/polynomial"
   "../Data Structures and Algorithms/include/queue"
   "../Data Structures and Algorithms/include/stack"
   )

@@ -77,8 +77,6 @@ void yxlKMP::initialize(T& pattern_string)
 		}
 		else { left = next_[left]; }
 	}
-	/*for (auto i = 0 ; i < size_; ++i)
-		std::cout << next_[i] << ' ';*/
 	is_initialize_ = true;
 }
 
@@ -86,8 +84,6 @@ template <typename T>
 int yxlKMP::search(T& text_string)
 {
 	check_type(text_string);
-
-	auto jj = 0;
 	auto index_pattern = 0;
 	auto index_text = 0;
 	const int text_size = text_string.size();

@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\algorithm">
+      <UniqueIdentifier>{a2d31ba4-2eef-4520-a0b5-e64894c77de6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\list">
+      <UniqueIdentifier>{b1b3f836-623a-495f-9fdb-a8068669d4ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\stack">
+      <UniqueIdentifier>{90cbdeff-2a7e-4ed9-a08d-f62d43106ec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\queue">
+      <UniqueIdentifier>{7667e481-3fcf-4dd3-8b3a-708360dc0e23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\polynomial">
+      <UniqueIdentifier>{374ddc04-859a-440f-9f61-316e3277efd4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Data Structures and Algorithms.cpp">
@@ -23,32 +38,38 @@
     <ClInclude Include="include\yxlSegmentTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\queue\yxlArrayQueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\queue\yxlQueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stack\yxlArrayStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stack\yxlStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\algorithm\yxlAlgorithm.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\algorithm</Filter>
     </ClInclude>
     <ClInclude Include="include\list\yxlArray.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\list</Filter>
+    </ClInclude>
+    <ClInclude Include="include\queue\yxlArrayQueue.h">
+      <Filter>Header Files\queue</Filter>
     </ClInclude>
     <ClInclude Include="include\list\yxlChain.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\list</Filter>
     </ClInclude>
     <ClInclude Include="include\list\yxlList.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\list</Filter>
+    </ClInclude>
+    <ClInclude Include="include\queue\yxlQueue.h">
+      <Filter>Header Files\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stack\yxlStack.h">
+      <Filter>Header Files\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stack\yxlArrayStack.h">
+      <Filter>Header Files\stack</Filter>
     </ClInclude>
     <ClInclude Include="include\algorithm\yxlStringAlgorithm.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Polynomial\yxlPolynomial.h">
+      <Filter>Header Files\polynomial</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Polynomial\yxlChainPolynomial.h">
+      <Filter>Header Files\polynomial</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

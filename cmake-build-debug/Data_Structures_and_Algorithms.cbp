@@ -37,6 +37,7 @@
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include"/>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm"/>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial"/>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue"/>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/stack"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.2.1/../../../../include/c++/8.2.1"/>
@@ -64,6 +65,7 @@
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include"/>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm"/>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial"/>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue"/>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/stack"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.2.1/../../../../include/c++/8.2.1"/>
@@ -108,6 +110,12 @@
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlList.h">
+			<Option target="Data_Structures_and_Algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlChainPolynomial.h">
+			<Option target="Data_Structures_and_Algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlPolynomial.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue/yxlArrayQueue.h">

@@ -15,48 +15,38 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/ipch/AutoPCH/f820cacd733468fb/DATA STRUCTURES AND ALGORITHMS.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/ipch/AutoPCH/f820cacd733468fb/DATA STRUCTURES AND ALGORITHMS.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/ipch/AutoPCH/fa6e4a56be1fa638/DATA STRUCTURES AND ALGORITHMS.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/ipch/AutoPCH/fa6e4a56be1fa638/DATA STRUCTURES AND ALGORITHMS.ipch" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj.user" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/Data Structures and Algorithms.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/Data Structures and Algorithms.lastbuildstate" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.command.1.tlog" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Structures and Algorithms.log" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Structures and Algorithms.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Structures and Algorithms.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Structures and Algorithms.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/array/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/array/yxlArray.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/array/yxlList.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/chain/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/chain/yxlChain.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/chain/yxlList.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/yxlArrayQueue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/yxlArrayQueue.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/stack/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/stack/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/stack/yxlArrayStack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/stack/yxlArrayStack.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/yxlAlgorithm.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/x64/Debug/Data Str.6CE63930.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/x64/Debug/Data Str.6CE63930.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/x64/Debug/Data Structures and Algorithms.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/x64/Debug/Data Structures and Algorithms.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/x64/Debug/vc142.idb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/x64/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/x64/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/vc142.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/yxlArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/yxlArray.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/yxlChain.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/yxlChain.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/includes_CXX.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Structures_and_Algorithms.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Structures_and_Algorithms.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Data Structures and Algorithms.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Data Structures and Algorithms.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Data Structures and Algorithms.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Data Structures and Algorithms.ilk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/x64/Debug/Data Structures and Algorithms.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/Data Structures and Algorithms.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Structures_and_Algorithms.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Structures_and_Algorithms.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -94,6 +84,7 @@
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlAlgorithm.h" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.cpp" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h" />
+        <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/yxlChainPolynomial.h" />
       </list>
     </option>
   </component>
@@ -118,24 +109,6 @@
             <path>
               <item name="Data_Structures_and_Algorithms" type="b2602c69:ProjectViewProjectNode" />
               <item name="Data-Structures-and-Algorithms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Data_Structures_and_Algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Data-Structures-and-Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Data Structures and Algorithms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Data_Structures_and_Algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Data-Structures-and-Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Data Structures and Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Data_Structures_and_Algorithms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Data-Structures-and-Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="Data Structures and Algorithms" type="462c0819:PsiDirectoryNode" />
-              <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="algorithm" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -181,7 +154,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20349762" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20985691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -192,7 +165,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" order="8" visible="true" weight="0.32977587" />
+      <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32977587" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32870865" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32977587" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -209,7 +182,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.cpp</url>
-          <line>18</line>
+          <line>17</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -238,16 +211,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/a.h" />
-    <entry file="file://C:/msys64/mingw64/include/c++/8.2.1/iostream">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-          <folding>
-            <element signature="e#1296#1323#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/msys64/mingw64/include/c++/8.2.1/iostream" />
     <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/chain/yxlChain.h" />
     <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/array/yxlArray.h" />
     <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/yxlSegmentTree.h">
@@ -298,9 +262,6 @@
     <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms.sln">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -311,26 +272,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="e#196#205#0" expanded="true" />
-            <element signature="e#269#278#0" expanded="true" />
-            <element signature="e#326#338#0" expanded="true" />
-            <element signature="e#452#461#0" expanded="true" />
-            <element signature="e#754#766#0" expanded="true" />
-            <element signature="e#964#976#0" expanded="true" />
-            <element signature="e#1526#1538#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlAlgorithm.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/list/yxlChain.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="84" column="4" selection-start-line="84" selection-start-column="4" selection-end-line="84" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="890">
+          <caret line="85" column="28" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/list/yxlList.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/yxlChainPolynomial.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
