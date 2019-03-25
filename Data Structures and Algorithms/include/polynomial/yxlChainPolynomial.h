@@ -1,6 +1,6 @@
 /**
  * \Author: YXL
- * \LastUpdated: 2018/03/25 01:00:00
+ * \LastUpdated: 2018/03/25 23:10:50
  * \description:
  */
 
@@ -16,6 +16,7 @@ class yxlChainPolynomial final : yxlPolynomial
 public:
 	yxlChainPolynomial() = default;
 	explicit yxlChainPolynomial(yxlChain<double>& that);
+	yxlChainPolynomial(const double coef[], const int& size);
 	yxlChainPolynomial(yxlChainPolynomial& that) = default;
 	yxlChainPolynomial(yxlChainPolynomial&& that) noexcept = default;
 	~yxlChainPolynomial() = default;
@@ -51,6 +52,14 @@ inline yxlChainPolynomial::yxlChainPolynomial(yxlChain<double>& that)
 	coef_ = that;
 }
 
+inline yxlChainPolynomial::yxlChainPolynomial(const double coef[], const int& size)
+{
+	for (auto i = size - 1; i >= 0; --i)
+	{
+		coef_.insert(0, coef[i]);
+	}
+}
+
 inline void yxlChainPolynomial::read(yxlChain<double>& that)
 {
 	coef_ = that;
@@ -71,36 +80,17 @@ inline void yxlChainPolynomial::write() const
 
 inline void yxlChainPolynomial::plus(yxlChainPolynomial& that)
 {
-	auto this_it = coef_.begin();
-	auto that_it = that.coef_.begin();
-	while (this_it != coef_.end() && that_it != that.coef_.end())
-	{
-		this_it->value += that_it->value;
-		++this_it;
-		++that_it;
-	}
-	while (that_it != that.coef_.end())
-	{
-		coef_.insert(coef_.size(), that_it->value);
-		++that_it;
-	}
+	*this = *this + that;
 }
 
 inline void yxlChainPolynomial::minus(yxlChainPolynomial& that)
 {
-	auto this_it = coef_.begin();
-	auto that_it = that.coef_.begin();
-	while (this_it != coef_.end() && that_it != that.coef_.end())
-	{
-		this_it->value -= that_it->value;
-		++this_it;
-		++that_it;
-	}
-	while (that_it != that.coef_.end())
-	{
-		coef_.insert(coef_.size(), -that_it->value);
-		++that_it;
-	}
+	*this = *this - that;
+}
+
+inline void yxlChainPolynomial::times(yxlChainPolynomial& that)
+{
+	*this = *this * that;
 }
 
 inline double yxlChainPolynomial::calculate(const double& x)
@@ -119,58 +109,103 @@ inline double yxlChainPolynomial::calculate(const double& x)
 
 inline yxlChainPolynomial yxlChainPolynomial::differentiate(const int& x)
 {
-	auto old = *this;
-	for (auto i = 0; i < x; ++i) { coef_.erase(0); }
+	yxlChainPolynomial answer;
+	auto it = coef_.begin() + (x - 1);
+	while (it != coef_.end())
+	{
+		answer.coef_.insert(answer.coef_.size(), it->value);
+		++it;
+	}
 	auto expn = x;
-	auto it = old.coef_.begin();
-	while (it != old.coef_.end())
+	auto answer_it = answer.coef_.begin();
+	while (answer_it != answer.coef_.end())
 	{
 		for (auto i = 1; i <= x; ++i)
 		{
-			it->value *= (double(expn) - double(i));
+			answer_it->value *= (double(expn) - double(i));
 		}
 		++expn;
-		++it;
+		++answer_it;
 	}
-	return old;
+	answer.coef_.erase(0);
+	return answer;
 }
 
 inline yxlChainPolynomial yxlChainPolynomial::operator+(yxlChainPolynomial& right)
 {
-	auto old = *this;
-	auto this_it = old.coef_.begin();
-	auto that_it = right.coef_.begin();
-	while (this_it != old.coef_.end() && that_it != right.coef_.end())
+	yxlChainPolynomial answer;
+	auto left_it = coef_.begin();
+	auto right_it = right.coef_.begin();
+	while (left_it != coef_.end() && right_it != right.coef_.end())
 	{
-		this_it->value += that_it->value;
-		++this_it;
-		++that_it;
+		answer.coef_.insert(answer.coef_.size(), left_it->value + right_it->value);
+		++left_it;
+		++right_it;
 	}
-	while (that_it != right.coef_.end())
+	while (left_it != coef_.end())
 	{
-		old.coef_.insert(old.coef_.size(), that_it->value);
-		++that_it;
+		answer.coef_.insert(answer.coef_.size(), left_it->value);
+		++left_it;
 	}
-	return old;
+	while (right_it != right.coef_.end())
+	{
+		answer.coef_.insert(answer.coef_.size(), right_it->value);
+		++right_it;
+	}
+	return answer;
 }
 
 inline yxlChainPolynomial yxlChainPolynomial::operator-(yxlChainPolynomial& right)
 {
-	auto old = *this;
-	auto this_it = old.coef_.begin();
-	auto that_it = right.coef_.begin();
-	while (this_it != old.coef_.end() && that_it != right.coef_.end())
+	yxlChainPolynomial answer;
+	auto left_it = coef_.begin();
+	auto right_it = right.coef_.begin();
+	while (left_it != coef_.end() && right_it != right.coef_.end())
 	{
-		this_it->value -= that_it->value;
-		++this_it;
-		++that_it;
+		answer.coef_.insert(answer.coef_.size(), left_it->value - right_it->value);
+		++left_it;
+		++right_it;
 	}
-	while (that_it != right.coef_.end())
+	while (left_it != coef_.end())
 	{
-		old.coef_.insert(old.coef_.size(), -that_it->value);
-		++that_it;
+		answer.coef_.insert(answer.coef_.size(), -left_it->value);
+		++left_it;
 	}
-	return old;
+	while (right_it != right.coef_.end())
+	{
+		answer.coef_.insert(answer.coef_.size(), -right_it->value);
+		++right_it;
+	}
+	return answer;
+}
+
+inline yxlChainPolynomial yxlChainPolynomial::operator*(yxlChainPolynomial& right)
+{
+	yxlChainPolynomial answer;
+	auto left_expn = 0;
+	auto left_it = coef_.begin();
+	while (left_it != coef_.end())
+	{
+		auto right_expn = 0;
+		auto right_it = right.coef_.begin();
+		while (right_it != right.coef_.end())
+		{
+			const auto expn = left_expn + right_expn;
+			if (expn >= int(answer.coef_.size()))
+			{
+				answer.coef_.insert(answer.coef_.size(), left_it->value * right_it->value);
+			}
+			else
+			{
+				answer.coef_[expn] += left_it->value * right_it->value;
+			}
+			++right_expn;
+			++right_it;
+		}
+		++left_expn;
+		++left_it;
+	}
+	return answer;
 }
 
 inline yxlChainPolynomial& yxlChainPolynomial::operator+=(yxlChainPolynomial& right)
@@ -182,6 +217,12 @@ inline yxlChainPolynomial& yxlChainPolynomial::operator+=(yxlChainPolynomial& ri
 inline yxlChainPolynomial& yxlChainPolynomial::operator-=(yxlChainPolynomial& right)
 {
 	this->minus(right);
+	return *this;
+}
+
+inline yxlChainPolynomial& yxlChainPolynomial::operator*=(yxlChainPolynomial& right)
+{
+	this->times(right);
 	return *this;
 }
 
