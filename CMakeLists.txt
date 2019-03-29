@@ -14,7 +14,7 @@ add_executable(Data_Structures_and_Algorithms
         "Data Structures and Algorithms/include/algorithm/yxlAlgorithm.h"
         "Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h"
         "Data Structures and Algorithms/include/list/yxlArray.h"
-        "Data Structures and Algorithms/include/list/yxlChain.h"
+        "Data Structures and Algorithms/include/list/yxlLink.h"
         "Data Structures and Algorithms/include/list/yxlList.h"
         "Data Structures and Algorithms/include/polynomial/yxlChainPolynomial.h"
         "Data Structures and Algorithms/include/polynomial/yxlPolynomial.h"

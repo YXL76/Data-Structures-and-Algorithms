@@ -17,7 +17,7 @@ public:
 	yxlPolynomial(yxlPolynomial& that) noexcept = default;
 	yxlPolynomial(yxlPolynomial&& that) noexcept = default;
 
-	virtual void read(yxlChain<double>& that) = 0;
+	virtual void read(yxlLink<double>& that) = 0;
 	virtual void read(const double coef[], const int& size) = 0;
 	virtual void write() const = 0;
 	virtual double calculate(const double& x) = 0;

@@ -15,13 +15,13 @@ class yxlChainPolynomial final : yxlPolynomial
 {
 public:
 	yxlChainPolynomial() = default;
-	explicit yxlChainPolynomial(yxlChain<double>& that);
+	explicit yxlChainPolynomial(yxlLink<double>& that);
 	yxlChainPolynomial(const double coef[], const int& size);
 	yxlChainPolynomial(yxlChainPolynomial& that) = default;
 	yxlChainPolynomial(yxlChainPolynomial&& that) noexcept = default;
 	~yxlChainPolynomial() = default;
 
-	void read(yxlChain<double>& that) override;
+	void read(yxlLink<double>& that) override;
 	void read(const double coef[], const int& size) override;
 	void write() const override;
 	void plus(yxlChainPolynomial& that);
@@ -44,10 +44,10 @@ public:
 	friend std::ostream& operator<<(std::ostream& out, yxlChainPolynomial&& item);
 
 private:
-	yxlChain<double> coef_;
+	yxlLink<double> coef_;
 };
 
-inline yxlChainPolynomial::yxlChainPolynomial(yxlChain<double>& that)
+inline yxlChainPolynomial::yxlChainPolynomial(yxlLink<double>& that)
 {
 	coef_ = that;
 }
@@ -60,7 +60,7 @@ inline yxlChainPolynomial::yxlChainPolynomial(const double coef[], const int& si
 	}
 }
 
-inline void yxlChainPolynomial::read(yxlChain<double>& that)
+inline void yxlChainPolynomial::read(yxlLink<double>& that)
 {
 	coef_ = that;
 }

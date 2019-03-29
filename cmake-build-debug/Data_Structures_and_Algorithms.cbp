@@ -106,7 +106,7 @@
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlArray.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlChain.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlLink.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlList.h">

@@ -47,9 +47,6 @@
     <ClInclude Include="include\queue\yxlArrayQueue.h">
       <Filter>Header Files\queue</Filter>
     </ClInclude>
-    <ClInclude Include="include\list\yxlChain.h">
-      <Filter>Header Files\list</Filter>
-    </ClInclude>
     <ClInclude Include="include\list\yxlList.h">
       <Filter>Header Files\list</Filter>
     </ClInclude>
@@ -70,6 +67,9 @@
     </ClInclude>
     <ClInclude Include="include\Polynomial\yxlChainPolynomial.h">
       <Filter>Header Files\polynomial</Filter>
+    </ClInclude>
+    <ClInclude Include="include\list\yxlLink.h">
+      <Filter>Header Files\list</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

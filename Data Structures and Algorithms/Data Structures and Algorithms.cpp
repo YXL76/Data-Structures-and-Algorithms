@@ -1,14 +1,14 @@
 #include <iostream>
 
 #include "include/list/yxlArray.h"
-#include "include/list/yxlChain.h"
+#include "include/list/yxlLink.h"
 #include "include/queue/yxlArrayQueue.h"
 #include "include/stack/yxlArrayStack.h"
 #include "include/algorithm/yxlAlgorithm.h"
 #include "include/polynomial/yxlChainPolynomial.h"
 
 yxlArray<int> a(10);
-yxlChain<int> b;
+yxlLink<int> b;
 yxlArrayQueue<int> c;
 yxlArrayStack<int> d;
 yxlChainPolynomial e, f;

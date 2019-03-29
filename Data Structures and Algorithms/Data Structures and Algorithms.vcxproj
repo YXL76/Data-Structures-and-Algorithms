@@ -160,7 +160,7 @@
     <ClInclude Include="include\algorithm\yxlAlgorithm.h" />
     <ClInclude Include="include\algorithm\yxlStringAlgorithm.h" />
     <ClInclude Include="include\list\yxlArray.h" />
-    <ClInclude Include="include\list\yxlChain.h" />
+    <ClInclude Include="include\list\yxlLink.h" />
     <ClInclude Include="include\list\yxlList.h" />
     <ClInclude Include="include\Polynomial\yxlChainPolynomial.h" />
     <ClInclude Include="include\Polynomial\yxlPolynomial.h" />
