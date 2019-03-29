@@ -1,7 +1,7 @@
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/11 16:09:30
- * \description:
+ * \Description:
  */
 
 #pragma once
@@ -19,7 +19,7 @@ public:
     yxlStack(yxlStack<T>&& that) noexcept = default;
 
     virtual bool empty() const = 0;
-    virtual unsigned size() const = 0;
+    virtual int size() const = 0;
     virtual T& top() const = 0;
     virtual void clear() = 0;
     virtual void pop() = 0;

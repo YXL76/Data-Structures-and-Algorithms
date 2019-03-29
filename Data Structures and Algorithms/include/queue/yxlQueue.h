@@ -1,7 +1,7 @@
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/11 14:14:10
- * \description:
+ * \Description:
  */
 
 #pragma once
@@ -19,7 +19,7 @@ public:
     yxlQueue(yxlQueue<T>&& that) noexcept = default;
 
     virtual bool empty() const = 0;
-    virtual unsigned size() const = 0;
+    virtual int size() const = 0;
     virtual T& front() const = 0;
     virtual T& back() const = 0;
     virtual void clear() = 0;

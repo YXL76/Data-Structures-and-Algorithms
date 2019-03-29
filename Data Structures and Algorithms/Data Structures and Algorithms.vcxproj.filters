@@ -65,11 +65,14 @@
     <ClInclude Include="include\Polynomial\yxlPolynomial.h">
       <Filter>Header Files\polynomial</Filter>
     </ClInclude>
-    <ClInclude Include="include\Polynomial\yxlChainPolynomial.h">
-      <Filter>Header Files\polynomial</Filter>
-    </ClInclude>
     <ClInclude Include="include\list\yxlLink.h">
       <Filter>Header Files\list</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Polynomial\yxlLinkedPolynomial.h">
+      <Filter>Header Files\polynomial</Filter>
+    </ClInclude>
+    <ClInclude Include="include\polynomial\yxlArrayPolynomial.h">
+      <Filter>Header Files\polynomial</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

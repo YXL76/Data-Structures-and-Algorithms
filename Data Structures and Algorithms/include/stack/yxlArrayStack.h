@@ -1,7 +1,7 @@
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/11 16:24:20
- * \description:
+ * \Description:
  */
 
 #pragma once
@@ -21,7 +21,7 @@ public:
     ~yxlArrayStack() override = default;
 
     bool empty() const override;
-    unsigned size() const override;
+    int size() const override;
     T& top() const override;
     void clear() override;
     void pop() override;
@@ -74,9 +74,9 @@ bool yxlArrayStack<T>::empty() const
 }
 
 template <typename T>
-unsigned yxlArrayStack<T>::size() const
+int yxlArrayStack<T>::size() const
 {
-    return static_cast<unsigned int>(top_ + 1);
+    return top_ + 1;
 }
 
 template <typename T>

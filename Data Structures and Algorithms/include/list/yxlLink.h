@@ -1,15 +1,16 @@
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/11 16:01:40
- * \description:
+ * \Description:
  */
 
 #pragma once
 
-#ifndef YXL_CHAIN_H
-#define YXL_CHAIN_H
+#ifndef YXL_LINK_H
+#define YXL_LINK_H
 
 #include "yxlList.h"
+#include <ostream>
 
 template <typename T>
 class yxlLink final : public yxlList<T>
@@ -21,11 +22,11 @@ public:
 	~yxlLink() override = default;
 
 	bool empty() const override;
-	unsigned size() const override;
+	int size() const override;
 	int index_of(const T& value) const override;
 	void clear() override;
-	void erase(const unsigned& index) override;
-	void insert(const unsigned& index, const T& value) override;
+	void erase(const int& index) override;
+	void insert(const int& index, const T& value) override;
 
 	class Iterator;
 	Iterator begin();
@@ -33,7 +34,7 @@ public:
 	Iterator end();
 	void insert(Iterator& index, const T& value);
 
-	T& operator[](const unsigned& index);
+	T& operator[](const int& index);
 
 	yxlLink& operator=(const yxlLink<T>& right);
 	yxlLink& operator=(yxlLink<T>&& right) noexcept;
@@ -54,12 +55,12 @@ public:
 	};
 
 private:
-	unsigned size_;
+	int size_;
 	Node* head_node_;
 	Node* rear_node_;
 
 	bool check_index(Iterator& index);
-	bool check_index(const unsigned& index) const;
+	bool check_index(const int& index) const;
 };
 
 template <typename T>
@@ -123,7 +124,7 @@ yxlLink<T>::yxlLink(yxlLink<T>& that)
 	head_node_->next = rear_node_;
 	Node* this_node = head_node_;
 	Node* that_node = that.head_node_;
-	for (unsigned i = 0; i < size_; ++i)
+	for (auto i = 0; i < size_; ++i)
 	{
 		that_node = that_node->next;
 		this_node->next = new Node(that_node->value, this_node->next);
@@ -149,7 +150,7 @@ bool yxlLink<T>::empty() const
 }
 
 template <typename T>
-unsigned yxlLink<T>::size() const
+int yxlLink<T>::size() const
 {
 	return size_;
 }
@@ -173,7 +174,7 @@ void yxlLink<T>::clear()
 {
 	Node* previous_node = head_node_;
 	Node* current_node = head_node_->next;
-	for (unsigned i = 0; i < size_; ++i)
+	for (auto i = 0; i < size_; ++i)
 	{
 		delete previous_node;
 		previous_node = current_node;
@@ -189,14 +190,14 @@ void yxlLink<T>::clear()
 }
 
 template <typename T>
-void yxlLink<T>::erase(const unsigned& index)
+void yxlLink<T>::erase(const int& index)
 {
 	if (check_index(index))
 	{
 		Node* current_node;
 		if (index == 0) { current_node = head_node_; }
 		else { current_node = head_node_->next; }
-		for (unsigned i = 1; i < index; ++i)
+		for (auto i = 1; i < index; ++i)
 		{
 			current_node = current_node->next;
 		}
@@ -208,12 +209,12 @@ void yxlLink<T>::erase(const unsigned& index)
 }
 
 template <typename T>
-void yxlLink<T>::insert(const unsigned& index, const T& value)
+void yxlLink<T>::insert(const int& index, const T& value)
 {
 	if (check_index(index) || index == size_)
 	{
 		Node* current_node = head_node_;
-		for (unsigned i = 0; i < index; ++i)
+		for (auto i = 0; i < index; ++i)
 		{
 			current_node = current_node->next;
 		}
@@ -251,12 +252,12 @@ void yxlLink<T>::insert(Iterator& index, const T& value)
 }
 
 template <typename T>
-T& yxlLink<T>::operator[](const unsigned& index)
+T& yxlLink<T>::operator[](const int& index)
 {
 	if (check_index(index))
 	{
 		Node* current_node = head_node_->next;
-		for (unsigned i = 0; i < index; ++i)
+		for (auto i = 0; i < index; ++i)
 		{
 			current_node = current_node->next;
 		}
@@ -275,7 +276,7 @@ yxlLink<T>& yxlLink<T>::operator=(const yxlLink<T>& right)
 	head_node_->next = rear_node_;
 	Node* this_node = head_node_;
 	Node* that_node = right.head_node_;
-	for (unsigned i = 0; i < size_; ++i)
+	for (auto i = 0; i < size_; ++i)
 	{
 		that_node = that_node->next;
 		this_node->next = new Node(that_node->value, this_node->next);
@@ -321,7 +322,7 @@ bool yxlLink<T>::check_index(Iterator& index)
 }
 
 template <typename T>
-bool yxlLink<T>::check_index(const unsigned& index) const
+bool yxlLink<T>::check_index(const int& index) const
 {
 	return index >= 0 && index < size_;
 }
@@ -415,7 +416,7 @@ template <typename T>
 std::ostream& operator<<(std::ostream& out, const yxlLink<T>& item)
 {
 	auto current_node = item.head_node_->next;
-	for (unsigned i = 0; i < item.size_; ++i)
+	for (auto i = 0; i < item.size_; ++i)
 	{
 		out << current_node->value << ' ';
 		current_node = current_node->next;
@@ -427,7 +428,7 @@ template <typename T>
 std::ostream& operator<<(std::ostream& out, const yxlLink<T>&& item)
 {
 	auto current_node = item.head_node_->next;
-	for (unsigned i = 0; i < item.size_; ++i)
+	for (auto i = 0; i < item.size_; ++i)
 	{
 		out << current_node->value << ' ';
 		current_node = current_node->next;
@@ -435,4 +436,4 @@ std::ostream& operator<<(std::ostream& out, const yxlLink<T>&& item)
 	return out;
 }
 
-#endif // !YXL_CHAIN_H
+#endif // !YXL_LINK_H

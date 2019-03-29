@@ -1,7 +1,7 @@
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/24 10:50:40
- * \description:
+ * \Description:
  */
 
 #pragma once
@@ -17,9 +17,7 @@ public:
 	yxlPolynomial(yxlPolynomial& that) noexcept = default;
 	yxlPolynomial(yxlPolynomial&& that) noexcept = default;
 
-	virtual void read(yxlLink<double>& that) = 0;
 	virtual void read(const double coef[], const int& size) = 0;
-	virtual void write() const = 0;
 	virtual double calculate(const double& x) = 0;
 
 	yxlPolynomial& operator=(const yxlPolynomial& right) = default;

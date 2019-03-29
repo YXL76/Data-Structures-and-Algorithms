@@ -112,7 +112,10 @@
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlList.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlChainPolynomial.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlArrayPolynomial.h">
+			<Option target="Data_Structures_and_Algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlLinkedPolynomial.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlPolynomial.h">

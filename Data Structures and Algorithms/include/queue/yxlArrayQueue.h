@@ -1,7 +1,7 @@
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/15 14:19:10
- * \description:
+ * \Description:
  */
 
 #pragma once
@@ -21,7 +21,7 @@ public:
     ~yxlArrayQueue() override = default;
 
     bool empty() const override;
-    unsigned size() const override;
+    int size() const override;
     T& front() const override;
     T& back() const override;
     void clear() override;
@@ -80,9 +80,9 @@ bool yxlArrayQueue<T>::empty() const
 }
 
 template <typename T>
-unsigned yxlArrayQueue<T>::size() const
+int yxlArrayQueue<T>::size() const
 {
-    return static_cast<unsigned int>((back_ - front_ + size_) % size_);
+    return (back_ - front_ + size_) % size_;
 }
 
 template <typename T>
