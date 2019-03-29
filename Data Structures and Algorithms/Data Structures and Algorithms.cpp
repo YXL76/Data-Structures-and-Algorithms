@@ -5,13 +5,13 @@
 #include "include/queue/yxlArrayQueue.h"
 #include "include/stack/yxlArrayStack.h"
 #include "include/algorithm/yxlAlgorithm.h"
-#include "include/Polynomial/yxlChainPolynomial.h"
+#include "include/polynomial/yxlChainPolynomial.h"
 
 yxlArray<int> a(10);
 yxlChain<int> b;
 yxlArrayQueue<int> c;
 yxlArrayStack<int> d;
-yxlChainPolynomial e;
+yxlChainPolynomial e, f;
 
 std::string sss = "ababababca";
 std::string ssss = "abababca";
