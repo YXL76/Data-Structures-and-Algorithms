@@ -159,16 +159,15 @@
   <ItemGroup>
     <ClInclude Include="include\algorithm\yxlAlgorithm.h" />
     <ClInclude Include="include\algorithm\yxlStringAlgorithm.h" />
-    <ClInclude Include="include\list\yxlArray.h" />
-    <ClInclude Include="include\list\yxlLink.h" />
-    <ClInclude Include="include\list\yxlList.h" />
-    <ClInclude Include="include\polynomial\yxlArrayPolynomial.h" />
-    <ClInclude Include="include\Polynomial\yxlLinkedPolynomial.h" />
-    <ClInclude Include="include\Polynomial\yxlPolynomial.h" />
-    <ClInclude Include="include\queue\yxlArrayQueue.h" />
-    <ClInclude Include="include\queue\yxlQueue.h" />
-    <ClInclude Include="include\stack\yxlArrayStack.h" />
-    <ClInclude Include="include\stack\yxlStack.h" />
+    <ClInclude Include="include\list\Array.h" />
+    <ClInclude Include="include\list\Link.h" />
+    <ClInclude Include="include\list\List.h" />
+    <ClInclude Include="include\polynomial\ArrayPolynomial.h" />
+    <ClInclude Include="include\Polynomial\LinkedPolynomial.h" />
+    <ClInclude Include="include\queue\ArrayQueue.h" />
+    <ClInclude Include="include\queue\Queue.h" />
+    <ClInclude Include="include\stack\ArrayStack.h" />
+    <ClInclude Include="include\stack\Stack.h" />
     <ClInclude Include="include\yxlSegmentTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

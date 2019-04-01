@@ -9,19 +9,19 @@
 #ifndef YXL_POLYNOMIAL_H
 #define YXL_POLYNOMIAL_H
 
-class yxlPolynomial
+class Polynomial
 {
 public:
-	yxlPolynomial() = default;
-	virtual ~yxlPolynomial() = default;
-	yxlPolynomial(yxlPolynomial& that) noexcept = default;
-	yxlPolynomial(yxlPolynomial&& that) noexcept = default;
+	Polynomial() = default;
+	virtual ~Polynomial() = default;
+	Polynomial(Polynomial& that) noexcept = default;
+	Polynomial(Polynomial&& that) noexcept = default;
 
 	virtual void read(const double coef[], const int& size) = 0;
 	virtual double calculate(const double& x) = 0;
 
-	yxlPolynomial& operator=(const yxlPolynomial& right) = default;
-	yxlPolynomial& operator=(yxlPolynomial&& right) noexcept = default ;
+	Polynomial& operator=(const Polynomial& right) = default;
+	Polynomial& operator=(Polynomial&& right) noexcept = default ;
 };
 
 #endif // !YXL_POLYNOMIAL_H

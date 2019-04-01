@@ -12,13 +12,13 @@
 #include "yxlQueue.h"
 
 template <typename T>
-class yxlArrayQueue final : public yxlQueue<T>
+class ArrayQueue final : public yxlQueue<T>
 {
 public:
-    yxlArrayQueue();
-    yxlArrayQueue(yxlArrayQueue<T>& that);
-    yxlArrayQueue(yxlArrayQueue<T>&& that) noexcept;
-    ~yxlArrayQueue() override = default;
+    ArrayQueue();
+    ArrayQueue(ArrayQueue<T>& that);
+    ArrayQueue(ArrayQueue<T>&& that) noexcept;
+    ~ArrayQueue() override = default;
 
     bool empty() const override;
     int size() const override;
@@ -29,8 +29,8 @@ public:
     void push_front(const T &value) override;
     void push_back(const T &value) override;
 
-    yxlArrayQueue& operator=(const yxlArrayQueue<T>& right);
-    yxlArrayQueue& operator=(yxlArrayQueue<T>&& right) noexcept;
+    ArrayQueue& operator=(const ArrayQueue<T>& right);
+    ArrayQueue& operator=(ArrayQueue<T>&& right) noexcept;
 
 private:
     T* array_;
@@ -42,13 +42,13 @@ private:
 };
 
 template <typename T>
-yxlArrayQueue<T>::yxlArrayQueue(): front_(0), back_(0), size_(1 << 10)
+ArrayQueue<T>::ArrayQueue(): front_(0), back_(0), size_(1 << 10)
 {
     array_ = new T[size_];
 }
 
 template <typename T>
-yxlArrayQueue<T>::yxlArrayQueue(yxlArrayQueue<T>& that)
+ArrayQueue<T>::ArrayQueue(ArrayQueue<T>& that)
 {
     size_ = that.size_;
     front_ = that.front_;
@@ -61,7 +61,7 @@ yxlArrayQueue<T>::yxlArrayQueue(yxlArrayQueue<T>& that)
 }
 
 template <typename T>
-yxlArrayQueue<T>::yxlArrayQueue(yxlArrayQueue<T>&& that) noexcept
+ArrayQueue<T>::ArrayQueue(ArrayQueue<T>&& that) noexcept
 {
     size_ = that.size_;
     front_ = that.front_;
@@ -74,31 +74,31 @@ yxlArrayQueue<T>::yxlArrayQueue(yxlArrayQueue<T>&& that) noexcept
 }
 
 template <typename T>
-bool yxlArrayQueue<T>::empty() const
+bool ArrayQueue<T>::empty() const
 {
     return front_ == back_;
 }
 
 template <typename T>
-int yxlArrayQueue<T>::size() const
+int ArrayQueue<T>::size() const
 {
     return (back_ - front_ + size_) % size_;
 }
 
 template <typename T>
-T& yxlArrayQueue<T>::front() const
+T& ArrayQueue<T>::front() const
 {
     return array_[(front_ + 1) % size_];
 }
 
 template <typename T>
-T& yxlArrayQueue<T>::back() const
+T& ArrayQueue<T>::back() const
 {
     return array_[back_];
 }
 
 template <typename T>
-void yxlArrayQueue<T>::clear()
+void ArrayQueue<T>::clear()
 {
     delete[] array_;
     front_ = 0;
@@ -108,13 +108,13 @@ void yxlArrayQueue<T>::clear()
 }
 
 template <typename T>
-void yxlArrayQueue<T>::pop()
+void ArrayQueue<T>::pop()
 {
     if (front_ != back_) { front_ = (front_ + 1) % size_; }
 }
 
 template <typename T>
-void yxlArrayQueue<T>::push_front(const T &value)
+void ArrayQueue<T>::push_front(const T &value)
 {
     if ((back_ + 1) % size_ == front_) { change_size(); }
     array_[front_] = value;
@@ -122,7 +122,7 @@ void yxlArrayQueue<T>::push_front(const T &value)
 }
 
 template <typename T>
-void yxlArrayQueue<T>::push_back(const T &value)
+void ArrayQueue<T>::push_back(const T &value)
 {
     if ((back_ + 1) % size_ == front_) { change_size(); }
     back_ = (back_ + 1) % size_;
@@ -130,7 +130,7 @@ void yxlArrayQueue<T>::push_back(const T &value)
 }
 
 template <typename T>
-yxlArrayQueue<T>& yxlArrayQueue<T>::operator=(const yxlArrayQueue<T>& right)
+ArrayQueue<T>& ArrayQueue<T>::operator=(const ArrayQueue<T>& right)
 {
     size_ = right.size_;
     front_ = right.front_;
@@ -144,7 +144,7 @@ yxlArrayQueue<T>& yxlArrayQueue<T>::operator=(const yxlArrayQueue<T>& right)
 }
 
 template <typename T>
-yxlArrayQueue<T>& yxlArrayQueue<T>::operator=(yxlArrayQueue<T>&& right) noexcept
+ArrayQueue<T>& ArrayQueue<T>::operator=(ArrayQueue<T>&& right) noexcept
 {
     size_ = right.size_;
     front_ = right.front_;
@@ -158,7 +158,7 @@ yxlArrayQueue<T>& yxlArrayQueue<T>::operator=(yxlArrayQueue<T>&& right) noexcept
 }
 
 template <typename T>
-void yxlArrayQueue<T>::change_size()
+void ArrayQueue<T>::change_size()
 {
     auto index = 0;
     T* temp = new T[size_* 2];

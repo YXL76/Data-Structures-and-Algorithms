@@ -12,57 +12,57 @@
 #include "yxlPolynomial.h"
 #include "../list/yxlLink.h"
 
-class yxlLinkedPolynomial final : yxlPolynomial
+class LinkedPolynomial final : yxlPolynomial
 {
 public:
-	yxlLinkedPolynomial() = default;
-	explicit yxlLinkedPolynomial(yxlLink<double>& that);
-	yxlLinkedPolynomial(const double coef[], const int& size);
-	yxlLinkedPolynomial(yxlLinkedPolynomial& that) = default;
-	yxlLinkedPolynomial(yxlLinkedPolynomial&& that) noexcept = default;
-	~yxlLinkedPolynomial() = default;
+	LinkedPolynomial() = default;
+	explicit LinkedPolynomial(yxlLink<double>& that);
+	LinkedPolynomial(const double coef[], const int& size);
+	LinkedPolynomial(LinkedPolynomial& that) = default;
+	LinkedPolynomial(LinkedPolynomial&& that) noexcept = default;
+	~LinkedPolynomial() = default;
 
 	void read(yxlLink<double>& that);
 	void read(const double coef[], const int& size) override;
 	double calculate(const double& x) override;
-	yxlLinkedPolynomial differentiate(const int& x);
+	LinkedPolynomial differentiate(const int& x);
 
-	yxlLinkedPolynomial operator+(yxlLinkedPolynomial& right);
-	yxlLinkedPolynomial operator-(yxlLinkedPolynomial& right);
-	yxlLinkedPolynomial operator*(yxlLinkedPolynomial& right);
+	LinkedPolynomial operator+(LinkedPolynomial& right);
+	LinkedPolynomial operator-(LinkedPolynomial& right);
+	LinkedPolynomial operator*(LinkedPolynomial& right);
 
-	yxlLinkedPolynomial& operator=(const yxlLinkedPolynomial& right) = default;
-	yxlLinkedPolynomial& operator=(yxlLinkedPolynomial&& right) noexcept = default;
-	yxlLinkedPolynomial& operator+=(yxlLinkedPolynomial& right);
-	yxlLinkedPolynomial& operator-=(yxlLinkedPolynomial& right);
-	yxlLinkedPolynomial& operator*=(yxlLinkedPolynomial& right);
+	LinkedPolynomial& operator=(const LinkedPolynomial& right) = default;
+	LinkedPolynomial& operator=(LinkedPolynomial&& right) noexcept = default;
+	LinkedPolynomial& operator+=(LinkedPolynomial& right);
+	LinkedPolynomial& operator-=(LinkedPolynomial& right);
+	LinkedPolynomial& operator*=(LinkedPolynomial& right);
 
-	friend std::ostream& operator<<(std::ostream& out, yxlLinkedPolynomial& item);
-	friend std::ostream& operator<<(std::ostream& out, yxlLinkedPolynomial&& item);
+	friend std::ostream& operator<<(std::ostream& out, LinkedPolynomial& item);
+	friend std::ostream& operator<<(std::ostream& out, LinkedPolynomial&& item);
 
 private:
 	yxlLink<double> coef_;
-	static void plus(yxlLinkedPolynomial& answer, yxlLinkedPolynomial& left, yxlLinkedPolynomial& right);
-	static void minus(yxlLinkedPolynomial& answer, yxlLinkedPolynomial& left, yxlLinkedPolynomial& right);
-	static void times(yxlLinkedPolynomial& answer, yxlLinkedPolynomial& left, yxlLinkedPolynomial& right);
+	static void plus(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right);
+	static void minus(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right);
+	static void times(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right);
 };
 
-inline yxlLinkedPolynomial::yxlLinkedPolynomial(yxlLink<double>& that)
+inline LinkedPolynomial::LinkedPolynomial(yxlLink<double>& that)
 {
 	read(that);
 }
 
-inline yxlLinkedPolynomial::yxlLinkedPolynomial(const double coef[], const int& size)
+inline LinkedPolynomial::LinkedPolynomial(const double coef[], const int& size)
 {
 	read(coef, size);
 }
 
-inline void yxlLinkedPolynomial::read(yxlLink<double>& that)
+inline void LinkedPolynomial::read(yxlLink<double>& that)
 {
 	coef_ = that;
 }
 
-inline void yxlLinkedPolynomial::read(const double coef[], const int& size)
+inline void LinkedPolynomial::read(const double coef[], const int& size)
 {
 	for (auto i = size - 1; i >= 0; --i)
 	{
@@ -70,7 +70,7 @@ inline void yxlLinkedPolynomial::read(const double coef[], const int& size)
 	}
 }
 
-inline double yxlLinkedPolynomial::calculate(const double& x)
+inline double LinkedPolynomial::calculate(const double& x)
 {
 	double now = 1;
 	double answer = 0;
@@ -82,9 +82,9 @@ inline double yxlLinkedPolynomial::calculate(const double& x)
 	return answer;
 }
 
-inline yxlLinkedPolynomial yxlLinkedPolynomial::differentiate(const int& x)
+inline LinkedPolynomial LinkedPolynomial::differentiate(const int& x)
 {
-	yxlLinkedPolynomial answer;
+	LinkedPolynomial answer;
 	for (auto i = coef_.begin() + x, j = answer.coef_.before_begin(); i != coef_.end(); ++i, ++j)
 	{
 		answer.coef_.insert(j, i->value);
@@ -101,47 +101,47 @@ inline yxlLinkedPolynomial yxlLinkedPolynomial::differentiate(const int& x)
 	return answer;
 }
 
-inline yxlLinkedPolynomial yxlLinkedPolynomial::operator+(yxlLinkedPolynomial& right)
+inline LinkedPolynomial LinkedPolynomial::operator+(LinkedPolynomial& right)
 {
-	yxlLinkedPolynomial answer;
+	LinkedPolynomial answer;
 	plus(answer, *this, right);
 	return answer;
 }
 
-inline yxlLinkedPolynomial yxlLinkedPolynomial::operator-(yxlLinkedPolynomial& right)
+inline LinkedPolynomial LinkedPolynomial::operator-(LinkedPolynomial& right)
 {
-	yxlLinkedPolynomial answer;
+	LinkedPolynomial answer;
 	minus(answer, *this, right);
 	return answer;
 }
 
-inline yxlLinkedPolynomial yxlLinkedPolynomial::operator*(yxlLinkedPolynomial& right)
+inline LinkedPolynomial LinkedPolynomial::operator*(LinkedPolynomial& right)
 {
-	yxlLinkedPolynomial answer;
+	LinkedPolynomial answer;
 	times(answer, *this, right);
 	return answer;
 }
 
-inline yxlLinkedPolynomial& yxlLinkedPolynomial::operator+=(yxlLinkedPolynomial& right)
+inline LinkedPolynomial& LinkedPolynomial::operator+=(LinkedPolynomial& right)
 {
 	plus(*this, *this, right);
 	return *this;
 }
 
-inline yxlLinkedPolynomial& yxlLinkedPolynomial::operator-=(yxlLinkedPolynomial& right)
+inline LinkedPolynomial& LinkedPolynomial::operator-=(LinkedPolynomial& right)
 {
 	minus(*this, *this, right);
 	return *this;
 }
 
-inline yxlLinkedPolynomial& yxlLinkedPolynomial::operator*=(yxlLinkedPolynomial& right)
+inline LinkedPolynomial& LinkedPolynomial::operator*=(LinkedPolynomial& right)
 {
 	times(*this, *this, right);
 	return *this;
 }
 
-inline void yxlLinkedPolynomial::plus(yxlLinkedPolynomial& answer, yxlLinkedPolynomial& left,
-                                      yxlLinkedPolynomial& right)
+inline void LinkedPolynomial::plus(LinkedPolynomial& answer, LinkedPolynomial& left,
+                                      LinkedPolynomial& right)
 {
 	auto index = 0;
 	auto l_it = left.coef_.begin();
@@ -164,8 +164,8 @@ inline void yxlLinkedPolynomial::plus(yxlLinkedPolynomial& answer, yxlLinkedPoly
 	}
 }
 
-inline void yxlLinkedPolynomial::minus(yxlLinkedPolynomial& answer, yxlLinkedPolynomial& left,
-                                       yxlLinkedPolynomial& right)
+inline void LinkedPolynomial::minus(LinkedPolynomial& answer, LinkedPolynomial& left,
+                                       LinkedPolynomial& right)
 {
 	auto index = 0;
 	auto l_it = left.coef_.begin();
@@ -188,8 +188,8 @@ inline void yxlLinkedPolynomial::minus(yxlLinkedPolynomial& answer, yxlLinkedPol
 	}
 }
 
-inline void yxlLinkedPolynomial::times(yxlLinkedPolynomial& answer, yxlLinkedPolynomial& left,
-                                       yxlLinkedPolynomial& right)
+inline void LinkedPolynomial::times(LinkedPolynomial& answer, LinkedPolynomial& left,
+                                       LinkedPolynomial& right)
 {
 	auto l_expn = 0;
 	auto l_it = left.coef_.begin();
@@ -210,7 +210,7 @@ inline void yxlLinkedPolynomial::times(yxlLinkedPolynomial& answer, yxlLinkedPol
 	}
 }
 
-inline std::ostream& operator<<(std::ostream& out, yxlLinkedPolynomial& item)
+inline std::ostream& operator<<(std::ostream& out, LinkedPolynomial& item)
 {
 	for (auto& i : item.coef_)
 	{
@@ -219,7 +219,7 @@ inline std::ostream& operator<<(std::ostream& out, yxlLinkedPolynomial& item)
 	return out;
 }
 
-inline std::ostream& operator<<(std::ostream& out, yxlLinkedPolynomial&& item)
+inline std::ostream& operator<<(std::ostream& out, LinkedPolynomial&& item)
 {
 	for (auto& i : item.coef_)
 	{

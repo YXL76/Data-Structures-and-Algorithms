@@ -10,13 +10,13 @@
 #define YXL_QUEUE_H
 
 template <typename T>
-class yxlQueue
+class Queue
 {
 public:
-    yxlQueue() = default;
-    virtual ~yxlQueue() = default;
-    yxlQueue(yxlQueue<T>& that) noexcept = default;
-    yxlQueue(yxlQueue<T>&& that) noexcept = default;
+    Queue() = default;
+    virtual ~Queue() = default;
+    Queue(Queue<T>& that) noexcept = default;
+    Queue(Queue<T>&& that) noexcept = default;
 
     virtual bool empty() const = 0;
     virtual int size() const = 0;
@@ -27,8 +27,8 @@ public:
     virtual void push_front(const T &value) = 0;
     virtual void push_back(const T &value) = 0;
 
-    yxlQueue& operator=(const yxlQueue<T>& right) = default;
-    yxlQueue& operator=(yxlQueue<T>&& right) noexcept = default;
+    Queue& operator=(const Queue<T>& right) = default;
+    Queue& operator=(Queue<T>&& right) noexcept = default;
 };
 
 #endif // !YXL_QUEUE_H

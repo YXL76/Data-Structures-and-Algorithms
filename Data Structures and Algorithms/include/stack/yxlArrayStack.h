@@ -9,16 +9,16 @@
 #ifndef YXL_ARRAY_STACK_H
 #define YXL_ARRAY_STACK_H
 
-#include "yxlStack.h"
+#include "Stack.h"
 
 template <typename T>
-class yxlArrayStack final : public yxlStack<T>
+class ArrayStack final : public Stack<T>
 {
 public:
-    yxlArrayStack();
-    yxlArrayStack(yxlArrayStack<T>& that);
-    yxlArrayStack(yxlArrayStack<T>&& that) noexcept;
-    ~yxlArrayStack() override = default;
+    ArrayStack();
+    ArrayStack(ArrayStack<T>& that);
+    ArrayStack(ArrayStack<T>&& that) noexcept;
+    ~ArrayStack() override = default;
 
     bool empty() const override;
     int size() const override;
@@ -27,8 +27,8 @@ public:
     void pop() override;
     void push(const T& value) override;
 
-    yxlArrayStack& operator=(const yxlArrayStack<T>& right);
-    yxlArrayStack& operator=(yxlArrayStack<T>&& right) noexcept;
+    ArrayStack& operator=(const ArrayStack<T>& right);
+    ArrayStack& operator=(ArrayStack<T>&& right) noexcept;
 
 private:
     T* array_;
@@ -39,13 +39,13 @@ private:
 };
 
 template <typename T>
-yxlArrayStack<T>::yxlArrayStack(): top_(-1), size_(1 << 10)
+ArrayStack<T>::ArrayStack(): top_(-1), size_(1 << 10)
 {
     array_ = new T[size_];
 }
 
 template <typename T>
-yxlArrayStack<T>::yxlArrayStack(yxlArrayStack<T>& that)
+ArrayStack<T>::ArrayStack(ArrayStack<T>& that)
 {
     size_ = that.size_;
     top_ = that.top_;
@@ -57,7 +57,7 @@ yxlArrayStack<T>::yxlArrayStack(yxlArrayStack<T>& that)
 }
 
 template <typename T>
-yxlArrayStack<T>::yxlArrayStack(yxlArrayStack<T>&& that) noexcept
+ArrayStack<T>::ArrayStack(ArrayStack<T>&& that) noexcept
 {
     top_ = that.top_;
     size_ = that.size_;
@@ -68,26 +68,26 @@ yxlArrayStack<T>::yxlArrayStack(yxlArrayStack<T>&& that) noexcept
 }
 
 template <typename T>
-bool yxlArrayStack<T>::empty() const
+bool ArrayStack<T>::empty() const
 {
     return top_ == -1;
 }
 
 template <typename T>
-int yxlArrayStack<T>::size() const
+int ArrayStack<T>::size() const
 {
     return top_ + 1;
 }
 
 template <typename T>
-T& yxlArrayStack<T>::top() const
+T& ArrayStack<T>::top() const
 {
     if (top_ >= 0) { return array_[top_]; }
     return array_[0];
 }
 
 template <typename T>
-void yxlArrayStack<T>::clear()
+void ArrayStack<T>::clear()
 {
     delete[] array_;
     top_ = 0;
@@ -96,20 +96,20 @@ void yxlArrayStack<T>::clear()
 }
 
 template <typename T>
-void yxlArrayStack<T>::pop()
+void ArrayStack<T>::pop()
 {
     if (top_ >= 0) { --top_; }
 }
 
 template <typename T>
-void yxlArrayStack<T>::push(const T& value)
+void ArrayStack<T>::push(const T& value)
 {
     if (top_ == size_ - 1)  {change_size();}
     array_[++top_] = value;
 }
 
 template <typename T>
-yxlArrayStack<T>& yxlArrayStack<T>::operator=(const yxlArrayStack<T>& right)
+ArrayStack<T>& ArrayStack<T>::operator=(const ArrayStack<T>& right)
 {
     size_ = right.size_;
     top_ = right.top_;
@@ -122,7 +122,7 @@ yxlArrayStack<T>& yxlArrayStack<T>::operator=(const yxlArrayStack<T>& right)
 }
 
 template <typename T>
-yxlArrayStack<T>& yxlArrayStack<T>::operator=(yxlArrayStack<T>&& right) noexcept
+ArrayStack<T>& ArrayStack<T>::operator=(ArrayStack<T>&& right) noexcept
 {
     top_ = right.top_;
     size_ = right.size_;
@@ -134,7 +134,7 @@ yxlArrayStack<T>& yxlArrayStack<T>::operator=(yxlArrayStack<T>&& right) noexcept
 }
 
 template <typename T>
-void yxlArrayStack<T>::change_size()
+void ArrayStack<T>::change_size()
 {
     T* temp = new T[size_ * 2];
     for (auto i = 0; i < size_; ++i)

@@ -1,19 +1,21 @@
 #include <iostream>
 
-#include "include/list/yxlArray.h"
-#include "include/list/yxlLink.h"
-#include "include/queue/yxlArrayQueue.h"
-#include "include/stack/yxlArrayStack.h"
+#include "include/list/Array.h"
+#include "include/list/Link.h"
+#include "include/queue/ArrayQueue.h"
+#include "include/stack/ArrayStack.h"
 #include "include/algorithm/yxlAlgorithm.h"
-#include "include/polynomial/yxlArrayPolynomial.h"
-#include "include/polynomial/yxlLinkedPolynomial.h"
+#include "include/polynomial/ArrayPolynomial.h"
+#include "include/polynomial/LinkedPolynomial.h"
 
-yxlArray<int> a(10);
-yxlLink<int> b;
-yxlArrayQueue<int> c;
-yxlArrayStack<int> d;
-yxlArrayPolynomial e;
-yxlLinkedPolynomial f;
+using namespace yxl;
+
+Array<int> a(10);
+Link<int> b;
+ArrayQueue<int> c;
+ArrayStack<int> d;
+ArrayPolynomial e;
+LinkedPolynomial f;
 
 std::string sss = "ababababca";
 std::string ssss = "abababca";
@@ -23,10 +25,5 @@ int main()
 {
 	std::ios::sync_with_stdio(false);
 	std::cin.tie(nullptr);
-	double a[4] = {1, 3, 3, 1};
-	double b[3] = {1, 2, 1};
-	yxlArrayPolynomial x(a, 4);
-	yxlArrayPolynomial y(b, 3);
-	std::cout << x * y;
 	return 0;
 }

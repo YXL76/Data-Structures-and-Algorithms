@@ -41,38 +41,35 @@
     <ClInclude Include="include\algorithm\yxlAlgorithm.h">
       <Filter>Header Files\algorithm</Filter>
     </ClInclude>
-    <ClInclude Include="include\list\yxlArray.h">
-      <Filter>Header Files\list</Filter>
-    </ClInclude>
-    <ClInclude Include="include\queue\yxlArrayQueue.h">
-      <Filter>Header Files\queue</Filter>
-    </ClInclude>
-    <ClInclude Include="include\list\yxlList.h">
-      <Filter>Header Files\list</Filter>
-    </ClInclude>
-    <ClInclude Include="include\queue\yxlQueue.h">
-      <Filter>Header Files\queue</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stack\yxlStack.h">
-      <Filter>Header Files\stack</Filter>
-    </ClInclude>
-    <ClInclude Include="include\stack\yxlArrayStack.h">
-      <Filter>Header Files\stack</Filter>
-    </ClInclude>
     <ClInclude Include="include\algorithm\yxlStringAlgorithm.h">
       <Filter>Header Files\algorithm</Filter>
     </ClInclude>
-    <ClInclude Include="include\Polynomial\yxlPolynomial.h">
+    <ClInclude Include="include\Polynomial\LinkedPolynomial.h">
       <Filter>Header Files\polynomial</Filter>
     </ClInclude>
-    <ClInclude Include="include\list\yxlLink.h">
+    <ClInclude Include="include\polynomial\ArrayPolynomial.h">
+      <Filter>Header Files\polynomial</Filter>
+    </ClInclude>
+    <ClInclude Include="include\list\Array.h">
       <Filter>Header Files\list</Filter>
     </ClInclude>
-    <ClInclude Include="include\Polynomial\yxlLinkedPolynomial.h">
-      <Filter>Header Files\polynomial</Filter>
+    <ClInclude Include="include\list\List.h">
+      <Filter>Header Files\list</Filter>
     </ClInclude>
-    <ClInclude Include="include\polynomial\yxlArrayPolynomial.h">
-      <Filter>Header Files\polynomial</Filter>
+    <ClInclude Include="include\list\Link.h">
+      <Filter>Header Files\list</Filter>
+    </ClInclude>
+    <ClInclude Include="include\queue\ArrayQueue.h">
+      <Filter>Header Files\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="include\queue\Queue.h">
+      <Filter>Header Files\queue</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stack\Stack.h">
+      <Filter>Header Files\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="include\stack\ArrayStack.h">
+      <Filter>Header Files\stack</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

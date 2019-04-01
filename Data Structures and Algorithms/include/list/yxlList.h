@@ -10,13 +10,13 @@
 #define YXL_LIST_H
 
 template <typename T>
-class yxlList
+class List
 {
 public:
-    yxlList() = default;
-    virtual ~yxlList() = default;
-    yxlList(yxlList<T>& that) noexcept = default;
-    yxlList(yxlList<T>&& that) noexcept = default;
+    List() = default;
+    virtual ~List() = default;
+    List(List<T>& that) noexcept = default;
+    List(List<T>&& that) noexcept = default;
 
     virtual bool empty() const = 0;
     virtual int size() const = 0;
@@ -25,8 +25,8 @@ public:
     virtual void erase(const int& index) = 0;
     virtual void insert(const int& index, const T& value) = 0;
 
-    yxlList& operator=(const yxlList<T>& right) = default;
-    yxlList& operator=(yxlList<T>&& right) noexcept = default ;
+    List& operator=(const List<T>& right) = default;
+    List& operator=(List<T>&& right) noexcept = default ;
 };
 
 #endif // !YXL_LIST_H

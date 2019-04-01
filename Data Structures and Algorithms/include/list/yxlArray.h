@@ -13,14 +13,14 @@
 #include <ostream>
 
 template <typename T>
-class yxlArray final : public yxlList<T>
+class Array : public yxlList<T>
 {
 public:
-    yxlArray();
-    explicit yxlArray(const int& initial_size);
-    yxlArray(yxlArray<T>& that);
-    yxlArray(yxlArray<T>&& that) noexcept;
-    ~yxlArray() override = default;
+    Array();
+    explicit Array(const int& initial_size);
+    Array(Array<T>& that);
+    Array(Array<T>&& that) noexcept;
+    ~Array() override = default;
 
     bool empty() const override;
     int size() const override;
@@ -35,13 +35,13 @@ public:
 
     T& operator[](const int& index);
 
-    yxlArray& operator=(const yxlArray<T>& right);
-    yxlArray& operator=(yxlArray<T>&& right) noexcept;
+    Array& operator=(const Array<T>& right);
+    Array& operator=(Array<T>&& right) noexcept;
 
     template <typename Tt>
-    friend std::ostream& operator<<(std::ostream& out, const yxlArray<Tt>& item);
+    friend std::ostream& operator<<(std::ostream& out, const Array<Tt>& item);
     template <typename Tt>
-    friend std::ostream& operator<<(std::ostream& out, const yxlArray<Tt>&& item);
+    friend std::ostream& operator<<(std::ostream& out, const Array<Tt>&& item);
 
 private:
     T* array_;
@@ -53,7 +53,7 @@ private:
 };
 
 template <typename T>
-class yxlArray<T>::Iterator
+class Array<T>::Iterator
 {
 public:
     using _Mybase = Iterator;
@@ -99,7 +99,7 @@ private:
 };
 
 template <typename T>
-yxlArray<T>::yxlArray()
+Array<T>::Array()
 {
     size_ = 0;
     max_size_ = 1 << 10;
@@ -107,14 +107,14 @@ yxlArray<T>::yxlArray()
 }
 
 template <typename T>
-yxlArray<T>::yxlArray(const int& initial_size)
+Array<T>::Array(const int& initial_size)
 {
     size_ = max_size_ = initial_size;
     array_ = new T[max_size_];
 }
 
 template <typename T>
-yxlArray<T>::yxlArray(yxlArray<T>& that)
+Array<T>::Array(Array<T>& that)
 {
     size_ = that.size_;
     max_size_ = that.max_size_;
@@ -126,7 +126,7 @@ yxlArray<T>::yxlArray(yxlArray<T>& that)
 }
 
 template <typename T>
-yxlArray<T>::yxlArray(yxlArray<T>&& that) noexcept
+Array<T>::Array(Array<T>&& that) noexcept
 {
     size_ = that.size_;
     max_size_ = that.max_size_;
@@ -137,19 +137,19 @@ yxlArray<T>::yxlArray(yxlArray<T>&& that) noexcept
 }
 
 template <typename T>
-bool yxlArray<T>::empty() const
+bool Array<T>::empty() const
 {
     return size_ == 0;
 }
 
 template <typename T>
-int yxlArray<T>::size() const
+int Array<T>::size() const
 {
     return size_;
 }
 
 template <typename T>
-int yxlArray<T>::index_of(const T& value) const
+int Array<T>::index_of(const T& value) const
 {
     for (auto i = 0; i < size_; ++i)
     {
@@ -159,7 +159,7 @@ int yxlArray<T>::index_of(const T& value) const
 }
 
 template <typename T>
-void yxlArray<T>::clear()
+void Array<T>::clear()
 {
     delete [] array_;
     size_ = 0;
@@ -167,7 +167,7 @@ void yxlArray<T>::clear()
 }
 
 template <typename T>
-void yxlArray<T>::erase(const int& index)
+void Array<T>::erase(const int& index)
 {
     if (check_index(index))
     {
@@ -184,7 +184,7 @@ void yxlArray<T>::erase(const int& index)
 }
 
 template <typename T>
-void yxlArray<T>::insert(const int& index, const T& value)
+void Array<T>::insert(const int& index, const T& value)
 {
     if (check_index(index) || index == size_)
     {
@@ -202,26 +202,26 @@ void yxlArray<T>::insert(const int& index, const T& value)
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator yxlArray<T>::begin()
+typename Array<T>::Iterator Array<T>::begin()
 {
     return Iterator(array_);
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator yxlArray<T>::end()
+typename Array<T>::Iterator Array<T>::end()
 {
     return Iterator(array_ + size_);
 }
 
 template <typename T>
-T& yxlArray<T>::operator[](const int& index)
+T& Array<T>::operator[](const int& index)
 {
     if (check_index(index)) { return array_[index]; }
     return array_[0];
 }
 
 template <typename T>
-yxlArray<T>& yxlArray<T>::operator=(const yxlArray<T>& right)
+Array<T>& Array<T>::operator=(const Array<T>& right)
 {
     size_ = right.size_;
     max_size_ = right.max_size_;
@@ -234,7 +234,7 @@ yxlArray<T>& yxlArray<T>::operator=(const yxlArray<T>& right)
 }
 
 template <typename T>
-yxlArray<T>& yxlArray<T>::operator=(yxlArray<T>&& right) noexcept
+Array<T>& Array<T>::operator=(Array<T>&& right) noexcept
 {
     size_ = right.size_;
     max_size_ = right.max_size_;
@@ -246,7 +246,7 @@ yxlArray<T>& yxlArray<T>::operator=(yxlArray<T>&& right) noexcept
 }
 
 template <typename T>
-void yxlArray<T>::change_size(const int& new_size)
+void Array<T>::change_size(const int& new_size)
 {
     T* temp = new T[new_size];
     for (auto i = 0; i < size_ && i < new_size; ++i)
@@ -259,51 +259,51 @@ void yxlArray<T>::change_size(const int& new_size)
 }
 
 template <typename T>
-bool yxlArray<T>::check_index(const int& index) const
+bool Array<T>::check_index(const int& index) const
 {
     return index >= 0 && index < size_;
 }
 
 template <typename T>
-yxlArray<T>::Iterator::Iterator(T* that)
+Array<T>::Iterator::Iterator(T* that)
 {
     position_ = that;
 }
 
 template <typename T>
-yxlArray<T>::Iterator::Iterator(const Iterator& that)
+Array<T>::Iterator::Iterator(const Iterator& that)
 {
     position_ = that.position_;
 }
 
 template <typename T>
-yxlArray<T>::Iterator::Iterator(Iterator&& that) noexcept
+Array<T>::Iterator::Iterator(Iterator&& that) noexcept
 {
     position_ = that.position_;
     that.position_ = nullptr;
 }
 
 template <typename T>
-T& yxlArray<T>::Iterator::operator*() const
+T& Array<T>::Iterator::operator*() const
 {
     return *position_;
 }
 
 template <typename T>
-T* yxlArray<T>::Iterator::operator->() const
+T* Array<T>::Iterator::operator->() const
 {
     return &*position_;
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator& yxlArray<T>::Iterator::operator++()
+typename Array<T>::Iterator& Array<T>::Iterator::operator++()
 {
     ++position_;
     return *this;
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator yxlArray<T>::Iterator::operator++(int)
+typename Array<T>::Iterator Array<T>::Iterator::operator++(int)
 {
     Iterator old = *this;
     ++position_;
@@ -311,14 +311,14 @@ typename yxlArray<T>::Iterator yxlArray<T>::Iterator::operator++(int)
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator& yxlArray<T>::Iterator::operator--()
+typename Array<T>::Iterator& Array<T>::Iterator::operator--()
 {
     --position_;
     return *this;
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator yxlArray<T>::Iterator::operator--(int)
+typename Array<T>::Iterator Array<T>::Iterator::operator--(int)
 {
     Iterator old = *this;
     --position_;
@@ -326,7 +326,7 @@ typename yxlArray<T>::Iterator yxlArray<T>::Iterator::operator--(int)
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator yxlArray<T>::Iterator::operator+(const int& right) const
+typename Array<T>::Iterator Array<T>::Iterator::operator+(const int& right) const
 {
     Iterator old = *this;
     old.position_ += right;
@@ -334,7 +334,7 @@ typename yxlArray<T>::Iterator yxlArray<T>::Iterator::operator+(const int& right
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator yxlArray<T>::Iterator::operator-(const int& right) const
+typename Array<T>::Iterator Array<T>::Iterator::operator-(const int& right) const
 {
     Iterator old = *this;
     old.position_ -= right;
@@ -342,57 +342,57 @@ typename yxlArray<T>::Iterator yxlArray<T>::Iterator::operator-(const int& right
 }
 
 template <typename T>
-bool yxlArray<T>::Iterator::operator<(const Iterator& right) const
+bool Array<T>::Iterator::operator<(const Iterator& right) const
 {
     return position_ < right.position_;
 }
 
 template <typename T>
-bool yxlArray<T>::Iterator::operator>(const Iterator& right) const
+bool Array<T>::Iterator::operator>(const Iterator& right) const
 {
     return position_ > right.position_;
 }
 
 template <typename T>
-bool yxlArray<T>::Iterator::operator>=(const Iterator& right) const
+bool Array<T>::Iterator::operator>=(const Iterator& right) const
 {
     return position_ >= right.position_;
 }
 
 template <typename T>
-bool yxlArray<T>::Iterator::operator<=(const Iterator& right) const
+bool Array<T>::Iterator::operator<=(const Iterator& right) const
 {
     return position_ <= right.position_;
 }
 
 template <typename T>
-bool yxlArray<T>::Iterator::operator!=(const Iterator& right) const
+bool Array<T>::Iterator::operator!=(const Iterator& right) const
 {
     return position_ != right.position_;
 }
 
 template <typename T>
-bool yxlArray<T>::Iterator::operator==(const Iterator& right) const
+bool Array<T>::Iterator::operator==(const Iterator& right) const
 {
     return position_ == right.position_;
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator& yxlArray<T>::Iterator::operator+=(const int& right)
+typename Array<T>::Iterator& Array<T>::Iterator::operator+=(const int& right)
 {
     position_ += right;
     return *this;
 }
 
 template <typename T>
-typename yxlArray<T>::Iterator& yxlArray<T>::Iterator::operator-=(const int& right)
+typename Array<T>::Iterator& Array<T>::Iterator::operator-=(const int& right)
 {
     position_ -= right;
     return *this;
 }
 
 template <typename T>
-std::ostream& operator<<(std::ostream& out, const yxlArray<T>& item)
+std::ostream& operator<<(std::ostream& out, const Array<T>& item)
 {
     for (auto i = 0; i < item.size_; ++i)
     {
@@ -402,7 +402,7 @@ std::ostream& operator<<(std::ostream& out, const yxlArray<T>& item)
 }
 
 template <typename T>
-std::ostream& operator<<(std::ostream& out, const yxlArray<T>&& item)
+std::ostream& operator<<(std::ostream& out, const Array<T>&& item)
 {
     for (auto i = 0; i < item.size_; ++i)
     {

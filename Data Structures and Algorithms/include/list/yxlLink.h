@@ -9,17 +9,17 @@
 #ifndef YXL_LINK_H
 #define YXL_LINK_H
 
-#include "yxlList.h"
+#include "List.h"
 #include <ostream>
 
 template <typename T>
-class yxlLink final : public yxlList<T>
+class Link final : public List<T>
 {
 public:
-	yxlLink();
-	yxlLink(yxlLink<T>& that);
-	yxlLink(yxlLink<T>&& that) noexcept;
-	~yxlLink() override = default;
+	Link();
+	Link(Link<T>& that);
+	Link(Link<T>&& that) noexcept;
+	~Link() override = default;
 
 	bool empty() const override;
 	int size() const override;
@@ -36,13 +36,13 @@ public:
 
 	T& operator[](const int& index);
 
-	yxlLink& operator=(const yxlLink<T>& right);
-	yxlLink& operator=(yxlLink<T>&& right) noexcept;
+	Link& operator=(const Link<T>& right);
+	Link& operator=(Link<T>&& right) noexcept;
 
 	template <typename Tt>
-	friend std::ostream& operator<<(std::ostream& out, const yxlLink<Tt>& item);
+	friend std::ostream& operator<<(std::ostream& out, const Link<Tt>& item);
 	template <typename Tt>
-	friend std::ostream& operator<<(std::ostream& out, const yxlLink<Tt>&& item);
+	friend std::ostream& operator<<(std::ostream& out, const Link<Tt>&& item);
 
 	struct Node
 	{
@@ -64,7 +64,7 @@ private:
 };
 
 template <typename T>
-class yxlLink<T>::Iterator
+class Link<T>::Iterator
 {
 public:
 	using _Mybase = Iterator;
@@ -106,7 +106,7 @@ private:
 class Node;
 
 template <typename T>
-yxlLink<T>::yxlLink(): size_(0)
+Link<T>::Link(): size_(0)
 {
 	head_node_ = new Node();
 	rear_node_ = new Node();
@@ -115,7 +115,7 @@ yxlLink<T>::yxlLink(): size_(0)
 }
 
 template <typename T>
-yxlLink<T>::yxlLink(yxlLink<T>& that)
+Link<T>::Link(Link<T>& that)
 {
 	size_ = that.size_;
 	head_node_ = new Node(that.head_node_->value);
@@ -133,7 +133,7 @@ yxlLink<T>::yxlLink(yxlLink<T>& that)
 }
 
 template <typename T>
-yxlLink<T>::yxlLink(yxlLink<T>&& that) noexcept
+Link<T>::Link(Link<T>&& that) noexcept
 {
 	size_ = that.size_;
 	head_node_ = that.head_node_;
@@ -144,19 +144,19 @@ yxlLink<T>::yxlLink(yxlLink<T>&& that) noexcept
 }
 
 template <typename T>
-bool yxlLink<T>::empty() const
+bool Link<T>::empty() const
 {
 	return size_ == 0;
 }
 
 template <typename T>
-int yxlLink<T>::size() const
+int Link<T>::size() const
 {
 	return size_;
 }
 
 template <typename T>
-int yxlLink<T>::index_of(const T& value) const
+int Link<T>::index_of(const T& value) const
 {
 	auto index = 0;
 	Node* current_node = head_node_->next;
@@ -170,7 +170,7 @@ int yxlLink<T>::index_of(const T& value) const
 }
 
 template <typename T>
-void yxlLink<T>::clear()
+void Link<T>::clear()
 {
 	Node* previous_node = head_node_;
 	Node* current_node = head_node_->next;
@@ -190,7 +190,7 @@ void yxlLink<T>::clear()
 }
 
 template <typename T>
-void yxlLink<T>::erase(const int& index)
+void Link<T>::erase(const int& index)
 {
 	if (check_index(index))
 	{
@@ -209,7 +209,7 @@ void yxlLink<T>::erase(const int& index)
 }
 
 template <typename T>
-void yxlLink<T>::insert(const int& index, const T& value)
+void Link<T>::insert(const int& index, const T& value)
 {
 	if (check_index(index) || index == size_)
 	{
@@ -224,25 +224,25 @@ void yxlLink<T>::insert(const int& index, const T& value)
 }
 
 template <typename T>
-typename yxlLink<T>::Iterator yxlLink<T>::begin()
+typename Link<T>::Iterator Link<T>::begin()
 {
 	return Iterator(head_node_->next);
 }
 
 template <typename T>
-typename yxlLink<T>::Iterator yxlLink<T>::before_begin()
+typename Link<T>::Iterator Link<T>::before_begin()
 {
 	return Iterator(head_node_);
 }
 
 template <typename T>
-typename yxlLink<T>::Iterator yxlLink<T>::end()
+typename Link<T>::Iterator Link<T>::end()
 {
 	return Iterator(rear_node_);
 }
 
 template <typename T>
-void yxlLink<T>::insert(Iterator& index, const T& value)
+void Link<T>::insert(Iterator& index, const T& value)
 {
 	if (check_index(index))
 	{
@@ -252,7 +252,7 @@ void yxlLink<T>::insert(Iterator& index, const T& value)
 }
 
 template <typename T>
-T& yxlLink<T>::operator[](const int& index)
+T& Link<T>::operator[](const int& index)
 {
 	if (check_index(index))
 	{
@@ -267,7 +267,7 @@ T& yxlLink<T>::operator[](const int& index)
 }
 
 template <typename T>
-yxlLink<T>& yxlLink<T>::operator=(const yxlLink<T>& right)
+Link<T>& Link<T>::operator=(const Link<T>& right)
 {
 	size_ = right.size_;
 	head_node_ = new Node(right.head_node_->value);
@@ -286,7 +286,7 @@ yxlLink<T>& yxlLink<T>::operator=(const yxlLink<T>& right)
 }
 
 template <typename T>
-yxlLink<T>& yxlLink<T>::operator=(yxlLink<T>&& right) noexcept
+Link<T>& Link<T>::operator=(Link<T>&& right) noexcept
 {
 	size_ = right.size_;
 	head_node_ = right.head_node_;
@@ -298,81 +298,81 @@ yxlLink<T>& yxlLink<T>::operator=(yxlLink<T>&& right) noexcept
 }
 
 template <typename T>
-yxlLink<T>::Node::Node(): value(T()), next(nullptr)
+Link<T>::Node::Node(): value(T()), next(nullptr)
 {
 }
 
 template <typename T>
-yxlLink<T>::Node::Node(const T& value): next(nullptr)
+Link<T>::Node::Node(const T& value): next(nullptr)
 {
 	this->value = value;
 }
 
 template <typename T>
-yxlLink<T>::Node::Node(const T& value, Node* next)
+Link<T>::Node::Node(const T& value, Node* next)
 {
 	this->value = value;
 	this->next = next;
 }
 
 template <typename T>
-bool yxlLink<T>::check_index(Iterator& index)
+bool Link<T>::check_index(Iterator& index)
 {
 	return !index.is_null() && index != end();
 }
 
 template <typename T>
-bool yxlLink<T>::check_index(const int& index) const
+bool Link<T>::check_index(const int& index) const
 {
 	return index >= 0 && index < size_;
 }
 
 template <typename T>
-yxlLink<T>::Iterator::Iterator(Node* that)
+Link<T>::Iterator::Iterator(Node* that)
 {
 	position_ = that;
 }
 
 template <typename T>
-yxlLink<T>::Iterator::Iterator(const Iterator& that)
+Link<T>::Iterator::Iterator(const Iterator& that)
 {
 	position_ = that.position_;
 }
 
 template <typename T>
-yxlLink<T>::Iterator::Iterator(Iterator&& that) noexcept
+Link<T>::Iterator::Iterator(Iterator&& that) noexcept
 {
 	position_ = that.position_;
 	that.position_ = nullptr;
 }
 
 template <typename T>
-bool yxlLink<T>::Iterator::is_null()
+bool Link<T>::Iterator::is_null()
 {
 	return position_ == nullptr;
 }
 
 template <typename T>
-typename yxlLink<T>::Node& yxlLink<T>::Iterator::operator*() const
+typename Link<T>::Node& Link<T>::Iterator::operator*() const
 {
 	return *position_;
 }
 
 template <typename T>
-typename yxlLink<T>::Node* yxlLink<T>::Iterator::operator->() const
+typename Link<T>::Node* Link<T>::Iterator::operator->() const
 {
 	return &*position_;
 }
 
 template <typename T>
-typename yxlLink<T>::Iterator& yxlLink<T>::Iterator::operator++()
+typename Link<T>::Iterator& Link<T>::Iterator::operator++()
 {
 	position_ = position_->next;
 	return *this;
 }
 
 template <typename T>
-typename yxlLink<T>::Iterator yxlLink<T>::Iterator::operator++(int)
+typename Link<T>::Iterator Link<T>::Iterator::operator++(int)
 {
 	Iterator old = *this;
 	position_ = position_->next;
@@ -380,7 +380,7 @@ typename yxlLink<T>::Iterator yxlLink<T>::Iterator::operator++(int)
 }
 
 template <typename T>
-typename yxlLink<T>::Iterator yxlLink<T>::Iterator::operator+(const int& right) const
+typename Link<T>::Iterator Link<T>::Iterator::operator+(const int& right) const
 {
 	Iterator old = *this;
 	for (auto i = 0; i < right; ++i)
@@ -391,19 +391,19 @@ typename yxlLink<T>::Iterator yxlLink<T>::Iterator::operator+(const int& right) 
 }
 
 template <typename T>
-bool yxlLink<T>::Iterator::operator!=(const Iterator& right) const
+bool Link<T>::Iterator::operator!=(const Iterator& right) const
 {
 	return position_ != right.position_;
 }
 
 template <typename T>
-bool yxlLink<T>::Iterator::operator==(const Iterator& right) const
+bool Link<T>::Iterator::operator==(const Iterator& right) const
 {
 	return position_ == right.position_;
 }
 
 template <typename T>
-typename yxlLink<T>::Iterator& yxlLink<T>::Iterator::operator+=(const int& right)
+typename Link<T>::Iterator& Link<T>::Iterator::operator+=(const int& right)
 {
 	for (auto i = 0; i < right; ++i)
 	{
@@ -413,7 +413,7 @@ typename yxlLink<T>::Iterator& yxlLink<T>::Iterator::operator+=(const int& right
 }
 
 template <typename T>
-std::ostream& operator<<(std::ostream& out, const yxlLink<T>& item)
+std::ostream& operator<<(std::ostream& out, const Link<T>& item)
 {
 	auto current_node = item.head_node_->next;
 	for (auto i = 0; i < item.size_; ++i)
@@ -425,7 +425,7 @@ std::ostream& operator<<(std::ostream& out, const yxlLink<T>& item)
 }
 
 template <typename T>
-std::ostream& operator<<(std::ostream& out, const yxlLink<T>&& item)
+std::ostream& operator<<(std::ostream& out, const Link<T>&& item)
 {
 	auto current_node = item.head_node_->next;
 	for (auto i = 0; i < item.size_; ++i)

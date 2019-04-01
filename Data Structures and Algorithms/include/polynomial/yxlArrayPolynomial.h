@@ -9,71 +9,71 @@
 #ifndef YXL_ARRAY_POLYNOMIAL_H
 #define YXL_ARRAY_POLYNOMIAL_H
 
-#include "yxlPolynomial.h"
+#include "Polynomial.h"
 #include "../list/yxlArray.h"
 #include <complex>
 
 constexpr double kPi = 3.1415926;
 
-class yxlArrayPolynomial final : yxlPolynomial
+class ArrayPolynomial final : Polynomial
 {
 public:
 	using comp = std::complex<double>;
 
-	yxlArrayPolynomial() = default;
-	explicit yxlArrayPolynomial(const int& initial_size);
-	explicit yxlArrayPolynomial(yxlArray<double>& that);
-	yxlArrayPolynomial(const double coef[], const int& size);
-	yxlArrayPolynomial(yxlArrayPolynomial& that) = default;
-	yxlArrayPolynomial(yxlArrayPolynomial&& that) noexcept = default;
-	~yxlArrayPolynomial() = default;
+	ArrayPolynomial() = default;
+	explicit ArrayPolynomial(const int& initial_size);
+	explicit ArrayPolynomial(yxlArray<double>& that);
+	ArrayPolynomial(const double coef[], const int& size);
+	ArrayPolynomial(ArrayPolynomial& that) = default;
+	ArrayPolynomial(ArrayPolynomial&& that) noexcept = default;
+	~ArrayPolynomial() = default;
 
 	void read(yxlArray<double>& that);
 	void read(const double coef[], const int& size) override;
 	double calculate(const double& x) override;
-	yxlArrayPolynomial differentiate(const int& x);
+	ArrayPolynomial differentiate(const int& x);
 
-	yxlArrayPolynomial operator+(yxlArrayPolynomial& right);
-	yxlArrayPolynomial operator-(yxlArrayPolynomial& right);
-	yxlArrayPolynomial operator*(yxlArrayPolynomial& right);
+	ArrayPolynomial operator+(ArrayPolynomial& right);
+	ArrayPolynomial operator-(ArrayPolynomial& right);
+	ArrayPolynomial operator*(ArrayPolynomial& right);
 
-	yxlArrayPolynomial& operator=(const yxlArrayPolynomial& right) = default;
-	yxlArrayPolynomial& operator=(yxlArrayPolynomial&& right) noexcept = default;
-	yxlArrayPolynomial& operator+=(yxlArrayPolynomial& right);
-	yxlArrayPolynomial& operator-=(yxlArrayPolynomial& right);
-	yxlArrayPolynomial& operator*=(yxlArrayPolynomial& right);
+	ArrayPolynomial& operator=(const ArrayPolynomial& right) = default;
+	ArrayPolynomial& operator=(ArrayPolynomial&& right) noexcept = default;
+	ArrayPolynomial& operator+=(ArrayPolynomial& right);
+	ArrayPolynomial& operator-=(ArrayPolynomial& right);
+	ArrayPolynomial& operator*=(ArrayPolynomial& right);
 
-	friend std::ostream& operator<<(std::ostream& out, yxlArrayPolynomial& item);
-	friend std::ostream& operator<<(std::ostream& out, yxlArrayPolynomial&& item);
+	friend std::ostream& operator<<(std::ostream& out, ArrayPolynomial& item);
+	friend std::ostream& operator<<(std::ostream& out, ArrayPolynomial&& item);
 
 private:
 	yxlArray<double> coef_;
-	static void plus(yxlArrayPolynomial& answer, yxlArrayPolynomial& left, yxlArrayPolynomial& right);
-	static void minus(yxlArrayPolynomial& answer, yxlArrayPolynomial& left, yxlArrayPolynomial& right);
-	yxlArrayPolynomial times(yxlArrayPolynomial& left, yxlArrayPolynomial& right) const;
+	static void plus(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right);
+	static void minus(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right);
+	ArrayPolynomial times(ArrayPolynomial& left, ArrayPolynomial& right) const;
 	void cooley_tukey(yxlArray<comp>& that, bool inverse) const;
 };
 
-inline yxlArrayPolynomial::yxlArrayPolynomial(const int& initial_size): coef_(initial_size)
+inline ArrayPolynomial::ArrayPolynomial(const int& initial_size): coef_(initial_size)
 {
 }
 
-inline yxlArrayPolynomial::yxlArrayPolynomial(yxlArray<double>& that)
+inline ArrayPolynomial::ArrayPolynomial(yxlArray<double>& that)
 {
 	read(that);
 }
 
-inline yxlArrayPolynomial::yxlArrayPolynomial(const double coef[], const int& size)
+inline ArrayPolynomial::ArrayPolynomial(const double coef[], const int& size)
 {
 	read(coef, size);
 }
 
-inline void yxlArrayPolynomial::read(yxlArray<double>& that)
+inline void ArrayPolynomial::read(yxlArray<double>& that)
 {
 	coef_ = that;
 }
 
-inline void yxlArrayPolynomial::read(const double coef[], const int& size)
+inline void ArrayPolynomial::read(const double coef[], const int& size)
 {
 	for (auto i = 0; i < size; ++i)
 	{
@@ -81,7 +81,7 @@ inline void yxlArrayPolynomial::read(const double coef[], const int& size)
 	}
 }
 
-inline double yxlArrayPolynomial::calculate(const double& x)
+inline double ArrayPolynomial::calculate(const double& x)
 {
 	double now = 1;
 	double answer = 0;
@@ -93,9 +93,9 @@ inline double yxlArrayPolynomial::calculate(const double& x)
 	return answer;
 }
 
-inline yxlArrayPolynomial yxlArrayPolynomial::differentiate(const int& x)
+inline ArrayPolynomial ArrayPolynomial::differentiate(const int& x)
 {
-	yxlArrayPolynomial answer;
+	ArrayPolynomial answer;
 	auto expn = x;
 	for (auto i = x; i < coef_.size(); ++i)
 	{
@@ -112,44 +112,44 @@ inline yxlArrayPolynomial yxlArrayPolynomial::differentiate(const int& x)
 	return answer;
 }
 
-inline yxlArrayPolynomial yxlArrayPolynomial::operator+(yxlArrayPolynomial& right)
+inline ArrayPolynomial ArrayPolynomial::operator+(ArrayPolynomial& right)
 {
-	yxlArrayPolynomial answer;
+	ArrayPolynomial answer;
 	plus(answer, *this, right);
 	return answer;
 }
 
-inline yxlArrayPolynomial yxlArrayPolynomial::operator-(yxlArrayPolynomial& right)
+inline ArrayPolynomial ArrayPolynomial::operator-(ArrayPolynomial& right)
 {
-	yxlArrayPolynomial answer;
+	ArrayPolynomial answer;
 	minus(answer, *this, right);
 	return answer;
 }
 
-inline yxlArrayPolynomial yxlArrayPolynomial::operator*(yxlArrayPolynomial& right)
+inline ArrayPolynomial ArrayPolynomial::operator*(ArrayPolynomial& right)
 {
 	return times(*this, right);
 }
 
-inline yxlArrayPolynomial& yxlArrayPolynomial::operator+=(yxlArrayPolynomial& right)
+inline ArrayPolynomial& ArrayPolynomial::operator+=(ArrayPolynomial& right)
 {
 	plus(*this, *this, right);
 	return *this;
 }
 
-inline yxlArrayPolynomial& yxlArrayPolynomial::operator-=(yxlArrayPolynomial& right)
+inline ArrayPolynomial& ArrayPolynomial::operator-=(ArrayPolynomial& right)
 {
 	minus(*this, *this, right);
 	return *this;
 }
 
-inline yxlArrayPolynomial& yxlArrayPolynomial::operator*=(yxlArrayPolynomial& right)
+inline ArrayPolynomial& ArrayPolynomial::operator*=(ArrayPolynomial& right)
 {
 	*this = times(*this, right);
 	return *this;
 }
 
-inline void yxlArrayPolynomial::plus(yxlArrayPolynomial& answer, yxlArrayPolynomial& left, yxlArrayPolynomial& right)
+inline void ArrayPolynomial::plus(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right)
 {
 	auto index = 0;
 	auto l_it = left.coef_.begin();
@@ -171,7 +171,7 @@ inline void yxlArrayPolynomial::plus(yxlArrayPolynomial& answer, yxlArrayPolynom
 	}
 }
 
-inline void yxlArrayPolynomial::minus(yxlArrayPolynomial& answer, yxlArrayPolynomial& left, yxlArrayPolynomial& right)
+inline void ArrayPolynomial::minus(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right)
 {
 	auto index = 0;
 	auto l_it = left.coef_.begin();
@@ -193,7 +193,7 @@ inline void yxlArrayPolynomial::minus(yxlArrayPolynomial& answer, yxlArrayPolyno
 	}
 }
 
-inline yxlArrayPolynomial yxlArrayPolynomial::times(yxlArrayPolynomial& left, yxlArrayPolynomial& right) const
+inline ArrayPolynomial ArrayPolynomial::times(ArrayPolynomial& left, ArrayPolynomial& right) const
 {
 	auto size = 2;
 	const auto l_size = left.coef_.size();
@@ -206,7 +206,7 @@ inline yxlArrayPolynomial yxlArrayPolynomial::times(yxlArrayPolynomial& left, yx
 	cooley_tukey(b, false);
 	for (auto i = 0; i < size; ++i) { a[i] *= b[i]; }
 	cooley_tukey(a, true);
-	yxlArrayPolynomial answer(l_size + r_size - 1);
+	ArrayPolynomial answer(l_size + r_size - 1);
 	for (auto i = 0; i < l_size + r_size - 1; ++i)
 	{
 		answer.coef_[i] = a[i].real();
@@ -214,7 +214,7 @@ inline yxlArrayPolynomial yxlArrayPolynomial::times(yxlArrayPolynomial& left, yx
 	return answer;
 }
 
-inline void yxlArrayPolynomial::cooley_tukey(yxlArray<comp>& that, const bool inverse) const
+inline void ArrayPolynomial::cooley_tukey(yxlArray<comp>& that, const bool inverse) const
 {
 	const auto n = that.size();
 	for (auto i = 0, j = 0; i < n; ++i)
@@ -243,7 +243,7 @@ inline void yxlArrayPolynomial::cooley_tukey(yxlArray<comp>& that, const bool in
 	if (inverse) { for (auto i = 0; i < n; i++) { that[i] /= n; } }
 }
 
-inline std::ostream& operator<<(std::ostream& out, yxlArrayPolynomial& item)
+inline std::ostream& operator<<(std::ostream& out, ArrayPolynomial& item)
 {
 	for (auto i : item.coef_)
 	{
@@ -252,7 +252,7 @@ inline std::ostream& operator<<(std::ostream& out, yxlArrayPolynomial& item)
 	return out;
 }
 
-inline std::ostream& operator<<(std::ostream& out, yxlArrayPolynomial&& item)
+inline std::ostream& operator<<(std::ostream& out, ArrayPolynomial&& item)
 {
 	for (auto i : item.coef_)
 	{

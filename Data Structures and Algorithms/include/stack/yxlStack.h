@@ -10,13 +10,13 @@
 #define YXL_STACK_H
 
 template <typename T>
-class yxlStack
+class Stack
 {
 public:
-    yxlStack() = default;
-    virtual ~yxlStack() = default;
-    yxlStack(yxlStack<T>& that) noexcept = default;
-    yxlStack(yxlStack<T>&& that) noexcept = default;
+    Stack() = default;
+    virtual ~Stack() = default;
+    Stack(Stack<T>& that) noexcept = default;
+    Stack(Stack<T>&& that) noexcept = default;
 
     virtual bool empty() const = 0;
     virtual int size() const = 0;
@@ -25,8 +25,8 @@ public:
     virtual void pop() = 0;
     virtual void push(const T& value) = 0;
 
-    yxlStack& operator=(const yxlStack<T>& right) = default;
-    yxlStack& operator=(yxlStack<T>&& right) noexcept = default;
+    Stack& operator=(const Stack<T>& right) = default;
+    Stack& operator=(Stack<T>&& right) noexcept = default;
 };
 
 #endif // !YXL_STACK_H
