@@ -6,17 +6,20 @@
 
 #pragma once
 
-#ifndef YXL_ARRAY_POLYNOMIAL_H
-#define YXL_ARRAY_POLYNOMIAL_H
+#ifndef ARRAY_POLYNOMIAL_H
+#define ARRAY_POLYNOMIAL_H
 
+#include "Polynomial.h"
 #include "../list/Array.h"
 #include <complex>
 
 namespace yxl
 {
+	class LinkedPolynomial;
 	constexpr double kPi = 3.1415926;
 
-	class ArrayPolynomial final : Array<double>
+	class ArrayPolynomial final : Array<double>,
+	                              Polynomial<ArrayPolynomial>
 	{
 	public:
 		using comp = std::complex<double>;
@@ -29,9 +32,9 @@ namespace yxl
 		ArrayPolynomial(ArrayPolynomial&& that) noexcept = default;
 		~ArrayPolynomial() = default;
 
-		void read(const double coef[], const int& size);
-		double calculate(const double& x);
-		ArrayPolynomial differentiate(const int& x) const;
+		void read(const double coef[], const int& size) override;
+		double calculate(const double& x) override;
+		ArrayPolynomial differentiate(const int& x) override;
 
 		ArrayPolynomial operator+(ArrayPolynomial& right);
 		ArrayPolynomial operator-(ArrayPolynomial& right);
@@ -47,10 +50,14 @@ namespace yxl
 		friend std::ostream& operator<<(std::ostream& out, ArrayPolynomial&& item);
 
 	private:
-		static void plus(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right);
-		static void minus(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right);
-		ArrayPolynomial times(ArrayPolynomial& left, ArrayPolynomial& right) const;
+		void plus(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right) override;
+		void minus(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right) override;
+		ArrayPolynomial times(ArrayPolynomial& left, ArrayPolynomial& right) const override;
 		void cooley_tukey(Array<comp>& that, bool inverse) const;
+
+		void times(ArrayPolynomial& answer, ArrayPolynomial& left, ArrayPolynomial& right) override
+		{
+		}
 	};
 
 	inline ArrayPolynomial::ArrayPolynomial(const int& initial_size): Array<double>(initial_size)
@@ -86,7 +93,7 @@ namespace yxl
 		return answer;
 	}
 
-	inline ArrayPolynomial ArrayPolynomial::differentiate(const int& x) const
+	inline ArrayPolynomial ArrayPolynomial::differentiate(const int& x)
 	{
 		ArrayPolynomial answer;
 		auto expn = x;
@@ -255,4 +262,4 @@ namespace yxl
 	}
 }
 
-#endif // !YXL_ARRAY_POLYNOMIAL_H
+#endif // !ARRAY_POLYNOMIAL_H

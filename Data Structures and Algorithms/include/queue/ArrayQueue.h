@@ -6,8 +6,8 @@
 
 #pragma once
 
-#ifndef YXL_ARRAY_QUEUE_H
-#define YXL_ARRAY_QUEUE_H
+#ifndef ARRAY_QUEUE_H
+#define ARRAY_QUEUE_H
 
 #include "Queue.h"
 
@@ -177,4 +177,4 @@ namespace yxl
 	}
 }
 
-#endif // !YXL_ARRAY_QUEUE_H
+#endif // !ARRAY_QUEUE_H

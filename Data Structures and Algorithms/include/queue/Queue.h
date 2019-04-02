@@ -6,8 +6,8 @@
 
 #pragma once
 
-#ifndef YXL_QUEUE_H
-#define YXL_QUEUE_H
+#ifndef QUEUE_H
+#define QUEUE_H
 
 namespace yxl
 {
@@ -34,4 +34,4 @@ namespace yxl
 	};
 }
 
-#endif // !YXL_QUEUE_H
+#endif // !QUEUE_H

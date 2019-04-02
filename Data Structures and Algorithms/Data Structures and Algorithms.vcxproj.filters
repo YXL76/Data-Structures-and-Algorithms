@@ -35,15 +35,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\yxlSegmentTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\algorithm\yxlAlgorithm.h">
-      <Filter>Header Files\algorithm</Filter>
-    </ClInclude>
-    <ClInclude Include="include\algorithm\yxlStringAlgorithm.h">
-      <Filter>Header Files\algorithm</Filter>
-    </ClInclude>
     <ClInclude Include="include\Polynomial\LinkedPolynomial.h">
       <Filter>Header Files\polynomial</Filter>
     </ClInclude>
@@ -70,6 +61,18 @@
     </ClInclude>
     <ClInclude Include="include\stack\ArrayStack.h">
       <Filter>Header Files\stack</Filter>
+    </ClInclude>
+    <ClInclude Include="include\polynomial\Polynomial.h">
+      <Filter>Header Files\polynomial</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SegmentTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\algorithm\Algorithm.h">
+      <Filter>Header Files\algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\algorithm\StringAlgorithm.h">
+      <Filter>Header Files\algorithm</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

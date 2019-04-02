@@ -4,7 +4,7 @@
 #include "include/list/Link.h"
 #include "include/queue/ArrayQueue.h"
 #include "include/stack/ArrayStack.h"
-#include "include/algorithm/yxlAlgorithm.h"
+#include "include/algorithm/Algorithm.h"
 #include "include/polynomial/ArrayPolynomial.h"
 #include "include/polynomial/LinkedPolynomial.h"
 

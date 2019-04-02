@@ -6,8 +6,8 @@
 
 #pragma once
 
-#ifndef YXL_STACK_H
-#define YXL_STACK_H
+#ifndef STACK_H
+#define STACK_H
 
 namespace yxl
 {
@@ -32,4 +32,4 @@ namespace yxl
 	};
 }
 
-#endif // !YXL_STACK_H
+#endif // !STACK_H

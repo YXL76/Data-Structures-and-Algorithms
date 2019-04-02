@@ -6,8 +6,8 @@
 
 #pragma once
 
-#ifndef YXL_ARRAY_H
-#define YXL_ARRAY_H
+#ifndef ARRAY_H
+#define ARRAY_H
 
 #include "List.h"
 #include <ostream>
@@ -414,4 +414,4 @@ namespace yxl
 	}
 }
 
-#endif // !YXL_ARRAY_H
+#endif // !ARRAY_H

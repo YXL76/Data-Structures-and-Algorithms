@@ -157,18 +157,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\algorithm\yxlAlgorithm.h" />
-    <ClInclude Include="include\algorithm\yxlStringAlgorithm.h" />
+    <ClInclude Include="include\algorithm\Algorithm.h" />
+    <ClInclude Include="include\algorithm\StringAlgorithm.h" />
     <ClInclude Include="include\list\Array.h" />
     <ClInclude Include="include\list\Link.h" />
     <ClInclude Include="include\list\List.h" />
     <ClInclude Include="include\polynomial\ArrayPolynomial.h" />
     <ClInclude Include="include\Polynomial\LinkedPolynomial.h" />
+    <ClInclude Include="include\polynomial\Polynomial.h" />
     <ClInclude Include="include\queue\ArrayQueue.h" />
     <ClInclude Include="include\queue\Queue.h" />
     <ClInclude Include="include\stack\ArrayStack.h" />
     <ClInclude Include="include\stack\Stack.h" />
-    <ClInclude Include="include\yxlSegmentTree.h" />
+    <ClInclude Include="include\SegmentTree.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

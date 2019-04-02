@@ -6,8 +6,8 @@
 
 #pragma once
 
-#ifndef YXL_LINK_H
-#define YXL_LINK_H
+#ifndef LINK_H
+#define LINK_H
 
 #include "List.h"
 #include <ostream>
@@ -439,4 +439,4 @@ namespace yxl
 	}
 }
 
-#endif // !YXL_LINK_H
+#endif // !LINK_H

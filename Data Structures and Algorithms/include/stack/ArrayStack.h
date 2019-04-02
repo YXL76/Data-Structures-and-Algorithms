@@ -6,8 +6,8 @@
 
 #pragma once
 
-#ifndef YXL_ARRAY_STACK_H
-#define YXL_ARRAY_STACK_H
+#ifndef ARRAY_STACK_H
+#define ARRAY_STACK_H
 
 #include "Stack.h"
 
@@ -149,4 +149,4 @@ namespace yxl
 	}
 }
 
-#endif // !YXL_ARRAY_STACK_H
+#endif // !ARRAY_STACK_H

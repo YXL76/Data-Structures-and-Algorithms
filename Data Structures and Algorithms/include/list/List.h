@@ -6,8 +6,8 @@
 
 #pragma once
 
-#ifndef YXL_LIST_H
-#define YXL_LIST_H
+#ifndef LIST_H
+#define LIST_H
 
 namespace yxl
 {
@@ -32,4 +32,4 @@ namespace yxl
 	};
 }
 
-#endif // !YXL_LIST_H
+#endif // !LIST_H

@@ -6,14 +6,16 @@
 
 #pragma once
 
-#ifndef YXL_LINKED_POLYNOMIAL_H
-#define YXL_LINKED_POLYNOMIAL_H
+#ifndef LINKED_POLYNOMIAL_H
+#define LINKED_POLYNOMIAL_H
 
+#include "Polynomial.h"
 #include "../list/Link.h"
 
 namespace yxl
 {
-	class LinkedPolynomial final : Link<double>
+	class LinkedPolynomial final : Link<double>,
+	                               Polynomial<LinkedPolynomial>
 	{
 	public:
 		LinkedPolynomial() = default;
@@ -24,10 +26,9 @@ namespace yxl
 		LinkedPolynomial(LinkedPolynomial&& that) noexcept = default;
 		~LinkedPolynomial() = default;
 
-		void read(const Link<double>& that);
-		void read(const double coef[], const int& size);
-		double calculate(const double& x);
-		LinkedPolynomial differentiate(const int& x);
+		void read(const double coef[], const int& size) override;
+		double calculate(const double& x) override;
+		LinkedPolynomial differentiate(const int& x) override;
 
 		LinkedPolynomial operator+(LinkedPolynomial& right);
 		LinkedPolynomial operator-(LinkedPolynomial& right);
@@ -43,9 +44,11 @@ namespace yxl
 		friend std::ostream& operator<<(std::ostream& out, LinkedPolynomial&& item);
 
 	private:
-		static void plus(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right);
-		static void minus(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right);
-		static void times(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right);
+		void plus(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right) override;
+		void minus(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right) override;
+		void times(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right) override;
+
+		LinkedPolynomial times(LinkedPolynomial& left, LinkedPolynomial& right) const override { return {}; }
 	};
 
 	inline LinkedPolynomial::LinkedPolynomial(Link<double>& that) : Link<double>(that)
@@ -59,11 +62,6 @@ namespace yxl
 	inline LinkedPolynomial::LinkedPolynomial(const double coef[], const int& size)
 	{
 		read(coef, size);
-	}
-
-	inline void LinkedPolynomial::read(const Link<double>& that)
-	{
-		static_cast<Link<double>>(*this) = that;
 	}
 
 	inline void LinkedPolynomial::read(const double coef[], const int& size)
@@ -233,4 +231,4 @@ namespace yxl
 	}
 }
 
-#endif // !YXL_LINKED_POLYNOMIAL_H
+#endif // !LINKED_POLYNOMIAL_H
