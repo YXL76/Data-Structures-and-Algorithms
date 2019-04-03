@@ -11,12 +11,12 @@
 
 namespace yxl
 {
-	class yxlKMP final
+	class KMP final
 	{
 	public:
-		yxlKMP();
+		KMP();
 		template <class T>
-		explicit yxlKMP(T& pattern_string);
+		explicit KMP(T& pattern_string);
 
 		void clear();
 		template <class T>
@@ -34,11 +34,11 @@ namespace yxl
 		void check_type(T& pattern_string);
 	};
 
-	inline yxlKMP::yxlKMP(): is_initialize_(false), size_(0), next_(nullptr), string_(nullptr)
+	inline KMP::KMP(): is_initialize_(false), size_(0), next_(nullptr), string_(nullptr)
 	{
 	}
 
-	inline void yxlKMP::clear()
+	inline void KMP::clear()
 	{
 		is_initialize_ = false;
 		size_ = 0;
@@ -49,7 +49,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	yxlKMP::yxlKMP(T& pattern_string): is_initialize_(false), size_(0), next_(nullptr), string_(nullptr)
+	KMP::KMP(T& pattern_string): is_initialize_(false), size_(0), next_(nullptr), string_(nullptr)
 	{
 		check_type(pattern_string);
 		initialize(pattern_string);
@@ -57,7 +57,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	void yxlKMP::initialize(T& pattern_string)
+	void KMP::initialize(T& pattern_string)
 	{
 		check_type(pattern_string);
 		if (is_initialize_) { clear(); }
@@ -83,7 +83,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	int yxlKMP::search(T& text_string)
+	int KMP::search(T& text_string)
 	{
 		check_type(text_string);
 		auto index_pattern = 0;
@@ -103,7 +103,7 @@ namespace yxl
 	}
 
 	template <class T>
-	void yxlKMP::check_type(T& pattern_string)
+	void KMP::check_type(T& pattern_string)
 	{
 		static_assert(std::is_same<T, std::string>::value || std::is_same<T, Array<char>>::value,
 			"the parameter type must be string or Array<char>");

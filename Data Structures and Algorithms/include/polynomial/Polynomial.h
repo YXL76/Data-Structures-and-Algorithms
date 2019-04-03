@@ -1,10 +1,10 @@
+#pragma once
+
 /**
  * \Author: YXL
- * \LastUpdated: 2018/03/11 16:09:30
+ * \LastUpdated: 2018/03/29 18:59:30
  * \Description:
  */
-
-#pragma once
 
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
@@ -31,5 +31,5 @@ namespace yxl
 		Polynomial& operator=(const Polynomial<T>& right) = default ;
 		Polynomial& operator=(Polynomial<T>&& right) noexcept = default ;
 	};
-}
+} // namespace yxl
 #endif // !POLYNOMIAL_H

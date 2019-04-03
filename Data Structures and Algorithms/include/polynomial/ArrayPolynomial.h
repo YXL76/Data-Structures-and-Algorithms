@@ -1,16 +1,16 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/29 23:04:20
  * \Description:
  */
 
-#pragma once
-
 #ifndef ARRAY_POLYNOMIAL_H
 #define ARRAY_POLYNOMIAL_H
 
 #include "Polynomial.h"
-#include "../list/Array.h"
+#include "../List/Array.h"
 #include <complex>
 
 namespace yxl
@@ -18,8 +18,8 @@ namespace yxl
 	class LinkedPolynomial;
 	constexpr double kPi = 3.1415926;
 
-	class ArrayPolynomial final : Array<double>,
-	                              Polynomial<ArrayPolynomial>
+	class ArrayPolynomial final : public Array<double>,
+	                              public Polynomial<ArrayPolynomial>
 	{
 	public:
 		using comp = std::complex<double>;
@@ -30,7 +30,7 @@ namespace yxl
 		ArrayPolynomial(const double coef[], const int& size);
 		ArrayPolynomial(ArrayPolynomial& that) = default;
 		ArrayPolynomial(ArrayPolynomial&& that) noexcept = default;
-		~ArrayPolynomial() = default;
+		~ArrayPolynomial() override = default;
 
 		void read(const double coef[], const int& size) override;
 		double calculate(const double& x) override;
@@ -105,7 +105,7 @@ namespace yxl
 		{
 			for (auto i = 0; i < x; ++i)
 			{
-				it *= (double(expn) - double(i));
+				it *= double(expn) - double(i);
 			}
 			++expn;
 		}
@@ -221,7 +221,7 @@ namespace yxl
 		{
 			if (j > i) { std::swap(that[i], that[j]); }
 			auto k = n;
-			while (j & (k >>= 1)) { j &= ~k; }
+			while ((j & (k >>= 1)) != 0) { j &= ~k; }
 			j |= k;
 		}
 		const auto pi = inverse ? -kPi : kPi;
@@ -260,6 +260,6 @@ namespace yxl
 		}
 		return out;
 	}
-}
+} // namespace yxl
 
 #endif // !ARRAY_POLYNOMIAL_H

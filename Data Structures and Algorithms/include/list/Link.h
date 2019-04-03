@@ -1,15 +1,16 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/11 16:01:40
  * \Description:
  */
 
-#pragma once
-
 #ifndef LINK_H
 #define LINK_H
 
 #include "List.h"
+#include "LinkNode.h"
 #include <ostream>
 
 namespace yxl
@@ -46,20 +47,10 @@ namespace yxl
 		template <typename Tt>
 		friend std::ostream& operator<<(std::ostream& out, const Link<Tt>&& item);
 
-		struct Node
-		{
-			T value;
-			Node* next;
-
-			Node();
-			explicit Node(const T& value);
-			Node(const T& value, Node* next);
-		};
-
 	protected:
-		int size_;
-		Node* head_node_;
-		Node* rear_node_;
+		int size_{0};
+		LinkNode<T>* head_node_;
+		LinkNode<T>* rear_node_;
 
 		bool check_index(Iterator& index);
 		bool check_index(const int& index) const;
@@ -79,18 +70,18 @@ namespace yxl
 
 
 		Iterator() = default;
-		explicit Iterator(Node* that);
+		explicit Iterator(LinkNode<T>* that);
 		Iterator(const Iterator& that);
 		Iterator(Iterator&& that) noexcept;
 		~Iterator() = default;
 
 		bool is_null();
 
-		Node& operator*() const;
-		Node* operator->() const;
+		LinkNode<T>& operator*() const;
+		LinkNode<T>* operator->() const;
 
 		Iterator& operator++();
-		Iterator operator++(int);
+		const Iterator operator++(int);
 
 		Iterator operator+(const int& right) const;
 
@@ -102,16 +93,16 @@ namespace yxl
 		Iterator& operator+=(const int& right);
 
 	private:
-		Node* position_;
+		LinkNode<T>* position_;
 	};
 
 	class Node;
 
 	template <typename T>
-	Link<T>::Link(): size_(0)
+	Link<T>::Link()
 	{
-		head_node_ = new Node();
-		rear_node_ = new Node();
+		head_node_ = new LinkNode<T>();
+		rear_node_ = new LinkNode<T>();
 		rear_node_->next = head_node_;
 		head_node_->next = rear_node_;
 	}
@@ -120,16 +111,16 @@ namespace yxl
 	Link<T>::Link(Link<T>& that)
 	{
 		size_ = that.size_;
-		head_node_ = new Node(that.head_node_->value);
-		rear_node_ = new Node(that.rear_node_->value);
+		head_node_ = new LinkNode<T>(that.head_node_->value);
+		rear_node_ = new LinkNode<T>(that.rear_node_->value);
 		rear_node_->next = head_node_;
 		head_node_->next = rear_node_;
-		Node* this_node = head_node_;
-		Node* that_node = that.head_node_;
+		LinkNode<T>* this_node = head_node_;
+		LinkNode<T>* that_node = that.head_node_;
 		for (auto i = 0; i < size_; ++i)
 		{
 			that_node = that_node->next;
-			this_node->next = new Node(that_node->value, this_node->next);
+			this_node->next = new LinkNode<T>(that_node->value, this_node->next);
 			this_node = this_node->next;
 		}
 	}
@@ -161,21 +152,21 @@ namespace yxl
 	int Link<T>::index_of(const T& value) const
 	{
 		auto index = 0;
-		Node* current_node = head_node_->next;
+		LinkNode<T>* current_node = head_node_->next;
 		while (current_node != rear_node_ && current_node->value != value)
 		{
 			current_node = current_node->next;
 			++index;
 		}
-		if (current_node == rear_node_) return -1;
+		if (current_node == rear_node_) { return -1; }
 		return index;
 	}
 
 	template <typename T>
 	void Link<T>::clear()
 	{
-		Node* previous_node = head_node_;
-		Node* current_node = head_node_->next;
+		LinkNode<T>* previous_node = head_node_;
+		LinkNode<T>* current_node = head_node_->next;
 		for (auto i = 0; i < size_; ++i)
 		{
 			delete previous_node;
@@ -185,8 +176,8 @@ namespace yxl
 		delete previous_node;
 		delete current_node;
 		size_ = 0;
-		head_node_ = new Node();
-		rear_node_ = new Node();
+		head_node_ = new LinkNode<T>();
+		rear_node_ = new LinkNode<T>();
 		rear_node_->next = head_node_;
 		head_node_->next = rear_node_;
 	}
@@ -196,14 +187,14 @@ namespace yxl
 	{
 		if (check_index(index))
 		{
-			Node* current_node;
+			LinkNode<T>* current_node;
 			if (index == 0) { current_node = head_node_; }
 			else { current_node = head_node_->next; }
 			for (auto i = 1; i < index; ++i)
 			{
 				current_node = current_node->next;
 			}
-			Node* erase_node = current_node->next;
+			LinkNode<T>* erase_node = current_node->next;
 			current_node->next = current_node->next->next;
 			delete erase_node;
 			--size_;
@@ -215,12 +206,12 @@ namespace yxl
 	{
 		if (check_index(index) || index == size_)
 		{
-			Node* current_node = head_node_;
+			LinkNode<T>* current_node = head_node_;
 			for (auto i = 0; i < index; ++i)
 			{
 				current_node = current_node->next;
 			}
-			current_node->next = new Node(value, current_node->next);
+			current_node->next = new LinkNode<T>(value, current_node->next);
 			++size_;
 		}
 	}
@@ -248,7 +239,7 @@ namespace yxl
 	{
 		if (check_index(index))
 		{
-			index->next = new Node(value, index->next);
+			index->next = new LinkNode<T>(value, index->next);
 			++size_;
 		}
 	}
@@ -258,7 +249,7 @@ namespace yxl
 	{
 		if (check_index(index))
 		{
-			Node* current_node = head_node_->next;
+			LinkNode<T>* current_node = head_node_->next;
 			for (auto i = 0; i < index; ++i)
 			{
 				current_node = current_node->next;
@@ -272,16 +263,16 @@ namespace yxl
 	Link<T>& Link<T>::operator=(const Link<T>& right)
 	{
 		size_ = right.size_;
-		head_node_ = new Node(right.head_node_->value);
-		rear_node_ = new Node(right.rear_node_->value);
+		head_node_ = new LinkNode<T>(right.head_node_->value);
+		rear_node_ = new LinkNode<T>(right.rear_node_->value);
 		rear_node_->next = head_node_;
 		head_node_->next = rear_node_;
-		Node* this_node = head_node_;
-		Node* that_node = right.head_node_;
+		LinkNode<T>* this_node = head_node_;
+		LinkNode<T>* that_node = right.head_node_;
 		for (auto i = 0; i < size_; ++i)
 		{
 			that_node = that_node->next;
-			this_node->next = new Node(that_node->value, this_node->next);
+			this_node->next = new LinkNode<T>(that_node->value, this_node->next);
 			this_node = this_node->next;
 		}
 		return *this;
@@ -300,24 +291,6 @@ namespace yxl
 	}
 
 	template <typename T>
-	Link<T>::Node::Node(): value(T()), next(nullptr)
-	{
-	}
-
-	template <typename T>
-	Link<T>::Node::Node(const T& value): next(nullptr)
-	{
-		this->value = value;
-	}
-
-	template <typename T>
-	Link<T>::Node::Node(const T& value, Node* next)
-	{
-		this->value = value;
-		this->next = next;
-	}
-
-	template <typename T>
 	bool Link<T>::check_index(Iterator& index)
 	{
 		return !index.is_null() && index != end();
@@ -330,7 +303,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	Link<T>::Iterator::Iterator(Node* that)
+	Link<T>::Iterator::Iterator(LinkNode<T>* that)
 	{
 		position_ = that;
 	}
@@ -355,13 +328,13 @@ namespace yxl
 	}
 
 	template <typename T>
-	typename Link<T>::Node& Link<T>::Iterator::operator*() const
+	LinkNode<T>& Link<T>::Iterator::operator*() const
 	{
 		return *position_;
 	}
 
 	template <typename T>
-	typename Link<T>::Node* Link<T>::Iterator::operator->() const
+	LinkNode<T>* Link<T>::Iterator::operator->() const
 	{
 		return &*position_;
 	}
@@ -374,7 +347,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	typename Link<T>::Iterator Link<T>::Iterator::operator++(int)
+	const typename Link<T>::Iterator Link<T>::Iterator::operator++(int)
 	{
 		Iterator old = *this;
 		position_ = position_->next;
@@ -437,6 +410,6 @@ namespace yxl
 		}
 		return out;
 	}
-}
+} // namespace yxl
 
 #endif // !LINK_H

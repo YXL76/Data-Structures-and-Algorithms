@@ -122,32 +122,32 @@ Data_Structures_and_Algorithms/fast:
 	$(MAKE) -f CMakeFiles\Data_Structures_and_Algorithms.dir\build.make CMakeFiles/Data_Structures_and_Algorithms.dir/build
 .PHONY : Data_Structures_and_Algorithms/fast
 
-Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.obj: Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj
+Data_Structures_and_Algorithms/Source.obj: Data_Structures_and_Algorithms/Source.cpp.obj
 
-.PHONY : Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.obj
+.PHONY : Data_Structures_and_Algorithms/Source.obj
 
 # target to build an object file
-Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj:
-	$(MAKE) -f CMakeFiles\Data_Structures_and_Algorithms.dir\build.make CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj
-.PHONY : Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj
+Data_Structures_and_Algorithms/Source.cpp.obj:
+	$(MAKE) -f CMakeFiles\Data_Structures_and_Algorithms.dir\build.make CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.obj
+.PHONY : Data_Structures_and_Algorithms/Source.cpp.obj
 
-Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.i: Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.i
+Data_Structures_and_Algorithms/Source.i: Data_Structures_and_Algorithms/Source.cpp.i
 
-.PHONY : Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.i
+.PHONY : Data_Structures_and_Algorithms/Source.i
 
 # target to preprocess a source file
-Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.i:
-	$(MAKE) -f CMakeFiles\Data_Structures_and_Algorithms.dir\build.make CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.i
-.PHONY : Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.i
+Data_Structures_and_Algorithms/Source.cpp.i:
+	$(MAKE) -f CMakeFiles\Data_Structures_and_Algorithms.dir\build.make CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.i
+.PHONY : Data_Structures_and_Algorithms/Source.cpp.i
 
-Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.s: Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.s
+Data_Structures_and_Algorithms/Source.s: Data_Structures_and_Algorithms/Source.cpp.s
 
-.PHONY : Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.s
+.PHONY : Data_Structures_and_Algorithms/Source.s
 
 # target to generate assembly for a file
-Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.s:
-	$(MAKE) -f CMakeFiles\Data_Structures_and_Algorithms.dir\build.make CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.s
-.PHONY : Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.s
+Data_Structures_and_Algorithms/Source.cpp.s:
+	$(MAKE) -f CMakeFiles\Data_Structures_and_Algorithms.dir\build.make CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.s
+.PHONY : Data_Structures_and_Algorithms/Source.cpp.s
 
 # Help Target
 help:
@@ -158,9 +158,9 @@ help:
 	@echo ... rebuild_cache
 	@echo ... Data_Structures_and_Algorithms
 	@echo ... edit_cache
-	@echo ... Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.obj
-	@echo ... Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.i
-	@echo ... Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.s
+	@echo ... Data_Structures_and_Algorithms/Source.obj
+	@echo ... Data_Structures_and_Algorithms/Source.i
+	@echo ... Data_Structures_and_Algorithms/Source.s
 .PHONY : help
 
 

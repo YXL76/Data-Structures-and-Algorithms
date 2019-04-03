@@ -13,66 +13,84 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\algorithm">
+    <Filter Include="Header Files\Algorithm">
       <UniqueIdentifier>{a2d31ba4-2eef-4520-a0b5-e64894c77de6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\list">
+    <Filter Include="Header Files\List">
       <UniqueIdentifier>{b1b3f836-623a-495f-9fdb-a8068669d4ea}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\stack">
-      <UniqueIdentifier>{90cbdeff-2a7e-4ed9-a08d-f62d43106ec5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\queue">
-      <UniqueIdentifier>{7667e481-3fcf-4dd3-8b3a-708360dc0e23}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\polynomial">
+    <Filter Include="Header Files\Polynomial">
       <UniqueIdentifier>{374ddc04-859a-440f-9f61-316e3277efd4}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Data Structures and Algorithms.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Filter Include="Header Files\Queue">
+      <UniqueIdentifier>{7667e481-3fcf-4dd3-8b3a-708360dc0e23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stack">
+      <UniqueIdentifier>{90cbdeff-2a7e-4ed9-a08d-f62d43106ec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BinaryTree">
+      <UniqueIdentifier>{36d891b6-5c03-4321-a47e-6f54294c5211}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Polynomial\LinkedPolynomial.h">
-      <Filter>Header Files\polynomial</Filter>
+      <Filter>Header Files\Polynomial</Filter>
     </ClInclude>
     <ClInclude Include="include\polynomial\ArrayPolynomial.h">
-      <Filter>Header Files\polynomial</Filter>
+      <Filter>Header Files\Polynomial</Filter>
     </ClInclude>
     <ClInclude Include="include\list\Array.h">
-      <Filter>Header Files\list</Filter>
+      <Filter>Header Files\List</Filter>
     </ClInclude>
     <ClInclude Include="include\list\List.h">
-      <Filter>Header Files\list</Filter>
+      <Filter>Header Files\List</Filter>
     </ClInclude>
     <ClInclude Include="include\list\Link.h">
-      <Filter>Header Files\list</Filter>
+      <Filter>Header Files\List</Filter>
     </ClInclude>
     <ClInclude Include="include\queue\ArrayQueue.h">
-      <Filter>Header Files\queue</Filter>
+      <Filter>Header Files\Queue</Filter>
     </ClInclude>
     <ClInclude Include="include\queue\Queue.h">
-      <Filter>Header Files\queue</Filter>
+      <Filter>Header Files\Queue</Filter>
     </ClInclude>
     <ClInclude Include="include\stack\Stack.h">
-      <Filter>Header Files\stack</Filter>
+      <Filter>Header Files\Stack</Filter>
     </ClInclude>
     <ClInclude Include="include\stack\ArrayStack.h">
-      <Filter>Header Files\stack</Filter>
+      <Filter>Header Files\Stack</Filter>
     </ClInclude>
     <ClInclude Include="include\polynomial\Polynomial.h">
-      <Filter>Header Files\polynomial</Filter>
+      <Filter>Header Files\Polynomial</Filter>
     </ClInclude>
     <ClInclude Include="include\SegmentTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\algorithm\Algorithm.h">
-      <Filter>Header Files\algorithm</Filter>
+      <Filter>Header Files\Algorithm</Filter>
     </ClInclude>
     <ClInclude Include="include\algorithm\StringAlgorithm.h">
-      <Filter>Header Files\algorithm</Filter>
+      <Filter>Header Files\Algorithm</Filter>
     </ClInclude>
+    <ClInclude Include="include\BinaryTree\BinaryTree.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryTree\LinkedBinaryTree.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="include\List\LinkNode.h">
+      <Filter>Header Files\List</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryTree\BinaryTreeTask.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryTree\LinkedBinaryTreeNode.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

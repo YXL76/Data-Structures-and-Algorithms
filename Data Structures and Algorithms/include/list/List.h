@@ -1,10 +1,10 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/04 11:21:10
  * \Description:
  */
-
-#pragma once
 
 #ifndef LIST_H
 #define LIST_H
@@ -30,6 +30,6 @@ namespace yxl
 		List& operator=(const List<T>& right) = default;
 		List& operator=(List<T>&& right) noexcept = default ;
 	};
-}
+} // namespace yxl
 
 #endif // !LIST_H

@@ -1,10 +1,10 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/15 14:19:10
  * \Description:
  */
-
-#pragma once
 
 #ifndef ARRAY_QUEUE_H
 #define ARRAY_QUEUE_H
@@ -36,15 +36,15 @@ namespace yxl
 
 	private:
 		T* array_;
-		int front_;
-		int back_;
+		int front_{0};
+		int back_{0};
 		int size_;
 
 		void change_size();
 	};
 
 	template <typename T>
-	ArrayQueue<T>::ArrayQueue(): front_(0), back_(0), size_(1 << 10)
+	ArrayQueue<T>::ArrayQueue(): size_(1 << 10)
 	{
 		array_ = new T[size_];
 	}
@@ -175,6 +175,6 @@ namespace yxl
 		front_ = 0;
 		back_ = index;
 	}
-}
+} // namespace yxl
 
 #endif // !ARRAY_QUEUE_H

@@ -35,11 +35,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/stack"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Algorithm"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/BinaryTree"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/List"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Polynomial"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Queue"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Stack"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.2.1/../../../../include/c++/8.2.1"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.2.1/../../../../include/c++/8.2.1/x86_64-w64-mingw32"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.2.1/../../../../include/c++/8.2.1/backward"/>
@@ -63,11 +64,12 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue"/>
-					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/stack"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Algorithm"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/BinaryTree"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/List"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Polynomial"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Queue"/>
+					<Add directory="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Stack"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.2.1/../../../../include/c++/8.2.1"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.2.1/../../../../include/c++/8.2.1/x86_64-w64-mingw32"/>
 					<Add directory="C:/msys64/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.2.1/../../../../include/c++/8.2.1/backward"/>
@@ -94,46 +96,58 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/Data Structures and Algorithms.cpp">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/Source.cpp">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm/yxlAlgorithm.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Algorithm/Algorithm.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Algorithm/StringAlgorithm.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlArray.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/BinaryTree/BinaryTree.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlLink.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTree.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/list/yxlList.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTreeNode.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlArrayPolynomial.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/List/Array.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlLinkedPolynomial.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/List/Link.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/polynomial/yxlPolynomial.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/List/LinkNode.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue/yxlArrayQueue.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/List/List.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/queue/yxlQueue.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Polynomial/ArrayPolynomial.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/stack/yxlArrayStack.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Polynomial/LinkedPolynomial.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/stack/yxlStack.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Polynomial/Polynomial.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
-		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/yxlSegmentTree.h">
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Queue/ArrayQueue.h">
+			<Option target="Data_Structures_and_Algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Queue/Queue.h">
+			<Option target="Data_Structures_and_Algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/SegmentTree.h">
+			<Option target="Data_Structures_and_Algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Stack/ArrayStack.h">
+			<Option target="Data_Structures_and_Algorithms"/>
+		</Unit>
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/Stack/Stack.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/CMakeLists.txt">

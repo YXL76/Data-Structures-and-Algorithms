@@ -56,28 +56,28 @@ include CMakeFiles/Data_Structures_and_Algorithms.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Data_Structures_and_Algorithms.dir/flags.make
 
-CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj: CMakeFiles/Data_Structures_and_Algorithms.dir/flags.make
-CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj: CMakeFiles/Data_Structures_and_Algorithms.dir/includes_CXX.rsp
-CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj: ../Data\ Structures\ and\ Algorithms/Data\ Structures\ and\ Algorithms.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\chenx\source\repos\Data-Structures-and-Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj"
-	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Data_Structures_and_Algorithms.dir\Data_Structures_and_Algorithms\Data_Structures_and_Algorithms.cpp.obj -c "C:\Users\chenx\source\repos\Data-Structures-and-Algorithms\Data Structures and Algorithms\Data Structures and Algorithms.cpp"
+CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.obj: CMakeFiles/Data_Structures_and_Algorithms.dir/flags.make
+CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.obj: CMakeFiles/Data_Structures_and_Algorithms.dir/includes_CXX.rsp
+CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.obj: ../Data\ Structures\ and\ Algorithms/Source.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\chenx\source\repos\Data-Structures-and-Algorithms\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.obj"
+	C:\msys64\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Data_Structures_and_Algorithms.dir\Data_Structures_and_Algorithms\Source.cpp.obj -c "C:\Users\chenx\source\repos\Data-Structures-and-Algorithms\Data Structures and Algorithms\Source.cpp"
 
-CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.i"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\chenx\source\repos\Data-Structures-and-Algorithms\Data Structures and Algorithms\Data Structures and Algorithms.cpp" > CMakeFiles\Data_Structures_and_Algorithms.dir\Data_Structures_and_Algorithms\Data_Structures_and_Algorithms.cpp.i
+CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.i"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\chenx\source\repos\Data-Structures-and-Algorithms\Data Structures and Algorithms\Source.cpp" > CMakeFiles\Data_Structures_and_Algorithms.dir\Data_Structures_and_Algorithms\Source.cpp.i
 
-CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.s"
-	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\chenx\source\repos\Data-Structures-and-Algorithms\Data Structures and Algorithms\Data Structures and Algorithms.cpp" -o CMakeFiles\Data_Structures_and_Algorithms.dir\Data_Structures_and_Algorithms\Data_Structures_and_Algorithms.cpp.s
+CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.s"
+	C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\chenx\source\repos\Data-Structures-and-Algorithms\Data Structures and Algorithms\Source.cpp" -o CMakeFiles\Data_Structures_and_Algorithms.dir\Data_Structures_and_Algorithms\Source.cpp.s
 
 # Object files for target Data_Structures_and_Algorithms
 Data_Structures_and_Algorithms_OBJECTS = \
-"CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj"
+"CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.obj"
 
 # External object files for target Data_Structures_and_Algorithms
 Data_Structures_and_Algorithms_EXTERNAL_OBJECTS =
 
-Data_Structures_and_Algorithms.exe: CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj
+Data_Structures_and_Algorithms.exe: CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.obj
 Data_Structures_and_Algorithms.exe: CMakeFiles/Data_Structures_and_Algorithms.dir/build.make
 Data_Structures_and_Algorithms.exe: CMakeFiles/Data_Structures_and_Algorithms.dir/linklibs.rsp
 Data_Structures_and_Algorithms.exe: CMakeFiles/Data_Structures_and_Algorithms.dir/objects1.rsp

@@ -4,18 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/Data Structures and Algorithms.cpp" "C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj"
+  "C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/Source.cpp" "C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Source.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../Data Structures and Algorithms/include"
-  "../Data Structures and Algorithms/include/algorithm"
-  "../Data Structures and Algorithms/include/list"
-  "../Data Structures and Algorithms/include/polynomial"
-  "../Data Structures and Algorithms/include/queue"
-  "../Data Structures and Algorithms/include/stack"
+  "../Data Structures and Algorithms/include/Algorithm"
+  "../Data Structures and Algorithms/include/BinaryTree"
+  "../Data Structures and Algorithms/include/List"
+  "../Data Structures and Algorithms/include/Polynomial"
+  "../Data Structures and Algorithms/include/Queue"
+  "../Data Structures and Algorithms/include/Stack"
   )
 
 # Targets to which this target links.

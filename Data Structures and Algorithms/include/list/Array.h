@@ -1,10 +1,10 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/17 13:09:50
  * \Description:
  */
-
-#pragma once
 
 #ifndef ARRAY_H
 #define ARRAY_H
@@ -178,7 +178,7 @@ namespace yxl
 				array_[i - 1] = array_[i];
 			}
 			array_[size_--].~T();
-			if (size_ < (max_size_ >> 1))
+			if (size_ < max_size_ >> 1)
 			{
 				change_size(max_size_ >> 1);
 			}
@@ -412,6 +412,6 @@ namespace yxl
 		}
 		return out;
 	}
-}
+} // namespace yxl
 
 #endif // !ARRAY_H

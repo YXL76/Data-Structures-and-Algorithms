@@ -1,21 +1,21 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/29 20:59:30
  * \Description:
  */
 
-#pragma once
-
 #ifndef LINKED_POLYNOMIAL_H
 #define LINKED_POLYNOMIAL_H
 
 #include "Polynomial.h"
-#include "../list/Link.h"
+#include "../List/Link.h"
 
 namespace yxl
 {
-	class LinkedPolynomial final : Link<double>,
-	                               Polynomial<LinkedPolynomial>
+	class LinkedPolynomial final : public Link<double>,
+	                               public Polynomial<LinkedPolynomial>
 	{
 	public:
 		LinkedPolynomial() = default;
@@ -24,7 +24,7 @@ namespace yxl
 		LinkedPolynomial(const double coef[], const int& size);
 		LinkedPolynomial(LinkedPolynomial& that) = default;
 		LinkedPolynomial(LinkedPolynomial&& that) noexcept = default;
-		~LinkedPolynomial() = default;
+		~LinkedPolynomial() override = default;
 
 		void read(const double coef[], const int& size) override;
 		double calculate(const double& x) override;
@@ -48,7 +48,7 @@ namespace yxl
 		void minus(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right) override;
 		void times(LinkedPolynomial& answer, LinkedPolynomial& left, LinkedPolynomial& right) override;
 
-		LinkedPolynomial times(LinkedPolynomial& left, LinkedPolynomial& right) const override { return {}; }
+		LinkedPolynomial times(LinkedPolynomial& /*left*/, LinkedPolynomial& /*right*/) const override { return {}; }
 	};
 
 	inline LinkedPolynomial::LinkedPolynomial(Link<double>& that) : Link<double>(that)
@@ -96,7 +96,7 @@ namespace yxl
 		{
 			for (auto i = 0; i < x; ++i)
 			{
-				it.value *= (double(expn) - double(i));
+				it.value *= double(expn) - double(i);
 			}
 			++expn;
 		}
@@ -229,6 +229,6 @@ namespace yxl
 		}
 		return out;
 	}
-}
+} // namespace yxl
 
 #endif // !LINKED_POLYNOMIAL_H

@@ -152,15 +152,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Data Structures and Algorithms.cpp">
+    <ClCompile Include="Source.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\algorithm\Algorithm.h" />
     <ClInclude Include="include\algorithm\StringAlgorithm.h" />
+    <ClInclude Include="include\BinaryTree\BinaryTree.h" />
+    <ClInclude Include="include\BinaryTree\BinaryTreeTask.h" />
+    <ClInclude Include="include\BinaryTree\LinkedBinaryTree.h" />
+    <ClInclude Include="include\BinaryTree\LinkedBinaryTreeNode.h" />
     <ClInclude Include="include\list\Array.h" />
     <ClInclude Include="include\list\Link.h" />
+    <ClInclude Include="include\List\LinkNode.h" />
     <ClInclude Include="include\list\List.h" />
     <ClInclude Include="include\polynomial\ArrayPolynomial.h" />
     <ClInclude Include="include\Polynomial\LinkedPolynomial.h" />

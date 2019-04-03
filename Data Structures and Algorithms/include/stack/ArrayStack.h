@@ -1,10 +1,10 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/11 16:24:20
  * \Description:
  */
-
-#pragma once
 
 #ifndef ARRAY_STACK_H
 #define ARRAY_STACK_H
@@ -34,14 +34,14 @@ namespace yxl
 
 	private:
 		T* array_;
-		int top_;
+		int top_{-1};
 		int size_;
 
 		void change_size();
 	};
 
 	template <typename T>
-	ArrayStack<T>::ArrayStack(): top_(-1), size_(1 << 10)
+	ArrayStack<T>::ArrayStack(): size_(1 << 10)
 	{
 		array_ = new T[size_];
 	}
@@ -147,6 +147,6 @@ namespace yxl
 		size_ <<= 1;
 		array_ = temp;
 	}
-}
+} // namespace yxl
 
 #endif // !ARRAY_STACK_H

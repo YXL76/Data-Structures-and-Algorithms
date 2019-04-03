@@ -1,10 +1,10 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/11 14:14:10
  * \Description:
  */
-
-#pragma once
 
 #ifndef QUEUE_H
 #define QUEUE_H
@@ -32,6 +32,6 @@ namespace yxl
 		Queue& operator=(const Queue<T>& right) = default;
 		Queue& operator=(Queue<T>&& right) noexcept = default;
 	};
-}
+} // namespace yxl
 
 #endif // !QUEUE_H
