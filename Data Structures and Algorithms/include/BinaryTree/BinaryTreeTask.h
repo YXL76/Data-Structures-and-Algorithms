@@ -18,52 +18,48 @@ namespace yxl
 	class BinaryTreeTask final
 	{
 	public:
-		BinaryTreeTask();
-		BinaryTreeTask(BinaryTreeTask& that) = default;
+		BinaryTreeTask() = default;
+		BinaryTreeTask(const BinaryTreeTask& that) = default;
 		BinaryTreeTask(BinaryTreeTask&& that) = default;
 		~BinaryTreeTask() = default;
 
-		void none() const;
-		void clear() const;
-		void print() const;
+		void none();
+		void clear();
+		void count();
+		void print();
 		void operator()(T& x);
 
 		BinaryTreeTask& operator=(const BinaryTreeTask& right) = default;
 		BinaryTreeTask& operator=(BinaryTreeTask&& right) noexcept = default;
 
 	private:
-		std::function<void(T)>& task_;
+		std::function<void(T&)> task_;
 
-		std::function<void(T)> none_ = [](T /*x*/)
+		std::function<void(T&)> none_ = [](T& /*x*/)
 		{
 		};
-		std::function<void(T)> clear_ = [](T x)
+		std::function<void(T&)> clear_ = [](T& x)
 		{
 			delete x;
 			x = nullptr;
 		};
-		std::function<void(T)> print_ = [](T x) { std::cout << x << ' '; };
+		std::function<void(T&)> print_ = [](T& x) { std::cout << x << ' '; };
 	};
 
 	template <typename T>
-	BinaryTreeTask<T>::BinaryTreeTask(): task_(none_)
-	{
-	}
-
-	template <typename T>
-	void BinaryTreeTask<T>::none() const
+	void BinaryTreeTask<T>::none()
 	{
 		task_ = none_;
 	}
 
 	template <typename T>
-	void BinaryTreeTask<T>::clear() const
+	void BinaryTreeTask<T>::clear()
 	{
 		task_ = clear_;
 	}
 
 	template <typename T>
-	void BinaryTreeTask<T>::print() const
+	void BinaryTreeTask<T>::print()
 	{
 		task_ = print_;
 	}

@@ -12,39 +12,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd30a96-9f88-4ade-a0f1-5239212bc259" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/Browse.VC.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.vcxproj.filters" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/CL.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.command.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.read.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Str.6CE63930.tlog/link.write.1.tlog" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Structures and Algorithms.log" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Structures and Algorithms.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Structures and Algorithms.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Data Structures and Algorithms.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/ipch/AutoPCH/c040e80fd764b65c/SOURCE.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Data Structures and Algorithms/v16/Preview/ipch/AutoPCH/c040e80fd764b65c/SOURCE.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Source.obj" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/Source.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/vc142.idb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Debug/vc142.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/StringAlgorithm.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/StringAlgorithm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/Source.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/Source.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/BinaryTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/BinaryTree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/BinaryTreeTask.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/BinaryTreeTask.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTree.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTreeNode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTreeNode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/Array.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/Array.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/Link.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/Link.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/LinkNode.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/LinkNode.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/List.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/list/List.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/ArrayPolynomial.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/ArrayPolynomial.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/LinkedPolynomial.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/LinkedPolynomial.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/Polynomial.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/Polynomial.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/ArrayQueue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/ArrayQueue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/Queue.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/Queue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/stack/ArrayStack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/stack/ArrayStack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Structures and Algorithms/include/stack/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/Data Structures and Algorithms/include/stack/Stack.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.ilk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Debug/Data Structures and Algorithms.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/includes_CXX.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/objects1.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/Data_Structures_and_Algorithms/Data_Structures_and_Algorithms.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Structures_and_Algorithms.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Structures_and_Algorithms.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Data_Structures_and_Algorithms.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Data_Structures_and_Algorithms.exe" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,17 +58,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-434">
-              <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -88,12 +78,18 @@
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/array/yxlArray.h" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/yxlQueue.h" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/queue/yxlArrayQueue.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlAlgorithm.h" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/Data Structures and Algorithms.cpp" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/algorithm/yxlStringAlgorithm.h" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/yxlChainPolynomial.h" />
         <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/polynomial/yxlArrayPolynomial.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Data Structures and Algorithms/Source.cpp" />
+        <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTreeNode.h" />
+        <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/Polynomial/ArrayPolynomial.h" />
+        <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/Polynomial/LinkedPolynomial.h" />
+        <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/List/Array.h" />
+        <option value="$PROJECT_DIR$/Data Structures and Algorithms/include/List/Link.h" />
       </list>
     </option>
   </component>
@@ -111,6 +107,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -122,7 +119,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,10 +155,19 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20151034" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20468998" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -171,14 +176,14 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991462" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32977587" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Inspection Results" order="8" weight="0.32977587" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32870865" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32977587" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="CMake" order="13" visible="true" weight="0.33084312" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32977587" />
+      <window_info anchor="bottom" id="CMake" order="13" weight="0.33084312" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -240,9 +245,97 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/Polynomial/yxlArrayPolynomial.h" />
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/Algorithm/StringAlgorithm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1188" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/Algorithm/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/Algorithm/Algorithm.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTreeNode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="30" column="59" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+          <folding>
+            <element signature="e#500#513#0" expanded="true" />
+            <element signature="e#619#632#0" expanded="true" />
+            <element signature="e#754#767#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/Source.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="33" column="14" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/BinaryTree/BinaryTree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-426" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/List/LinkNode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/Queue/ArrayQueue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/List/List.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/List/Array.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="408" column="8" selection-start-line="408" selection-start-column="8" selection-end-line="412" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/List/Link.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/Polynomial/LinkedPolynomial.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5064">
+          <caret line="42" column="59" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data Structures and Algorithms/include/Polynomial/ArrayPolynomial.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="46" column="60" selection-start-line="46" selection-start-column="60" selection-end-line="46" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-434">
+        <state relative-caret-position="133">
           <caret line="5" column="7" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
         </state>
       </provider>

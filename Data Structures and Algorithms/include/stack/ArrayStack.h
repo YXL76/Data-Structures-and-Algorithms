@@ -18,7 +18,7 @@ namespace yxl
 	{
 	public:
 		ArrayStack();
-		ArrayStack(ArrayStack<T>& that);
+		ArrayStack(const ArrayStack<T>& that);
 		ArrayStack(ArrayStack<T>&& that) noexcept;
 		~ArrayStack() override = default;
 
@@ -47,7 +47,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	ArrayStack<T>::ArrayStack(ArrayStack<T>& that)
+	ArrayStack<T>::ArrayStack(const ArrayStack<T>& that)
 	{
 		size_ = that.size_;
 		top_ = that.top_;

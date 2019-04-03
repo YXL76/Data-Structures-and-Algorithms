@@ -18,7 +18,7 @@ namespace yxl
 	{
 	public:
 		ArrayQueue();
-		ArrayQueue(ArrayQueue<T>& that);
+		ArrayQueue(const ArrayQueue<T>& that);
 		ArrayQueue(ArrayQueue<T>&& that) noexcept;
 		~ArrayQueue() override = default;
 
@@ -50,7 +50,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	ArrayQueue<T>::ArrayQueue(ArrayQueue<T>& that)
+	ArrayQueue<T>::ArrayQueue(const ArrayQueue<T>& that)
 	{
 		size_ = that.size_;
 		front_ = that.front_;

@@ -26,7 +26,7 @@ namespace yxl
 
 		ArrayPolynomial() = default;
 		explicit ArrayPolynomial(const int& initial_size);
-		explicit ArrayPolynomial(Array<double>& that);
+		explicit ArrayPolynomial(const Array<double>& that);
 		ArrayPolynomial(const double coef[], const int& size);
 		ArrayPolynomial(ArrayPolynomial& that) = default;
 		ArrayPolynomial(ArrayPolynomial&& that) noexcept = default;
@@ -64,7 +64,7 @@ namespace yxl
 	{
 	}
 
-	inline ArrayPolynomial::ArrayPolynomial(Array<double>& that) : Array<double>(that)
+	inline ArrayPolynomial::ArrayPolynomial(const Array<double>& that) : Array<double>(that)
 	{
 	}
 

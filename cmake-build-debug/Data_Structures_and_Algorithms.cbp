@@ -108,6 +108,9 @@
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/BinaryTree/BinaryTree.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>
+		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/BinaryTree/BinaryTreeTask.h">
+			<Option target="Data_Structures_and_Algorithms"/>
+		</Unit>
 		<Unit filename="C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/Data Structures and Algorithms/include/BinaryTree/LinkedBinaryTree.h">
 			<Option target="Data_Structures_and_Algorithms"/>
 		</Unit>

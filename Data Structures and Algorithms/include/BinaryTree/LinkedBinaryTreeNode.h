@@ -19,12 +19,14 @@ namespace yxl
 		T value;
 		LinkedBinaryTreeNode *left, *right;
 
-		LinkedBinaryTreeNode<T>();
-		explicit LinkedBinaryTreeNode<T>(const T& value);
-		LinkedBinaryTreeNode<T>(const T& value, LinkedBinaryTreeNode<T>* left, LinkedBinaryTreeNode<T>* right);
+		LinkedBinaryTreeNode();
+		explicit LinkedBinaryTreeNode(const T& value);
+		LinkedBinaryTreeNode(const T& value, LinkedBinaryTreeNode<T>* left, LinkedBinaryTreeNode<T>* right);
 
-		friend std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<T>& item);
-		friend std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<T>&& item);
+		template <typename Tt>
+		friend std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<Tt>& item);
+        template <typename Tt>
+        friend std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<Tt>* item);
 	};
 
 	template <typename T>
@@ -47,14 +49,14 @@ namespace yxl
 	template <typename T>
 	std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<T>& item)
 	{
-		out << item.value << ' ';
+		out << item.value;
 		return out;
 	}
 
 	template <typename T>
-	std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<T>&& item)
+	std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<T>* item)
 	{
-		out << item.value << ' ';
+		out << item->value;
 		return out;
 	}
 } // namespace yxl

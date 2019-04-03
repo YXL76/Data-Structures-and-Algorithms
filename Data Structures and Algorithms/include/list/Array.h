@@ -20,7 +20,7 @@ namespace yxl
 	public:
 		Array();
 		explicit Array(const int& initial_size);
-		Array(Array<T>& that);
+		Array(const Array<T>& that);
 		Array(Array<T>&& that) noexcept;
 		~Array() override = default;
 
@@ -33,7 +33,9 @@ namespace yxl
 
 		class Iterator;
 		Iterator begin();
+		Iterator begin() const;
 		Iterator end();
+		Iterator end() const;
 
 		T& operator[](const int& index);
 
@@ -43,7 +45,7 @@ namespace yxl
 		template <typename Tt>
 		friend std::ostream& operator<<(std::ostream& out, const Array<Tt>& item);
 		template <typename Tt>
-		friend std::ostream& operator<<(std::ostream& out, const Array<Tt>&& item);
+		friend std::ostream& operator<<(std::ostream& out, Array<Tt>&& item);
 
 	protected:
 		T* array_;
@@ -64,11 +66,13 @@ namespace yxl
 		using value_type = T;
 		using difference_type = ptrdiff_t;
 		using pointer = T *;
+		using const_pointer = const T *;
 		using reference = T &;
-
+		using const_reference = const T &;
 
 		Iterator() = default;
 		explicit Iterator(T* that);
+		explicit Iterator(const T* that);
 		Iterator(const Iterator& that);
 		Iterator(Iterator&& that) noexcept;
 		~Iterator() = default;
@@ -116,7 +120,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	Array<T>::Array(Array<T>& that)
+	Array<T>::Array(const Array<T>& that)
 	{
 		size_ = that.size_;
 		max_size_ = that.max_size_;
@@ -210,7 +214,19 @@ namespace yxl
 	}
 
 	template <typename T>
+	typename Array<T>::Iterator Array<T>::begin() const
+	{
+		return Iterator(array_);
+	}
+
+	template <typename T>
 	typename Array<T>::Iterator Array<T>::end()
+	{
+		return Iterator(array_ + size_);
+	}
+
+	template <typename T>
+	typename Array<T>::Iterator Array<T>::end() const
 	{
 		return Iterator(array_ + size_);
 	}
@@ -268,6 +284,12 @@ namespace yxl
 
 	template <typename T>
 	Array<T>::Iterator::Iterator(T* that)
+	{
+		position_ = that;
+	}
+
+	template <typename T>
+	Array<T>::Iterator::Iterator(const T* that)
 	{
 		position_ = that;
 	}
@@ -396,21 +418,21 @@ namespace yxl
 	template <typename T>
 	std::ostream& operator<<(std::ostream& out, const Array<T>& item)
 	{
-		for (auto i = 0; i < item.size_; ++i)
+	    for (auto& i : item)
 		{
-			out << item.array_[i] << ' ';
+			out << i << ' ';
 		}
 		return out;
 	}
 
 	template <typename T>
-	std::ostream& operator<<(std::ostream& out, const Array<T>&& item)
+	std::ostream& operator<<(std::ostream& out, Array<T>&& item)
 	{
-		for (auto i = 0; i < item.size_; ++i)
-		{
-			out << item.array_[i] << ' ';
-		}
-		return out;
+        for (auto& i : item)
+        {
+            out << i << ' ';
+        }
+        return out;
 	}
 } // namespace yxl
 

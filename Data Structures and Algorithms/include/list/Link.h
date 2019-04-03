@@ -20,7 +20,7 @@ namespace yxl
 	{
 	public:
 		Link();
-		Link(Link<T>& that);
+		Link(const Link<T>& that);
 		Link(Link<T>&& that) noexcept;
 		~Link() override = default;
 
@@ -33,8 +33,11 @@ namespace yxl
 
 		class Iterator;
 		Iterator begin();
+		Iterator begin() const;
 		Iterator before_begin();
+		Iterator before_begin() const;
 		Iterator end();
+		Iterator end() const;
 		void insert(Iterator& index, const T& value);
 
 		T& operator[](const int& index);
@@ -45,7 +48,7 @@ namespace yxl
 		template <typename Tt>
 		friend std::ostream& operator<<(std::ostream& out, const Link<Tt>& item);
 		template <typename Tt>
-		friend std::ostream& operator<<(std::ostream& out, const Link<Tt>&& item);
+		friend std::ostream& operator<<(std::ostream& out, Link<Tt>&& item);
 
 	protected:
 		int size_{0};
@@ -66,11 +69,14 @@ namespace yxl
 		using value_type = T;
 		using difference_type = ptrdiff_t;
 		using pointer = T *;
+		using const_pointer = const T *;
 		using reference = T &;
+		using const_reference = const T &;
 
 
 		Iterator() = default;
 		explicit Iterator(LinkNode<T>* that);
+		explicit Iterator(const LinkNode<T>* that);
 		Iterator(const Iterator& that);
 		Iterator(Iterator&& that) noexcept;
 		~Iterator() = default;
@@ -108,7 +114,7 @@ namespace yxl
 	}
 
 	template <typename T>
-	Link<T>::Link(Link<T>& that)
+	Link<T>::Link(const Link<T>& that)
 	{
 		size_ = that.size_;
 		head_node_ = new LinkNode<T>(that.head_node_->value);
@@ -223,13 +229,31 @@ namespace yxl
 	}
 
 	template <typename T>
+	typename Link<T>::Iterator Link<T>::begin() const
+	{
+		return Iterator(head_node_->next);
+	}
+
+	template <typename T>
 	typename Link<T>::Iterator Link<T>::before_begin()
 	{
 		return Iterator(head_node_);
 	}
 
 	template <typename T>
+	typename Link<T>::Iterator Link<T>::before_begin() const
+	{
+		return Iterator(head_node_);
+	}
+
+	template <typename T>
 	typename Link<T>::Iterator Link<T>::end()
+	{
+		return Iterator(rear_node_);
+	}
+
+	template <typename T>
+	typename Link<T>::Iterator Link<T>::end() const
 	{
 		return Iterator(rear_node_);
 	}
@@ -304,6 +328,12 @@ namespace yxl
 
 	template <typename T>
 	Link<T>::Iterator::Iterator(LinkNode<T>* that)
+	{
+		position_ = that;
+	}
+
+	template <typename T>
+	Link<T>::Iterator::Iterator(const LinkNode<T>* that)
 	{
 		position_ = that;
 	}
@@ -390,25 +420,21 @@ namespace yxl
 	template <typename T>
 	std::ostream& operator<<(std::ostream& out, const Link<T>& item)
 	{
-		auto current_node = item.head_node_->next;
-		for (auto i = 0; i < item.size_; ++i)
-		{
-			out << current_node->value << ' ';
-			current_node = current_node->next;
-		}
-		return out;
+        for (auto& i : item)
+        {
+            out << i << ' ';
+        }
+        return out;
 	}
 
 	template <typename T>
-	std::ostream& operator<<(std::ostream& out, const Link<T>&& item)
+	std::ostream& operator<<(std::ostream& out, Link<T>&& item)
 	{
-		auto current_node = item.head_node_->next;
-		for (auto i = 0; i < item.size_; ++i)
-		{
-			out << current_node->value << ' ';
-			current_node = current_node->next;
-		}
-		return out;
+        for (auto& i : item)
+        {
+            out << i << ' ';
+        }
+        return out;
 	}
 } // namespace yxl
 

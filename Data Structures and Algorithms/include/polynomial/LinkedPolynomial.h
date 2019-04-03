@@ -19,7 +19,7 @@ namespace yxl
 	{
 	public:
 		LinkedPolynomial() = default;
-		explicit LinkedPolynomial(Link<double>& that);
+		explicit LinkedPolynomial(const Link<double>& that);
 		explicit LinkedPolynomial(Link<double>&& that);
 		LinkedPolynomial(const double coef[], const int& size);
 		LinkedPolynomial(LinkedPolynomial& that) = default;
@@ -51,7 +51,7 @@ namespace yxl
 		LinkedPolynomial times(LinkedPolynomial& /*left*/, LinkedPolynomial& /*right*/) const override { return {}; }
 	};
 
-	inline LinkedPolynomial::LinkedPolynomial(Link<double>& that) : Link<double>(that)
+	inline LinkedPolynomial::LinkedPolynomial(const Link<double>& that) : Link<double>(that)
 	{
 	}
 

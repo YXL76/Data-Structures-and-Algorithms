@@ -11,6 +11,8 @@
 
 using namespace yxl;
 
+int arr[5] = {1, 5, 4, 8, 4};
+
 Array<int> a(10);
 Link<int> b;
 ArrayQueue<int> c;
@@ -27,5 +29,9 @@ int main()
 {
 	std::ios::sync_with_stdio(false);
 	std::cin.tie(nullptr);
+	g.build(arr, 5);
+	g.print_in_level_order();
+	g.remove_left_subtree();
+	g.print_in_level_order();
 	return 0;
 }
