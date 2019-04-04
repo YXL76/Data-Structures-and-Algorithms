@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Algorithm">
+      <UniqueIdentifier>{8ce083f1-b8ed-43ba-ac12-0983920de011}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\BinaryTree">
+      <UniqueIdentifier>{400d9384-04c9-423d-a6a2-904a2790d390}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\List">
+      <UniqueIdentifier>{a8c715e2-58e4-423e-a30b-ab5472498a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Polynomial">
+      <UniqueIdentifier>{0a4fb878-bf4a-40f3-b1de-cc196bab8625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Queue">
+      <UniqueIdentifier>{52f5ebf1-fa58-4345-bca6-96283ed5ff90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Stack">
+      <UniqueIdentifier>{ecf67988-1b87-426d-b614-ae8764381b8f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Algorithm\StringAlgorithm.h">
+      <Filter>Header Files\Algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryTree\BinaryTree.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryTree\BinaryTreeTask.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryTree\LinkedBinaryTree.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinaryTree\LinkedBinaryTreeNode.h">
+      <Filter>Header Files\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="include\List\Array.h">
+      <Filter>Header Files\List</Filter>
+    </ClInclude>
+    <ClInclude Include="include\List\Link.h">
+      <Filter>Header Files\List</Filter>
+    </ClInclude>
+    <ClInclude Include="include\List\LinkNode.h">
+      <Filter>Header Files\List</Filter>
+    </ClInclude>
+    <ClInclude Include="include\List\List.h">
+      <Filter>Header Files\List</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Polynomial\ArrayPolynomial.h">
+      <Filter>Header Files\Polynomial</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Polynomial\LinkedPolynomial.h">
+      <Filter>Header Files\Polynomial</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Polynomial\Polynomial.h">
+      <Filter>Header Files\Polynomial</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Queue\ArrayQueue.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Queue\Queue.h">
+      <Filter>Header Files\Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Stack\ArrayStack.h">
+      <Filter>Header Files\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Stack\Stack.h">
+      <Filter>Header Files\Stack</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
