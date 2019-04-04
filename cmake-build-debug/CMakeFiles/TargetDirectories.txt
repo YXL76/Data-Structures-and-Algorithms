@@ -1,3 +1,0 @@
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/Data_Structures_and_Algorithms.dir
-C:/Users/chenx/source/repos/Data-Structures-and-Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
