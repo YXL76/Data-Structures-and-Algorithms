@@ -11,27 +11,25 @@
 
 namespace yxl
 {
-	template <typename T>
-	class Queue
-	{
-	public:
-		Queue() = default;
-		virtual ~Queue() = default;
-		Queue(const Queue<T>& that) noexcept = default;
-		Queue(Queue<T>&& that) noexcept = default;
+    template <typename T>
+    class Queue
+    {
+    public:
+        Queue() = default;
+        virtual ~Queue() = default;
+        Queue(const Queue<T>& that) noexcept = default;
+        Queue(Queue<T>&& that) noexcept = default;
 
-		virtual bool empty() const = 0;
-		virtual int size() const = 0;
-		virtual T& front() const = 0;
-		virtual T& back() const = 0;
-		virtual void clear() = 0;
-		virtual void pop() = 0;
-		virtual void push_front(const T& value) = 0;
-		virtual void push_back(const T& value) = 0;
+        virtual T& front() const = 0;
+        virtual T& back() const = 0;
+        virtual void pop_front() = 0;
+        virtual void pop_back() = 0;
+        virtual void push_front(const T& value) = 0;
+        virtual void push_back(const T& value) = 0;
 
-		Queue& operator=(const Queue<T>& right) = default;
-		Queue& operator=(Queue<T>&& right) noexcept = default;
-	};
+        Queue& operator=(const Queue<T>& right) = default;
+        Queue& operator=(Queue<T>&& right) noexcept = default;
+    };
 } // namespace yxl
 
 #endif // !QUEUE_H

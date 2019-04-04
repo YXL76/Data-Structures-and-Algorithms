@@ -11,28 +11,28 @@
 
 namespace yxl
 {
-	template <typename T>
-	class BinaryTree
-	{
-	public:
-		BinaryTree() = default;
-		virtual ~BinaryTree() = default;
-		BinaryTree(const BinaryTree& that) = default;
-		BinaryTree(BinaryTree&& that) = default;
+    template <typename E, typename T>
+    class BinaryTree
+    {
+    public:
+        BinaryTree() = default;
+        virtual ~BinaryTree() = default;
+        BinaryTree(const BinaryTree& that) = default;
+        BinaryTree(BinaryTree&& that) = default;
 
-		virtual void build(T that[], const int& size) = 0;
-		virtual int height() = 0;
-		virtual bool empty() const = 0;
-		virtual int size() const = 0;
-		virtual void clear() = 0;
-		virtual void print_in_pre_order() = 0;
-		virtual void print_in_in_order() = 0;
-		virtual void print_in_post_order() = 0;
-		virtual void print_in_level_order() = 0;
+        virtual bool empty(T*& node) = 0;
+        virtual int size(T*& node) = 0;
+        virtual int height(T*& node) = 0;
+        virtual int width(T*& node) = 0;
+        virtual void clear(T*& node) = 0;
+        virtual void build(const E& value) = 0;
+        virtual void build(T*& node, T*& that) = 0;
+        virtual void traversal(T*& node) = 0;
+        virtual void level_traversal(T*& node, int& count) = 0;
 
-		BinaryTree& operator=(const BinaryTree& right) = default;
-		BinaryTree& operator=(BinaryTree&& right) noexcept = default ;
-	};
+        BinaryTree& operator=(const BinaryTree& right) = default;
+        BinaryTree& operator=(BinaryTree&& right) noexcept = default ;
+    };
 } // namespace yxl
 
 #endif // !BINARY_TREE_H

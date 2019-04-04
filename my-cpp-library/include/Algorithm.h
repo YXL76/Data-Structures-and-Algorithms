@@ -1,10 +1,10 @@
+#pragma once
+
 /**
  * \Author: YXL
  * \LastUpdated: 2018/03/17 18:02:00
  * \Description:
  */
-
-#pragma once
 
 #ifndef ALGORITHM_H
 #define ALGORITHM_H

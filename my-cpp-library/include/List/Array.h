@@ -22,7 +22,7 @@ namespace yxl
         explicit Array(const int& initial_size);
         Array(const Array<T>& that);
         Array(Array<T>&& that) noexcept;
-        ~Array() override = default;
+        ~Array() override;
 
         bool empty() const override;
         int size() const override;
@@ -48,9 +48,9 @@ namespace yxl
         friend std::ostream& operator<<(std::ostream& out, Array<Tt>&& item);
 
     protected:
-        T* array_;
-        int size_{};
-        int max_size_{};
+        T* array_ = nullptr;
+        int size_{0};
+        int max_size_{1 << 10};
 
         void change_size(const int& new_size);
         bool check_index(const int& index) const;
@@ -107,8 +107,6 @@ namespace yxl
     template <typename T>
     Array<T>::Array()
     {
-        size_ = 0;
-        max_size_ = 1 << 10;
         array_ = new T[max_size_];
     }
 
@@ -129,6 +127,12 @@ namespace yxl
     Array<T>::Array(Array<T>&& that) noexcept
     {
         *this = that;
+    }
+
+    template <typename T>
+    Array<T>::~Array()
+    {
+        Array<T>::clear();
     }
 
     template <typename T>
@@ -157,8 +161,7 @@ namespace yxl
     void Array<T>::clear()
     {
         delete [] array_;
-        size_ = 0;
-        array_ = new T[max_size_];
+        max_size_ = size_ = 0;
     }
 
     template <typename T>
@@ -230,13 +233,15 @@ namespace yxl
     template <typename T>
     Array<T>& Array<T>::operator=(const Array<T>& right)
     {
-        delete [] array_;
-        size_ = 0;
+        clear();
         max_size_ = right.max_size_;
         array_ = new T[max_size_];
-        for (auto &i : right)
+        for (auto& i : right)
         {
-            array_[size_++] = i;
+            if (size_ < max_size_)
+            {
+                array_[size_++] = i;
+            }
         }
         return *this;
     }

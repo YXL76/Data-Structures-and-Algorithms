@@ -2,7 +2,7 @@
 
 /**
  * \Author: YXL
- * \LastUpdated: 2018/03/15 14:19:10
+ * \LastUpdated: 2018/04/04 13:50:10
  * \Description:
  */
 
@@ -13,168 +13,122 @@
 
 namespace yxl
 {
-	template <typename T>
-	class ArrayQueue final : public Queue<T>
-	{
-	public:
-		ArrayQueue();
-		ArrayQueue(const ArrayQueue<T>& that);
-		ArrayQueue(ArrayQueue<T>&& that) noexcept;
-		~ArrayQueue() override = default;
+    template <typename T>
+    class ArrayQueue final : public Queue<T>,
+                             public Array<T>
+    {
+    public:
+        ArrayQueue() = default;
+        ArrayQueue(const ArrayQueue<T>& that);
+        ArrayQueue(ArrayQueue<T>&& that) noexcept;
+        ~ArrayQueue() override = default;
 
-		bool empty() const override;
-		int size() const override;
-		T& front() const override;
-		T& back() const override;
-		void clear() override;
-		void pop() override;
-		void push_front(const T& value) override;
-		void push_back(const T& value) override;
+        T& front() const override;
+        T& back() const override;
+        void pop_front() override;
+        void pop_back() override;
+        void push_front(const T& value) override;
+        void push_back(const T& value) override;
 
-		ArrayQueue& operator=(const ArrayQueue<T>& right);
-		ArrayQueue& operator=(ArrayQueue<T>&& right) noexcept;
+        ArrayQueue& operator=(const ArrayQueue<T>& right);
+        ArrayQueue& operator=(ArrayQueue<T>&& right) noexcept;
 
-	private:
-		T* array_;
-		int front_{0};
-		int back_{0};
-		int size_;
+    private:
+        int front_{0};
 
-		void change_size();
-	};
+        int index_of(const T& /*value*/) const override { return 0; }
+        void erase(const int& index) override {}
+        void insert(const int& index, const T& value) override {}
+    };
 
-	template <typename T>
-	ArrayQueue<T>::ArrayQueue(): size_(1 << 10)
-	{
-		array_ = new T[size_];
-	}
+    template <typename T>
+    ArrayQueue<T>::ArrayQueue(const ArrayQueue<T>& that)
+    {
+        *this = that;
+    }
 
-	template <typename T>
-	ArrayQueue<T>::ArrayQueue(const ArrayQueue<T>& that)
-	{
-		size_ = that.size_;
-		front_ = that.front_;
-		back_ = that.back_;
-		array_ = new T[size_];
-		for (auto i = 0; i < size_; ++i)
-		{
-			array_[i] = that.array_[i];
-		}
-	}
+    template <typename T>
+    ArrayQueue<T>::ArrayQueue(ArrayQueue<T>&& that) noexcept
+    {
+        *this = that;
+    }
 
-	template <typename T>
-	ArrayQueue<T>::ArrayQueue(ArrayQueue<T>&& that) noexcept
-	{
-		size_ = that.size_;
-		front_ = that.front_;
-		back_ = that.back_;
-		array_ = that.array_;
-		that.size_ = 0;
-		that.front_ = 0;
-		that.back_ = 0;
-		that.array_ = nullptr;
-	}
+    template <typename T>
+    T& ArrayQueue<T>::front() const
+    {
+        return this->array_[front_];
+    }
 
-	template <typename T>
-	bool ArrayQueue<T>::empty() const
-	{
-		return front_ == back_;
-	}
+    template <typename T>
+    T& ArrayQueue<T>::back() const
+    {
+        return this->array_[(front_ + this->size_ - 1) % this->max_size_];
+    }
 
-	template <typename T>
-	int ArrayQueue<T>::size() const
-	{
-		return (back_ - front_ + size_) % size_;
-	}
+    template <typename T>
+    void ArrayQueue<T>::pop_front()
+    {
+        if (this->size_ != 0)
+        {
+            --this->size_;
+            front_ = (front_ + 1) % this->max_size_;
+        }
+    }
 
-	template <typename T>
-	T& ArrayQueue<T>::front() const
-	{
-		return array_[(front_ + 1) % size_];
-	}
+    template <typename T>
+    void ArrayQueue<T>::pop_back()
+    {
+        if (this->size_ != 0)
+        {
+            --this->size_;
+        }
+    }
 
-	template <typename T>
-	T& ArrayQueue<T>::back() const
-	{
-		return array_[back_];
-	}
+    template <typename T>
+    void ArrayQueue<T>::push_front(const T& value)
+    {
+        if (this->size_ == this->max_size_) { this->change_size(this->max_size_ << 1); }
+        front_ = (front_ + this->max_size_ - 1) % this->max_size_;
+        this->array_[front_] = value;
+        ++this->size_;
+    }
 
-	template <typename T>
-	void ArrayQueue<T>::clear()
-	{
-		delete[] array_;
-		front_ = 0;
-		back_ = 0;
-		size_ = 1 << 10;
-		array_ = new T[size_];
-	}
+    template <typename T>
+    void ArrayQueue<T>::push_back(const T& value)
+    {
+        if (this->size_ == this->max_size_) { this->change_size(this->max_size_ << 1); }
+        this->array_[(front_ + this->size_) % this->max_size_] = value;
+        ++this->size_;
+    }
 
-	template <typename T>
-	void ArrayQueue<T>::pop()
-	{
-		if (front_ != back_) { front_ = (front_ + 1) % size_; }
-	}
+    template <typename T>
+    ArrayQueue<T>& ArrayQueue<T>::operator=(const ArrayQueue<T>& right)
+    {
+        front_ = right.front_;
+        delete [] this->array_;
+        this->size_ = right.size_;
+        this->max_size_ = right.max_size_;
+        this->array_ = new T[this->max_size_];
+        for (auto i = 0; i < this->max_size_; ++i)
+        {
+            this->array_[i] = right.array_[i];
+        }
+        return *this;
+    }
 
-	template <typename T>
-	void ArrayQueue<T>::push_front(const T& value)
-	{
-		if ((back_ + 1) % size_ == front_) { change_size(); }
-		array_[front_] = value;
-		front_ = (front_ + size_ - 1) % size_;
-	}
-
-	template <typename T>
-	void ArrayQueue<T>::push_back(const T& value)
-	{
-		if ((back_ + 1) % size_ == front_) { change_size(); }
-		back_ = (back_ + 1) % size_;
-		array_[back_] = value;
-	}
-
-	template <typename T>
-	ArrayQueue<T>& ArrayQueue<T>::operator=(const ArrayQueue<T>& right)
-	{
-		size_ = right.size_;
-		front_ = right.front_;
-		back_ = right.back_;
-		array_ = new T[size_];
-		for (auto i = 0; i < size_; ++i)
-		{
-			array_[i] = right.array_[i];
-		}
-		return *this;
-	}
-
-	template <typename T>
-	ArrayQueue<T>& ArrayQueue<T>::operator=(ArrayQueue<T>&& right) noexcept
-	{
-		size_ = right.size_;
-		front_ = right.front_;
-		back_ = right.back_;
-		array_ = right.array_;
-		right.size_ = 0;
-		right.front_ = 0;
-		right.back_ = 0;
-		right.array_ = nullptr;
-		return *this;
-	}
-
-	template <typename T>
-	void ArrayQueue<T>::change_size()
-	{
-		auto index = 0;
-		T* temp = new T[size_ * 2];
-		while (front_ != back_ && index < size_ * 2 - 1)
-		{
-			front_ = (front_ + 1) % size_;
-			temp[++index] = array_[front_];
-		}
-		delete[] array_;
-		size_ <<= 1;
-		array_ = temp;
-		front_ = 0;
-		back_ = index;
-	}
+    template <typename T>
+    ArrayQueue<T>& ArrayQueue<T>::operator=(ArrayQueue<T>&& right) noexcept
+    {
+        front_ = right.front_;
+        this->size_ = right.size_;
+        this->max_size_ = right.max_size_;
+        this->array_ = right.array_;
+        right.front_ = 0;
+        right.size_ = 0;
+        right.max_size_ = 0;
+        right.array_ = nullptr;
+        return *this;
+    }
 } // namespace yxl
 
 #endif // !ARRAY_QUEUE_H
