@@ -21,6 +21,7 @@ ArrayPolynomial e;
 LinkedPolynomial f;
 LinkedBinaryTree<int> g;
 
+
 std::string sss = "ababababca";
 std::string ssss = "abababca";
 KMP dd(ssss);
@@ -30,12 +31,21 @@ int main()
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
     g.build(arr, 5);
-    g.print_in_pre_order();
+    /*g.print_in_pre_order();
     std::cout << std::endl;
     g.print_in_in_order();
     std::cout << std::endl;
     g.print_in_level_order();
     std::cout << std::endl;
-    std::cout << g.width();
+    std::cout << g.width();*/
+    /*LinkedBinaryTree<int>::ttask aaa = [](LinkedBinaryTree<int>::tree_node*& x){d.push(x->value);};
+    LinkedBinaryTree<int>::ttask bbb = [](LinkedBinaryTree<int>::tree_node*& x){};
+    LinkedBinaryTree<int>::ttask ccc = [](LinkedBinaryTree<int>::tree_node*& x){};
+    g.t_task(aaa, bbb, ccc);
+    while (!d.empty())
+    {
+        std::cout << d.top() << ' ';
+        d.pop();
+    }*/
     return 0;
 }

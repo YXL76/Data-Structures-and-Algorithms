@@ -9,12 +9,19 @@
 #ifndef BINARY_TREE_H
 #define BINARY_TREE_H
 
+#include <functional>
+
 namespace yxl
 {
     template <typename E, typename T>
     class BinaryTree
     {
     public:
+        using ttask = std::function<void(T*&)>;
+        using itask = std::function<void(int&)>;
+        using iitask = std::function<void(int&, const int&)>;
+        using ittask = std::function<void(int&, T*&)>;
+
         BinaryTree() = default;
         virtual ~BinaryTree() = default;
         BinaryTree(const BinaryTree& that) = default;
@@ -27,8 +34,8 @@ namespace yxl
         virtual void clear(T*& node) = 0;
         virtual void build(const E& value) = 0;
         virtual void build(T*& node, T*& that) = 0;
-        virtual void traversal(T*& node) = 0;
-        virtual void level_traversal(T*& node, int& count) = 0;
+        virtual void traversal(T*& node, ttask& pre, ttask& in, ttask& post) = 0;
+        virtual void level_traversal(T*& node, int& count, ittask& point, iitask& line, itask& plane) = 0;
 
         BinaryTree& operator=(const BinaryTree& right) = default;
         BinaryTree& operator=(BinaryTree&& right) noexcept = default ;

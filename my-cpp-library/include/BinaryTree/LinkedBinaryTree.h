@@ -26,6 +26,11 @@ namespace yxl
         using tree_node = LinkedBinaryTreeNode<T>;
         using traversal_task = BinaryTreeTask<LinkedBinaryTreeNode<T>*>;
 
+        using ttask = std::function<void(tree_node*&)>;
+        using itask = std::function<void(int&)>;
+        using iitask = std::function<void(int&, const int&)>;
+        using ittask = std::function<void(int&, tree_node*&)>;
+
         LinkedBinaryTree();
         explicit LinkedBinaryTree(const T& value);
         LinkedBinaryTree(T that[], const int& size);
@@ -52,16 +57,16 @@ namespace yxl
 
         void unite(const T& value, LinkedBinaryTree& left, LinkedBinaryTree& right);
 
+        void t_task(ttask& pre, ttask& in, ttask& post);
+        void lt_task(int& count, ittask& point, iitask& line, itask& plane);
+
         LinkedBinaryTree& operator=(const LinkedBinaryTree& right);
         LinkedBinaryTree& operator=(LinkedBinaryTree&& right) noexcept;
 
     private:
         tree_node* root_;
-        // t_task_ is short of traversal_task
-        // t_task_[0]: pre_task_
-        // t_task_[1]: in_task_
-        // t_task_[2]: post_task_
-        typename traversal_task::TTask t_task_[3];
+
+        typename traversal_task::TTask t_task_;
         typename traversal_task::ITask i_task_;
         typename traversal_task::IiTask ii_task_;
         typename traversal_task::ItTask it_task_;
@@ -73,14 +78,13 @@ namespace yxl
         int height(tree_node*& node) override;
         int width(tree_node*& node) override;
         void clear(tree_node*& node) override;
-
         void build(tree_node*& node, tree_node*& that) override;
-        void traversal(tree_node*& node) override;
-        void level_traversal(tree_node*& node, int& count) override;
+        void traversal(tree_node*& node, ttask& pre, ttask& in, ttask& post) override;
+        void level_traversal(tree_node*& node, int& count, ittask& point, iitask& line, itask& plane) override;
     };
 
     template <typename T>
-    LinkedBinaryTree<T>::LinkedBinaryTree(): root_(nullptr), t_task_()
+    LinkedBinaryTree<T>::LinkedBinaryTree(): root_(nullptr)
     {
     }
 
@@ -131,33 +135,26 @@ namespace yxl
     template <typename T>
     void LinkedBinaryTree<T>::print_in_pre_order()
     {
-        t_task_[0].print();
-        traversal(root_);
-        t_task_[0].none();
+        traversal(root_, t_task_.print, t_task_.none, t_task_.none);
     }
 
     template <typename T>
     void LinkedBinaryTree<T>::print_in_in_order()
     {
-        t_task_[1].print();
-        traversal(root_);
-        t_task_[1].none();
+        traversal(root_, t_task_.none, t_task_.print, t_task_.none);
     }
 
     template <typename T>
     void LinkedBinaryTree<T>::print_in_post_order()
     {
-        t_task_[2].print();
-        traversal(root_);
-        t_task_[2].none();
+        traversal(root_, t_task_.none, t_task_.none, t_task_.print);
     }
+
     template <typename T>
     void LinkedBinaryTree<T>::print_in_level_order()
     {
         auto count = 0;
-        it_task_.node_with_print();
-        level_traversal(root_, count);
-        it_task_.none();
+        level_traversal(root_, count, it_task_.node_with_print, ii_task_.none, i_task_.none);
     }
 
     template <typename T>
@@ -185,6 +182,18 @@ namespace yxl
         root_ = new tree_node(value);
         build(root_->left, left);
         build(root_->right, right);
+    }
+
+    template <typename T>
+    void LinkedBinaryTree<T>::t_task(ttask& pre, ttask& in, ttask& post)
+    {
+        traversal(root_, pre, in, post);
+    }
+
+    template <typename T>
+    void LinkedBinaryTree<T>::lt_task(int& count, ittask& point, iitask& line, itask& plane)
+    {
+        level_traversal(count, point, line, plane);
     }
 
     template <typename T>
@@ -217,49 +226,39 @@ namespace yxl
     template <typename T>
     bool LinkedBinaryTree<T>::empty(tree_node*& node)
     {
-        it_task_.node();
         auto count = 0;
-        level_traversal(node, count);
-        it_task_.none();
+        level_traversal(node, count, it_task_.node, ii_task_.none, i_task_.none);
         return count == 0;
     }
 
     template <typename T>
     int LinkedBinaryTree<T>::size(tree_node*& node)
     {
-        it_task_.node();
         auto count = 0;
-        level_traversal(node, count);
-        it_task_.none();
+        level_traversal(node, count, it_task_.node, ii_task_.none, i_task_.none);
         return count;
     }
 
     template <typename T>
     int LinkedBinaryTree<T>::height(tree_node*& node)
     {
-        i_task_.height();
         auto count = 0;
-        level_traversal(node, count);
-        i_task_.none();
+        level_traversal(node, count, it_task_.none, ii_task_.none, i_task_.height);
         return count;
     }
 
     template <typename T>
     int LinkedBinaryTree<T>::width(tree_node*& node)
     {
-        ii_task_.width();
         auto count = 0;
-        level_traversal(node, count);
-        ii_task_.none();
+        level_traversal(node, count, it_task_.none, ii_task_.width, i_task_.none);
         return count;
     }
 
     template <typename T>
     void LinkedBinaryTree<T>::clear(tree_node*& node)
     {
-        t_task_[2].clear();
-        traversal(node);
-        t_task_[2].none();
+        traversal(node, t_task_.none, t_task_.none, t_task_.clear);
     }
 
     template <typename T>
@@ -278,7 +277,7 @@ namespace yxl
     }
 
     template <typename T>
-    void LinkedBinaryTree<T>::traversal(tree_node*& node)
+    void LinkedBinaryTree<T>::traversal(tree_node*& node, ttask& pre, ttask& in, ttask& post)
     {
         ArrayStack<std::pair<tree_node*, bool>> s;
         tree_node* current = node;
@@ -287,17 +286,17 @@ namespace yxl
             while (current != nullptr)
             {
                 s.push({current, true});
-                t_task_[0](current);
+                pre(current);
                 current = current->left;
             }
             while (!s.empty() && !s.top().second)
             {
-                t_task_[2](s.top().first);
+                post(s.top().first);
                 s.pop();
             }
             if (!s.empty() && s.top().second)
             {
-                t_task_[1](s.top().first);
+                in(s.top().first);
                 current = s.top().first->right;
                 s.top().second = false;
             }
@@ -306,19 +305,19 @@ namespace yxl
     }
 
     template <typename T>
-    void LinkedBinaryTree<T>::level_traversal(tree_node*& node, int& count)
+    void LinkedBinaryTree<T>::level_traversal(tree_node*& node, int& count, ittask& point, iitask& line, itask& plane)
     {
         ArrayQueue<tree_node*> q;
         q.push_back(node);
         while (!q.empty())
         {
-            i_task_(count);
+            plane(count);
             auto len = q.size();
-            ii_task_(count, len);
+            line(count, len);
             while ((len--) != 0)
             {
                 tree_node* f = q.front();
-                it_task_(count, f);
+                point(count, f);
                 q.pop_front();
                 if (f->left != nullptr) { q.push_back(f->left); }
                 if (f->right != nullptr) { q.push_back(f->right); }
