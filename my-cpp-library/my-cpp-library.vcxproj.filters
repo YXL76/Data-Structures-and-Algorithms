@@ -31,6 +31,12 @@
     <Filter Include="Header Files\Stack">
       <UniqueIdentifier>{ecf67988-1b87-426d-b614-ae8764381b8f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\BinarySearchTree">
+      <UniqueIdentifier>{99176909-02d7-4a94-adfb-a0303e679c01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Dictionary">
+      <UniqueIdentifier>{63d89916-9b8e-477c-8560-afda47bc8178}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -88,6 +94,12 @@
     </ClInclude>
     <ClInclude Include="include\Stack\Stack.h">
       <Filter>Header Files\Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BinarySearchTree\BinarySearchTree.h">
+      <Filter>Header Files\BinarySearchTree</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Dictionary\Dictionary.h">
+      <Filter>Header Files\Dictionary</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

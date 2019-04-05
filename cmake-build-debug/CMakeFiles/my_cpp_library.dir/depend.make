@@ -4,10 +4,12 @@
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/Source.cpp
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/Algorithm.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/Algorithm/StringAlgorithm.h
+CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/BinaryTree/BinaryTree.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/BinaryTree/BinaryTreeTask.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
+CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/Dictionary/Dictionary.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/List/Array.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/List/Link.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj: ../my-cpp-library/include/List/LinkNode.h

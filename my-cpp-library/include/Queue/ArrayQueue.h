@@ -10,6 +10,7 @@
 #define ARRAY_QUEUE_H
 
 #include "Queue.h"
+#include "../List/Array.h"
 
 namespace yxl
 {
@@ -50,7 +51,7 @@ namespace yxl
     template <typename T>
     ArrayQueue<T>::ArrayQueue(ArrayQueue<T>&& that) noexcept
     {
-        *this = that;
+        *this = std::move(that);
     }
 
     template <typename T>

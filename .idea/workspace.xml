@@ -15,18 +15,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca872de0-e6e3-408e-b99b-fd7831b98225" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/my-cpp-library/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/my-cpp-library/v16/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/my-cpp-library/v16/Preview/Browse.VC.db" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/my-cpp-library/v16/Preview/Browse.VC.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/my-cpp-library/v16/Preview/ipch/AutoPCH/e2b5570ca74e286e/SOURCE.ipch" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/my-cpp-library/v16/Preview/ipch/AutoPCH/e2b5570ca74e286e/SOURCE.ipch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/includes_CXX.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_cpp_library.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/my_cpp_library.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/my_cpp_library.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/my_cpp_library.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/my_cpp_library.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-minsizerel/CMakeFiles/my_cpp_library.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-minsizerel/CMakeFiles/my_cpp_library.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-minsizerel/CMakeFiles/my_cpp_library.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-minsizerel/CMakeFiles/my_cpp_library.dir/includes_CXX.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-minsizerel/my_cpp_library.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-minsizerel/my_cpp_library.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/my_cpp_library.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/my_cpp_library.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/my_cpp_library.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/CMakeFiles/my_cpp_library.dir/includes_CXX.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-release/my_cpp_library.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-release/my_cpp_library.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/my_cpp_library.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/my_cpp_library.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/my_cpp_library.dir/includes_CXX.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/CMakeFiles/my_cpp_library.dir/includes_CXX.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-relwithdebinfo/my_cpp_library.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-relwithdebinfo/my_cpp_library.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/Source.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/Source.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-cpp-library/include/Algorithm.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/Algorithm.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-cpp-library/include/Algorithm/StringAlgorithm.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/Algorithm/StringAlgorithm.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTreeTask.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTreeTask.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/List/Array.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/List/Array.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/List/Link.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/List/Link.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-cpp-library/include/List/LinkNode.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/List/LinkNode.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/List/List.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/List/List.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-cpp-library/include/Polynomial/ArrayPolynomial.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/Polynomial/ArrayPolynomial.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/Polynomial/LinkedPolynomial.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/Polynomial/LinkedPolynomial.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/Polynomial/Polynomial.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/Polynomial/Polynomial.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/Queue/ArrayQueue.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/Queue/ArrayQueue.h" afterDir="false" />
@@ -34,6 +53,15 @@
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/Stack/ArrayStack.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/Stack/ArrayStack.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/include/Stack/Stack.h" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/include/Stack/Stack.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-cpp-library/my-cpp-library.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/my-cpp-library.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-cpp-library/my-cpp-library.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/my-cpp-library.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-cpp-library/x64/Debug/Source.obj" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/x64/Debug/Source.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-cpp-library/x64/Debug/my-cpp-library.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/x64/Debug/my-cpp-library.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-cpp-library/x64/Debug/my-cpp-library.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/x64/Debug/my-cpp-library.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-cpp-library/x64/Debug/vc142.idb" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/x64/Debug/vc142.idb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-cpp-library/x64/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/my-cpp-library/x64/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/my-cpp-library.exe" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/my-cpp-library.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/my-cpp-library.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/my-cpp-library.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/x64/Debug/my-cpp-library.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/x64/Debug/my-cpp-library.pdb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/cmake-build-release/" />
@@ -54,7 +82,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,9 +93,15 @@
         <option value="$PROJECT_DIR$/my-cpp-library/include/Queue/ArrayQueue.h" />
         <option value="$PROJECT_DIR$/my-cpp-library/include/List/Link.h" />
         <option value="$PROJECT_DIR$/my-cpp-library/Source.cpp" />
-        <option value="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTree.h" />
         <option value="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h" />
         <option value="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTreeTask.h" />
+        <option value="$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTree.h" />
+        <option value="$PROJECT_DIR$/my-cpp-library/include/Dictionary/Dictionary.h" />
+        <option value="$PROJECT_DIR$/my-cpp-library/include/List/List.h" />
+        <option value="$PROJECT_DIR$/my-cpp-library/include/Polynomial/Polynomial.h" />
+        <option value="$PROJECT_DIR$/my-cpp-library/include/Stack/Stack.h" />
+        <option value="$PROJECT_DIR$/my-cpp-library/include/Queue/Queue.h" />
+        <option value="$PROJECT_DIR$/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h" />
       </list>
     </option>
   </component>
@@ -98,6 +132,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="CMakeSettings" />
   </component>
@@ -142,7 +177,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1096" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25596184" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26391098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -173,80 +208,156 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Algorithm/StringAlgorithm.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Queue/ArrayQueue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Polynomial/ArrayPolynomial.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="237" column="20" selection-start-line="237" selection-start-column="20" selection-end-line="237" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/List/Link.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="400" column="23" selection-start-line="400" selection-start-column="23" selection-end-line="400" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Polynomial/LinkedPolynomial.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/List/Array.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+        <state relative-caret-position="517">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTree.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        <state relative-caret-position="344">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Dictionary/Dictionary.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/List/List.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="26" column="46" lean-forward="true" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/List/Link.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11795">
+          <caret line="403" column="9" lean-forward="true" selection-start-line="403" selection-start-column="9" selection-end-line="403" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/List/Array.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Polynomial/Polynomial.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Polynomial/LinkedPolynomial.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6189">
+          <caret line="226" column="23" selection-start-line="226" selection-start-column="23" selection-end-line="226" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Polynomial/ArrayPolynomial.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6439">
+          <caret line="237" column="20" selection-start-line="237" selection-start-column="20" selection-end-line="237" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Stack/Stack.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Stack/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Stack/ArrayStack.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Queue/Queue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="19" column="35" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/Queue/ArrayQueue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2202">
+          <caret line="91" column="37" selection-start-line="91" selection-start-column="37" selection-end-line="91" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/msys64/mingw64/include/c++/8.3.0/iostream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTreeTask.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/msys64/mingw64/include/c++/8.3.0/ostream">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="107" column="6" selection-start-line="107" selection-start-column="6" selection-end-line="107" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="153" column="33" selection-start-line="153" selection-start-column="33" selection-end-line="153" selection-end-column="33" />
+        <state relative-caret-position="227">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
           <folding>
             <element signature="e#152#175#0" expanded="true" />
-            <element signature="e#8103#8115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="36" column="31" lean-forward="true" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+          <folding>
+            <element signature="e#152#189#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-cpp-library/Source.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state relative-caret-position="189">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my-cpp-library/include/BinaryTree/BinaryTreeTask.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
         </state>
       </provider>
     </entry>

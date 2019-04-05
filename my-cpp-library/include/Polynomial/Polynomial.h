@@ -17,7 +17,7 @@ namespace yxl
     public:
         Polynomial() = default;
         virtual ~Polynomial() = default;
-        Polynomial(const Polynomial<T>& that) noexcept = default;
+        Polynomial(const Polynomial<T>& that) = default;
         Polynomial(Polynomial<T>&& that) noexcept = default;
 
         virtual void read(const double coef[], const int& size) = 0;

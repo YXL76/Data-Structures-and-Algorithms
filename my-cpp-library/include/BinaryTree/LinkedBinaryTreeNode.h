@@ -10,6 +10,7 @@
 #define LINKED_BINARY_TREE_NODE_H
 
 #include <iostream>
+#include <utility>
 
 namespace yxl
 {
@@ -20,8 +21,8 @@ namespace yxl
         LinkedBinaryTreeNode *left, *right;
 
         LinkedBinaryTreeNode();
-        explicit LinkedBinaryTreeNode(const T& value);
-        LinkedBinaryTreeNode(const T& value, LinkedBinaryTreeNode<T>* left, LinkedBinaryTreeNode<T>* right);
+        explicit LinkedBinaryTreeNode(T value);
+        LinkedBinaryTreeNode(T value, LinkedBinaryTreeNode<T>* left, LinkedBinaryTreeNode<T>* right);
 
         template <typename Tt>
         friend std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<Tt>& item);
@@ -35,19 +36,34 @@ namespace yxl
     }
 
     template <typename T>
-    LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(const T& value): value(value), left(nullptr), right(nullptr)
+    LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(T value): value(std::move(value)), left(nullptr),
+                                                            right(nullptr)
     {
     }
 
     template <typename T>
-    LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(const T& value, LinkedBinaryTreeNode<T>* left,
-                                                  LinkedBinaryTreeNode<T>* right): value(value), left(left),
+    LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(T value, LinkedBinaryTreeNode<T>* left,
+                                                  LinkedBinaryTreeNode<T>* right): value(std::move(value)), left(left),
                                                                                    right(right)
     {
     }
 
+    template <class K, class V>
+    std::ostream& operator<<(std::ostream& out, const std::pair<K, V>& item)
+    {
+        out << item.first  << ':'  << item.second;
+        return out;
+    }
+
+    template <class K, class V>
+    std::ostream& operator<<(std::ostream& out, const std::pair<K, V>*& item)
+    {
+        out << item->first << ':' << item->second;
+        return out;
+    }
+
     template <typename T>
-    std::ostream& operator<<(std::ostream& out,  LinkedBinaryTreeNode<T>& item)
+    std::ostream& operator<<(std::ostream& out, LinkedBinaryTreeNode<T>& item)
     {
         out << item.value;
         return out;

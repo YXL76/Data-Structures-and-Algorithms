@@ -58,6 +58,12 @@ namespace yxl
             {
             };
             std::function<void(int&, T&)> node = [](int& x, T& /*y*/) { ++x; };
+            std::function<void(int&, T&)> clear = [](int& x, T& y)
+            {
+                --x;
+                delete y;
+                y = nullptr;
+            };
             std::function<void(int&, T&)> node_with_print = [](int& x, T& y)
             {
                 ++x;

@@ -45,7 +45,7 @@ namespace yxl
     template <typename T>
     ArrayStack<T>::ArrayStack(ArrayStack<T>&& that) noexcept
     {
-        *this = that;
+        *this = std::move(that);
     }
 
     template <typename T>

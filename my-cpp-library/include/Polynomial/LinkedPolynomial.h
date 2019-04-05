@@ -55,7 +55,7 @@ namespace yxl
     {
     }
 
-    inline LinkedPolynomial::LinkedPolynomial(Link<double>&& that) : Link<double>(that)
+    inline LinkedPolynomial::LinkedPolynomial(Link<double>&& that) : Link<double>(std::move(that))
     {
     }
 

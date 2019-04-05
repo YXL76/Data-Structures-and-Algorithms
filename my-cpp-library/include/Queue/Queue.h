@@ -17,7 +17,7 @@ namespace yxl
     public:
         Queue() = default;
         virtual ~Queue() = default;
-        Queue(const Queue<T>& that) noexcept = default;
+        Queue(const Queue<T>& that) = default;
         Queue(Queue<T>&& that) noexcept = default;
 
         virtual T& front() const = 0;

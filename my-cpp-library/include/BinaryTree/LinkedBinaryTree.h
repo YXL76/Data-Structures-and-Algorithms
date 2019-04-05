@@ -2,7 +2,7 @@
 
 /**
  * \Author: YXL
- * \LastUpdated: 2018/04/03 17:00:00
+ * \LastUpdated: 2018/04/05 13:00:00
  * \Description:
  */
 
@@ -14,13 +14,13 @@
 #include "LinkedBinaryTreeNode.h"
 #include "../Queue/ArrayQueue.h"
 #include "../Stack/ArrayStack.h"
-#include <iostream>
+#include <utility>
 #include <functional>
 
 namespace yxl
 {
     template <typename T>
-    class LinkedBinaryTree final : public BinaryTree<T, LinkedBinaryTreeNode<T>>
+    class LinkedBinaryTree : public BinaryTree<LinkedBinaryTreeNode<T>>
     {
     public:
         using tree_node = LinkedBinaryTreeNode<T>;
@@ -38,11 +38,8 @@ namespace yxl
         LinkedBinaryTree(LinkedBinaryTree<T>&& that) noexcept;
         ~LinkedBinaryTree() override;
 
-        void build(const T& value) override;
-        void build(T that[], const int& size);
-
-        bool empty() { return empty(root_); }
-        int size() { return size(root_); }
+        virtual bool empty() { return empty(root_); }
+        virtual int size() { return size(root_); }
         int height() { return height(root_); }
         int width() { return width(root_); }
         void clear() { return clear(root_); }
@@ -52,8 +49,10 @@ namespace yxl
         void print_in_post_order();
         void print_in_level_order();
 
-        LinkedBinaryTree& remove_left_subtree();
-        LinkedBinaryTree& remove_right_subtree();
+        tree_node* root() { return root_; }
+
+        void remove_left_subtree();
+        void remove_right_subtree();
 
         void unite(const T& value, LinkedBinaryTree& left, LinkedBinaryTree& right);
 
@@ -63,7 +62,8 @@ namespace yxl
         LinkedBinaryTree& operator=(const LinkedBinaryTree& right);
         LinkedBinaryTree& operator=(LinkedBinaryTree&& right) noexcept;
 
-    private:
+    protected:
+        int size_{0};
         tree_node* root_;
 
         typename traversal_task::TTask t_task_;
@@ -71,16 +71,17 @@ namespace yxl
         typename traversal_task::IiTask ii_task_;
         typename traversal_task::ItTask it_task_;
 
-        void build(tree_node*& node, T that[], int index, const int& size);
-
         bool empty(tree_node*& node) override;
         int size(tree_node*& node) override;
         int height(tree_node*& node) override;
         int width(tree_node*& node) override;
         void clear(tree_node*& node) override;
-        void build(tree_node*& node, tree_node*& that) override;
+        void build(tree_node*& node, tree_node* const& that) override;
         void traversal(tree_node*& node, ttask& pre, ttask& in, ttask& post) override;
         void level_traversal(tree_node*& node, int& count, ittask& point, iitask& line, itask& plane) override;
+
+    private:
+        void build(tree_node*& node, T that[], int index);
     };
 
     template <typename T>
@@ -91,13 +92,15 @@ namespace yxl
     template <typename T>
     LinkedBinaryTree<T>::LinkedBinaryTree(const T& value): root_(nullptr)
     {
-        bulid(value);
+        size_ = 1;
+        root_ = new tree_node(value);
     }
 
     template <typename T>
     LinkedBinaryTree<T>::LinkedBinaryTree(T that[], const int& size)
     {
-        build(that, size);
+        size_ = size;
+        build(root_, that, 1);
     }
 
     template <typename T>
@@ -109,27 +112,13 @@ namespace yxl
     template <typename T>
     LinkedBinaryTree<T>::LinkedBinaryTree(LinkedBinaryTree<T>&& that) noexcept
     {
-        *this = that;
+        *this = std::move(that);
     }
 
     template <typename T>
     LinkedBinaryTree<T>::~LinkedBinaryTree()
     {
         clear();
-    }
-
-    template <typename T>
-    void LinkedBinaryTree<T>::build(const T& value)
-    {
-        clear(root_);
-        root_ = new tree_node(value);
-    }
-
-    template <typename T>
-    void LinkedBinaryTree<T>::build(T that[], const int& size)
-    {
-        clear(root_);
-        build(root_, that, 1, size);
     }
 
     template <typename T>
@@ -158,21 +147,17 @@ namespace yxl
     }
 
     template <typename T>
-    LinkedBinaryTree<T>& LinkedBinaryTree<T>::remove_left_subtree()
+    void LinkedBinaryTree<T>::remove_left_subtree()
     {
-        LinkedBinaryTree left;
-        left.root_ = root_->left;
+        clear(root_->left);
         root_->left = nullptr;
-        return left;
     }
 
     template <typename T>
-    LinkedBinaryTree<T>& LinkedBinaryTree<T>::remove_right_subtree()
+    void LinkedBinaryTree<T>::remove_right_subtree()
     {
-        LinkedBinaryTree right;
-        right.root_ = root_->right;
+        clear(root_->right);
         root_->right = nullptr;
-        return right;
     }
 
     template <typename T>
@@ -180,6 +165,7 @@ namespace yxl
     {
         clear(root_);
         root_ = new tree_node(value);
+        size_ = left.size_ + right.size_ + 1;
         build(root_->left, left);
         build(root_->right, right);
     }
@@ -215,17 +201,9 @@ namespace yxl
     }
 
     template <typename T>
-    void LinkedBinaryTree<T>::build(tree_node*& node, T that[], const int index, const int& size)
-    {
-        if (index > size) { return; }
-        node = new tree_node(that[index - 1]);
-        build(node->left, that, index << 1, size);
-        build(node->right, that, index << 1 | 1, size);
-    }
-
-    template <typename T>
     bool LinkedBinaryTree<T>::empty(tree_node*& node)
     {
+        if (node == root_) { return size_ == 0; }
         auto count = 0;
         level_traversal(node, count, it_task_.node, ii_task_.none, i_task_.none);
         return count == 0;
@@ -234,6 +212,7 @@ namespace yxl
     template <typename T>
     int LinkedBinaryTree<T>::size(tree_node*& node)
     {
+        if (node == root_) { return size_; }
         auto count = 0;
         level_traversal(node, count, it_task_.node, ii_task_.none, i_task_.none);
         return count;
@@ -258,11 +237,11 @@ namespace yxl
     template <typename T>
     void LinkedBinaryTree<T>::clear(tree_node*& node)
     {
-        traversal(node, t_task_.none, t_task_.none, t_task_.clear);
+        level_traversal(node, size_, it_task_.clear, ii_task_.none, i_task_.none);
     }
 
     template <typename T>
-    void LinkedBinaryTree<T>::build(tree_node*& node, tree_node*& that)
+    void LinkedBinaryTree<T>::build(tree_node*& node, tree_node* const& that)
     {
         clear(node);
         node = new tree_node(that->value, that->left, that->right);
@@ -307,6 +286,7 @@ namespace yxl
     template <typename T>
     void LinkedBinaryTree<T>::level_traversal(tree_node*& node, int& count, ittask& point, iitask& line, itask& plane)
     {
+        if (node == nullptr) { return; }
         ArrayQueue<tree_node*> q;
         q.push_back(node);
         while (!q.empty())
@@ -317,12 +297,21 @@ namespace yxl
             while ((len--) != 0)
             {
                 tree_node* f = q.front();
-                point(count, f);
                 q.pop_front();
                 if (f->left != nullptr) { q.push_back(f->left); }
                 if (f->right != nullptr) { q.push_back(f->right); }
+                point(count, f);
             }
         }
+    }
+
+    template <typename T>
+    void LinkedBinaryTree<T>::build(tree_node*& node, T that[], const int index)
+    {
+        if (index > size_) { return; }
+        node = new tree_node(that[index - 1]);
+        build(node->left, that, index << 1);
+        build(node->right, that, index << 1 | 1);
     }
 } // namespace yxl
 

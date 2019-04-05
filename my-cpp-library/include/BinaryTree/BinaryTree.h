@@ -13,7 +13,7 @@
 
 namespace yxl
 {
-    template <typename E, typename T>
+    template <typename T>
     class BinaryTree
     {
     public:
@@ -25,15 +25,14 @@ namespace yxl
         BinaryTree() = default;
         virtual ~BinaryTree() = default;
         BinaryTree(const BinaryTree& that) = default;
-        BinaryTree(BinaryTree&& that) = default;
+        BinaryTree(BinaryTree&& that) noexcept = default;
 
         virtual bool empty(T*& node) = 0;
         virtual int size(T*& node) = 0;
         virtual int height(T*& node) = 0;
         virtual int width(T*& node) = 0;
         virtual void clear(T*& node) = 0;
-        virtual void build(const E& value) = 0;
-        virtual void build(T*& node, T*& that) = 0;
+        virtual void build(T*& node, T* const& that) = 0;
         virtual void traversal(T*& node, ttask& pre, ttask& in, ttask& post) = 0;
         virtual void level_traversal(T*& node, int& count, ittask& point, iitask& line, itask& plane) = 0;
 

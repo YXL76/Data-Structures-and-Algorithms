@@ -159,10 +159,12 @@
   <ItemGroup>
     <ClInclude Include="include\Algorithm.h" />
     <ClInclude Include="include\Algorithm\StringAlgorithm.h" />
+    <ClInclude Include="include\BinarySearchTree\BinarySearchTree.h" />
     <ClInclude Include="include\BinaryTree\BinaryTree.h" />
     <ClInclude Include="include\BinaryTree\BinaryTreeTask.h" />
     <ClInclude Include="include\BinaryTree\LinkedBinaryTree.h" />
     <ClInclude Include="include\BinaryTree\LinkedBinaryTreeNode.h" />
+    <ClInclude Include="include\Dictionary\Dictionary.h" />
     <ClInclude Include="include\List\Array.h" />
     <ClInclude Include="include\List\Link.h" />
     <ClInclude Include="include\List\LinkNode.h" />

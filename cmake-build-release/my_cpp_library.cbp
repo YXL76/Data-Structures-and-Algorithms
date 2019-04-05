@@ -26,7 +26,9 @@
 				<Compiler>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm"/>
+					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree"/>
+					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/List"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue"/>
@@ -55,7 +57,9 @@
 				<Compiler>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm"/>
+					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree"/>
+					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/List"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial"/>
 					<Add directory="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue"/>
@@ -105,6 +109,9 @@
 		<Unit filename="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
+		<Unit filename="C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h">
+			<Option target="my_cpp_library"/>
+		</Unit>
 		<Unit filename="C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
@@ -115,6 +122,9 @@
 			<Option target="my_cpp_library"/>
 		</Unit>
 		<Unit filename="C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h">
+			<Option target="my_cpp_library"/>
+		</Unit>
+		<Unit filename="C:/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
 		<Unit filename="C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h">

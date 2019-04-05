@@ -17,7 +17,7 @@ namespace yxl
     public:
         Stack() = default;
         virtual ~Stack() = default;
-        Stack(const Stack<T>& that) noexcept = default;
+        Stack(const Stack<T>& that) = default;
         Stack(Stack<T>&& that) noexcept = default;
 
         virtual T& top() const = 0;

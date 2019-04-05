@@ -17,7 +17,7 @@ namespace yxl
     public:
         List() = default;
         virtual ~List() = default;
-        List(const List<T>& that) noexcept = default;
+        List(const List<T>& that) = default;
         List(List<T>&& that) noexcept = default;
 
         virtual bool empty() const = 0;

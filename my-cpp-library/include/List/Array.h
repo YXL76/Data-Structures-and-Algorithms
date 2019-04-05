@@ -95,8 +95,8 @@ namespace yxl
         bool operator!=(const Iterator& right) const;
         bool operator==(const Iterator& right) const;
 
-        Iterator& operator=(const Iterator& right) = default;
-        Iterator& operator=(Iterator&& right) noexcept = default;
+        Iterator& operator=(const Iterator& right);
+        Iterator& operator=(Iterator&& right) noexcept;
         Iterator& operator+=(const int& right);
         Iterator& operator-=(const int& right);
 
@@ -126,7 +126,7 @@ namespace yxl
     template <typename T>
     Array<T>::Array(Array<T>&& that) noexcept
     {
-        *this = that;
+        *this = std::move(that);
     }
 
     template <typename T>
@@ -292,14 +292,13 @@ namespace yxl
     template <typename T>
     Array<T>::Iterator::Iterator(const Iterator& that)
     {
-        position_ = that.position_;
+        *this = that;
     }
 
     template <typename T>
     Array<T>::Iterator::Iterator(Iterator&& that) noexcept
     {
-        position_ = that.position_;
-        that.position_ = nullptr;
+        *this = std::move(that);
     }
 
     template <typename T>
@@ -394,6 +393,21 @@ namespace yxl
     bool Array<T>::Iterator::operator==(const Iterator& right) const
     {
         return position_ == right.position_;
+    }
+
+    template <typename T>
+    typename Array<T>::Iterator& Array<T>::Iterator::operator=(const Iterator& right)
+    {
+        position_ = right.position_;
+        return *this;
+    }
+
+    template <typename T>
+    typename Array<T>::Iterator& Array<T>::Iterator::operator=(Iterator&& right) noexcept
+    {
+        position_ = right.position_;
+        right.position_ = nullptr;
+        return *this;
     }
 
     template <typename T>
