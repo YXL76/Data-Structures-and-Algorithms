@@ -31,8 +31,12 @@ int main()
 {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
-
-
+    for (auto &i : g)
+    {
+        std::cout << i << ' ';
+    }
+    std::cout << std::endl;
+    g.print(LinkedBinaryTree<int>::kLevel);
     /*LinkedBinaryTree<int>::ttask aaa = [](LinkedBinaryTree<int>::tree_node*& x){d.push(x);};
     LinkedBinaryTree<int>::ttask bbb = [](LinkedBinaryTree<int>::tree_node*& x){};
     LinkedBinaryTree<int>::ttask ccc = [](LinkedBinaryTree<int>::tree_node*& x){};
