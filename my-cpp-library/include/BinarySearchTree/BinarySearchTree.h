@@ -24,9 +24,9 @@ namespace yxl
         using parent = LinkedBinaryTree<v_type>;
         using tree_node = LinkedBinaryTreeNode<v_type>;
 
-        BinarySearchTree() = default;
-        BinarySearchTree(const BinarySearchTree& that) = default;
-        BinarySearchTree(BinarySearchTree&& that) = default;
+        constexpr BinarySearchTree() = default;
+        constexpr BinarySearchTree(const BinarySearchTree& that) = default;
+        constexpr BinarySearchTree(BinarySearchTree&& that) noexcept = default;
         ~BinarySearchTree() override = default;
 
         bool empty() override;

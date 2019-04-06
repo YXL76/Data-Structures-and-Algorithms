@@ -55,8 +55,8 @@ namespace yxl
         LinkNode<T>* head_node_ = nullptr;
         LinkNode<T>* rear_node_ = nullptr;
 
-        bool check_index(Iterator& index);
-        bool check_index(const int& index) const;
+        constexpr bool check_index(Iterator& index);
+        constexpr bool check_index(const int& index) const;
     };
 
     template <typename T>
@@ -74,25 +74,25 @@ namespace yxl
         using const_reference = const T &;
 
 
-        Iterator() = default;
-        explicit Iterator(LinkNode<T>* that);
-        explicit Iterator(const LinkNode<T>* that);
+        constexpr Iterator();
+        constexpr explicit Iterator(LinkNode<T>* that);
+        constexpr explicit Iterator(const LinkNode<T>* that);
         Iterator(const Iterator& that);
         Iterator(Iterator&& that) noexcept;
         ~Iterator() = default;
 
-        bool is_null();
+        constexpr bool is_null() const;
 
-        LinkNode<T>& operator*() const;
-        LinkNode<T>* operator->() const;
+        constexpr LinkNode<T>& operator*() const;
+        constexpr LinkNode<T>* operator->() const;
 
         Iterator& operator++();
         const Iterator operator++(int);
 
         Iterator operator+(const int& right) const;
 
-        bool operator!=(const Iterator& right) const;
-        bool operator==(const Iterator& right) const;
+        constexpr bool operator!=(const Iterator& right) const;
+        constexpr bool operator==(const Iterator& right) const;
 
         Iterator& operator=(const Iterator& right);
         Iterator& operator=(Iterator&& right) noexcept;
@@ -100,8 +100,6 @@ namespace yxl
     private:
         LinkNode<T>* position_;
     };
-
-    class Node;
 
     template <typename T>
     Link<T>::Link()
@@ -303,57 +301,58 @@ namespace yxl
     }
 
     template <typename T>
-    bool Link<T>::check_index(Iterator& index)
+    constexpr bool Link<T>::check_index(Iterator& index)
     {
         return !index.is_null() && index != end();
     }
 
     template <typename T>
-    bool Link<T>::check_index(const int& index) const
+    constexpr bool Link<T>::check_index(const int& index) const
     {
         return index >= 0 && index < size_;
     }
 
     template <typename T>
-    Link<T>::Iterator::Iterator(LinkNode<T>* that)
+    constexpr Link<T>::Iterator::Iterator(): position_(nullptr)
     {
-        position_ = that;
     }
 
     template <typename T>
-    Link<T>::Iterator::Iterator(const LinkNode<T>* that)
+    constexpr Link<T>::Iterator::Iterator(LinkNode<T>* that): position_(that)
     {
-        position_ = that;
     }
 
     template <typename T>
-    Link<T>::Iterator::Iterator(const Iterator& that)
+    constexpr Link<T>::Iterator::Iterator(const LinkNode<T>* that): position_(that)
     {
-        position_ = nullptr;
+    }
+
+    template <typename T>
+    Link<T>::Iterator::Iterator(const Iterator& that): position_(nullptr)
+    {
         *this = that;
     }
 
     template <typename T>
-    Link<T>::Iterator::Iterator(Iterator&& that) noexcept
+    Link<T>::Iterator::Iterator(Iterator&& that) noexcept: position_(nullptr)
     {
-        position_ = nullptr;
         *this = std::move(that);
     }
 
     template <typename T>
-    bool Link<T>::Iterator::is_null()
+    constexpr bool Link<T>::Iterator::is_null() const
     {
         return position_ == nullptr;
     }
 
     template <typename T>
-    LinkNode<T>& Link<T>::Iterator::operator*() const
+    constexpr LinkNode<T>& Link<T>::Iterator::operator*() const
     {
         return *position_;
     }
 
     template <typename T>
-    LinkNode<T>* Link<T>::Iterator::operator->() const
+    constexpr LinkNode<T>* Link<T>::Iterator::operator->() const
     {
         return &*position_;
     }
@@ -385,13 +384,13 @@ namespace yxl
     }
 
     template <typename T>
-    bool Link<T>::Iterator::operator!=(const Iterator& right) const
+    constexpr bool Link<T>::Iterator::operator!=(const Iterator& right) const
     {
         return position_ != right.position_;
     }
 
     template <typename T>
-    bool Link<T>::Iterator::operator==(const Iterator& right) const
+    constexpr bool Link<T>::Iterator::operator==(const Iterator& right) const
     {
         return position_ == right.position_;
     }

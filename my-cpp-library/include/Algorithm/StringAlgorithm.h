@@ -16,7 +16,7 @@ namespace yxl
     class KMP final
     {
     public:
-        KMP() = default;
+        constexpr KMP() = default;
         template <class T>
         explicit KMP(T& pattern_string);
 
@@ -33,7 +33,7 @@ namespace yxl
         char* string_{nullptr};
 
         template <class T>
-        void check_type(T& pattern_string);
+        constexpr void check_type(T& pattern_string);
     };
 
     inline void KMP::clear()
@@ -101,7 +101,7 @@ namespace yxl
     }
 
     template <class T>
-    void KMP::check_type(T& /*pattern_string*/)
+    constexpr void KMP::check_type(T& /*pattern_string*/)
     {
         static_assert(std::is_same<T, std::string>::value || std::is_same<T, Array<char>>::value,
             "the parameter type must be string or Array<char>");

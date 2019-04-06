@@ -25,6 +25,8 @@ include/Polynomial/LinkedPolynomial.h
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/LinkedPolynomial.h
 include/BinaryTree/LinkedBinaryTree.h
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
+include/BinarySearchTree/BinarySearchTree.h
+C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
 
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h
 Algorithm/StringAlgorithm.h
@@ -34,7 +36,17 @@ C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h
 ../List/Array.h
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
 
+C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
+../Dictionary/Dictionary.h
+C:/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
+../BinaryTree/LinkedBinaryTree.h
+C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
+utility
+-
+
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h
+functional
+-
 
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTreeTask.h
 iostream
@@ -53,13 +65,19 @@ C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h
 ../Stack/ArrayStack.h
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h
-iostream
+utility
 -
 functional
 -
 
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
 iostream
+-
+utility
+-
+
+C:/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
+utility
 -
 
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
@@ -99,6 +117,8 @@ C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h
 Queue.h
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/Queue.h
+../List/Array.h
+C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
 
 C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/Queue.h
 

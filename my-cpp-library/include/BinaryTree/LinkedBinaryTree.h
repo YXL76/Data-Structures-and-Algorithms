@@ -33,7 +33,7 @@ namespace yxl
         using iitask = std::function<void(int&, const int&)>;
         using ittask = std::function<void(int&, tree_node*&)>;
 
-        LinkedBinaryTree();
+        constexpr LinkedBinaryTree();
         explicit LinkedBinaryTree(const T& value);
         LinkedBinaryTree(T that[], const int& size);
         LinkedBinaryTree(const LinkedBinaryTree<T>& that);
@@ -108,16 +108,16 @@ namespace yxl
         Iterator(Iterator&& that) noexcept;
         ~Iterator() = default;
 
-        explicit operator pointer() const;
+        constexpr explicit operator pointer() const;
 
-        tree_node& operator*() const;
-        tree_node* operator->() const;
+        constexpr tree_node& operator*() const;
+        constexpr tree_node* operator->() const;
 
         Iterator& operator++();
         const Iterator operator++(int);
 
-        bool operator!=(const Iterator& right) const;
-        bool operator==(const Iterator& right) const;
+        constexpr bool operator!=(const Iterator& right) const;
+        constexpr bool operator==(const Iterator& right) const;
 
         Iterator& operator=(const Iterator& right);
         Iterator& operator=(Iterator&& right) noexcept;
@@ -132,7 +132,7 @@ namespace yxl
     };
 
     template <typename T>
-    LinkedBinaryTree<T>::LinkedBinaryTree(): root_(nullptr)
+    constexpr LinkedBinaryTree<T>::LinkedBinaryTree(): root_(nullptr)
     {
     }
 
@@ -201,6 +201,7 @@ namespace yxl
         {
             std::cout << static_cast<tree_node*>(l)->value << ' ';
         }
+        std::cout << std::endl;
     }
 
     template <typename T>
@@ -417,19 +418,19 @@ namespace yxl
     }
 
     template <typename T>
-    LinkedBinaryTree<T>::Iterator::operator pointer() const
+    constexpr LinkedBinaryTree<T>::Iterator::operator pointer() const
     {
         return position_;
     }
 
     template <typename T>
-    typename LinkedBinaryTree<T>::Iterator::tree_node& LinkedBinaryTree<T>::Iterator::operator*() const
+    constexpr typename LinkedBinaryTree<T>::Iterator::tree_node& LinkedBinaryTree<T>::Iterator::operator*() const
     {
         return *position_;
     }
 
     template <typename T>
-    typename LinkedBinaryTree<T>::Iterator::tree_node* LinkedBinaryTree<T>::Iterator::operator->() const
+    constexpr typename LinkedBinaryTree<T>::Iterator::tree_node* LinkedBinaryTree<T>::Iterator::operator->() const
     {
         return &*position_;
     }
@@ -493,13 +494,13 @@ namespace yxl
     }
 
     template <typename T>
-    bool LinkedBinaryTree<T>::Iterator::operator!=(const Iterator& right) const
+    constexpr bool LinkedBinaryTree<T>::Iterator::operator!=(const Iterator& right) const
     {
         return position_ != right.position_;
     }
 
     template <typename T>
-    bool LinkedBinaryTree<T>::Iterator::operator==(const Iterator& right) const
+    constexpr bool LinkedBinaryTree<T>::Iterator::operator==(const Iterator& right) const
     {
         return position_ == right.position_;
     }

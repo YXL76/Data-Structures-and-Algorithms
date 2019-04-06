@@ -15,10 +15,10 @@ namespace yxl
     class Stack
     {
     public:
-        Stack() = default;
+        constexpr Stack() = default;
         virtual ~Stack() = default;
-        Stack(const Stack<T>& that) = default;
-        Stack(Stack<T>&& that) noexcept = default;
+        constexpr Stack(const Stack<T>& that) = default;
+        constexpr Stack(Stack<T>&& that) noexcept = default;
 
         virtual T& top() const = 0;
         virtual void pop() = 0;

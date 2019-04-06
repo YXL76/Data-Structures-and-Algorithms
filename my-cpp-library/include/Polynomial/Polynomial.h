@@ -15,10 +15,10 @@ namespace yxl
     class Polynomial
     {
     public:
-        Polynomial() = default;
+        constexpr Polynomial() = default;
         virtual ~Polynomial() = default;
-        Polynomial(const Polynomial<T>& that) = default;
-        Polynomial(Polynomial<T>&& that) noexcept = default;
+        constexpr Polynomial(const Polynomial<T>& that) = default;
+        constexpr Polynomial(Polynomial<T>&& that) noexcept = default;
 
         virtual void read(const double coef[], const int& size) = 0;
         virtual double calculate(const double& x) = 0;

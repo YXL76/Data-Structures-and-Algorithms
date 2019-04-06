@@ -15,10 +15,10 @@ namespace yxl
     class Queue
     {
     public:
-        Queue() = default;
+        constexpr Queue() = default;
         virtual ~Queue() = default;
-        Queue(const Queue<T>& that) = default;
-        Queue(Queue<T>&& that) noexcept = default;
+        constexpr Queue(const Queue<T>& that) = default;
+        constexpr Queue(Queue<T>&& that) noexcept = default;
 
         virtual T& front() const = 0;
         virtual T& back() const = 0;

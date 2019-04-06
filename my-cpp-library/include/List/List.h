@@ -15,10 +15,10 @@ namespace yxl
     class List
     {
     public:
-        List() = default;
+        constexpr List() = default;
         virtual ~List() = default;
-        List(const List<T>& that) = default;
-        List(List<T>&& that) noexcept = default;
+        constexpr List(const List<T>& that) = default;
+        constexpr List(List<T>&& that) noexcept = default;
 
         virtual bool empty() const = 0;
         virtual int size() const = 0;

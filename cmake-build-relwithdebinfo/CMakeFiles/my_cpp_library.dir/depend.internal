@@ -5,10 +5,12 @@ CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj
  C:/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h
+ C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTreeTask.h
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
+ C:/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h
  C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/LinkNode.h

@@ -17,10 +17,10 @@ namespace yxl
     class Dictionary
     {
     public:
-        Dictionary() = default;
+        constexpr Dictionary() = default;
         virtual ~Dictionary() = default;
-        Dictionary(const Dictionary<K, V>& that) = default;
-        Dictionary(Dictionary<K, V>&& that) noexcept = default;
+        constexpr Dictionary(const Dictionary<K, V>& that) = default;
+        constexpr Dictionary(Dictionary<K, V>&& that) noexcept = default;
 
         virtual bool empty() = 0;
         virtual int size() = 0;

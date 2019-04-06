@@ -17,40 +17,40 @@ namespace yxl
         T value;
         LinkNode* next;
 
-        LinkNode();
-        explicit LinkNode(const T& value);
-        LinkNode(const T& value, LinkNode* next);
+        constexpr LinkNode();
+        constexpr explicit LinkNode(const T& value);
+        constexpr LinkNode(const T& value, LinkNode* next);
 
         template <typename Tt>
-        friend std::ostream& operator<<(std::ostream& out, const LinkNode<Tt>& item);
+        constexpr friend std::ostream& operator<<(std::ostream& out, const LinkNode<Tt>& item);
         template <typename Tt>
-        friend std::ostream& operator<<(std::ostream& out, const LinkNode<Tt>* item);
+        constexpr friend std::ostream& operator<<(std::ostream& out, const LinkNode<Tt>* item);
     };
 
     template <typename T>
-    LinkNode<T>::LinkNode(): value(T()), next(nullptr)
+    constexpr LinkNode<T>::LinkNode(): value(T()), next(nullptr)
     {
     }
 
     template <typename T>
-    LinkNode<T>::LinkNode(const T& value): value(value), next(nullptr)
+    constexpr LinkNode<T>::LinkNode(const T& value): value(value), next(nullptr)
     {
     }
 
     template <typename T>
-    LinkNode<T>::LinkNode(const T& value, LinkNode* next): value(value), next(next)
+    constexpr LinkNode<T>::LinkNode(const T& value, LinkNode* next): value(value), next(next)
     {
     }
 
     template <typename T>
-    std::ostream& operator<<(std::ostream& out, const LinkNode<T>& item)
+    constexpr std::ostream& operator<<(std::ostream& out, const LinkNode<T>& item)
     {
         out << item.value;
         return out;
     }
 
     template <typename T>
-    std::ostream& operator<<(std::ostream& out, const LinkNode<T>* item)
+    constexpr std::ostream& operator<<(std::ostream& out, const LinkNode<T>* item)
     {
         out << item->value;
         return out;

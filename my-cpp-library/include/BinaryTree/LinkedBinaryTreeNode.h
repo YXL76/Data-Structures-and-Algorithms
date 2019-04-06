@@ -20,9 +20,9 @@ namespace yxl
         T value;
         LinkedBinaryTreeNode *left, *right;
 
-        LinkedBinaryTreeNode();
-        explicit LinkedBinaryTreeNode(T value);
-        LinkedBinaryTreeNode(T value, LinkedBinaryTreeNode<T>* left, LinkedBinaryTreeNode<T>* right);
+        constexpr LinkedBinaryTreeNode();
+        constexpr explicit LinkedBinaryTreeNode(T value);
+        constexpr LinkedBinaryTreeNode(T value, LinkedBinaryTreeNode<T>* left, LinkedBinaryTreeNode<T>* right);
 
         template <typename Tt>
         friend std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<Tt>& item);
@@ -31,27 +31,28 @@ namespace yxl
     };
 
     template <typename T>
-    LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(): value(T()), left(nullptr), right(nullptr)
+    constexpr LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(): value(T()), left(nullptr), right(nullptr)
     {
     }
 
     template <typename T>
-    LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(T value): value(std::move(value)), left(nullptr),
-                                                            right(nullptr)
+    constexpr LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(T value): value(std::move(value)), left(nullptr),
+                                                                      right(nullptr)
     {
     }
 
     template <typename T>
-    LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(T value, LinkedBinaryTreeNode<T>* left,
-                                                  LinkedBinaryTreeNode<T>* right): value(std::move(value)), left(left),
-                                                                                   right(right)
+    constexpr LinkedBinaryTreeNode<T>::LinkedBinaryTreeNode(T value, LinkedBinaryTreeNode<T>* left,
+                                                            LinkedBinaryTreeNode<T>* right): value(std::move(value)),
+                                                                                             left(left),
+                                                                                             right(right)
     {
     }
 
     template <class K, class V>
     std::ostream& operator<<(std::ostream& out, const std::pair<K, V>& item)
     {
-        out << item.first  << ':'  << item.second;
+        out << item.first << ':' << item.second;
         return out;
     }
 
@@ -63,7 +64,7 @@ namespace yxl
     }
 
     template <typename T>
-    std::ostream& operator<<(std::ostream& out, LinkedBinaryTreeNode<T>& item)
+    std::ostream& operator<<(std::ostream& out, const LinkedBinaryTreeNode<T>& item)
     {
         out << item.value;
         return out;

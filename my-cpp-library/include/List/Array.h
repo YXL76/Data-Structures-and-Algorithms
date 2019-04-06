@@ -37,7 +37,7 @@ namespace yxl
         Iterator end();
         Iterator end() const;
 
-        T& operator[](const int& index);
+        constexpr T& operator[](const int& index) const;
 
         Array& operator=(const Array<T>& right);
         Array& operator=(Array<T>&& right) noexcept;
@@ -53,7 +53,7 @@ namespace yxl
         int max_size_{1 << 10};
 
         void change_size(const int& new_size);
-        bool check_index(const int& index) const;
+        constexpr bool check_index(const int& index) const;
     };
 
     template <typename T>
@@ -70,15 +70,15 @@ namespace yxl
         using reference = T &;
         using const_reference = const T &;
 
-        Iterator() = default;
-        explicit Iterator(T* that);
-        explicit Iterator(const T* that);
+        constexpr Iterator() = default;
+        constexpr explicit Iterator(T* that);
+        constexpr explicit Iterator(const T* that);
         Iterator(const Iterator& that);
         Iterator(Iterator&& that) noexcept;
         ~Iterator() = default;
 
-        T& operator*() const;
-        T* operator->() const;
+        constexpr T& operator*() const;
+        constexpr T* operator->() const;
 
         Iterator& operator++();
         const Iterator operator++(int);
@@ -88,12 +88,12 @@ namespace yxl
         Iterator operator+(const int& right) const;
         Iterator operator-(const int& right) const;
 
-        bool operator<(const Iterator& right) const;
-        bool operator>(const Iterator& right) const;
-        bool operator<=(const Iterator& right) const;
-        bool operator>=(const Iterator& right) const;
-        bool operator!=(const Iterator& right) const;
-        bool operator==(const Iterator& right) const;
+        constexpr bool operator<(const Iterator& right) const;
+        constexpr bool operator>(const Iterator& right) const;
+        constexpr bool operator<=(const Iterator& right) const;
+        constexpr bool operator>=(const Iterator& right) const;
+        constexpr bool operator!=(const Iterator& right) const;
+        constexpr bool operator==(const Iterator& right) const;
 
         Iterator& operator=(const Iterator& right);
         Iterator& operator=(Iterator&& right) noexcept;
@@ -111,9 +111,8 @@ namespace yxl
     }
 
     template <typename T>
-    Array<T>::Array(const int& initial_size)
+    Array<T>::Array(const int& initial_size) : size_(initial_size), max_size_(initial_size)
     {
-        size_ = max_size_ = initial_size;
         array_ = new T[max_size_];
     }
 
@@ -224,7 +223,7 @@ namespace yxl
     }
 
     template <typename T>
-    T& Array<T>::operator[](const int& index)
+    constexpr T& Array<T>::operator[](const int& index) const
     {
         if (check_index(index)) { return array_[index]; }
         return array_[0];
@@ -272,21 +271,19 @@ namespace yxl
     }
 
     template <typename T>
-    bool Array<T>::check_index(const int& index) const
+    constexpr bool Array<T>::check_index(const int& index) const
     {
         return index >= 0 && index < size_;
     }
 
     template <typename T>
-    Array<T>::Iterator::Iterator(T* that)
+    constexpr Array<T>::Iterator::Iterator(T* that) : position_(that)
     {
-        position_ = that;
     }
 
     template <typename T>
-    Array<T>::Iterator::Iterator(const T* that)
+    constexpr Array<T>::Iterator::Iterator(const T* that) : position_(that)
     {
-        position_ = that;
     }
 
     template <typename T>
@@ -302,13 +299,13 @@ namespace yxl
     }
 
     template <typename T>
-    T& Array<T>::Iterator::operator*() const
+    constexpr T& Array<T>::Iterator::operator*() const
     {
         return *position_;
     }
 
     template <typename T>
-    T* Array<T>::Iterator::operator->() const
+    constexpr T* Array<T>::Iterator::operator->() const
     {
         return &*position_;
     }
@@ -360,37 +357,37 @@ namespace yxl
     }
 
     template <typename T>
-    bool Array<T>::Iterator::operator<(const Iterator& right) const
+    constexpr bool Array<T>::Iterator::operator<(const Iterator& right) const
     {
         return position_ < right.position_;
     }
 
     template <typename T>
-    bool Array<T>::Iterator::operator>(const Iterator& right) const
+    constexpr bool Array<T>::Iterator::operator>(const Iterator& right) const
     {
         return position_ > right.position_;
     }
 
     template <typename T>
-    bool Array<T>::Iterator::operator>=(const Iterator& right) const
+    constexpr bool Array<T>::Iterator::operator>=(const Iterator& right) const
     {
         return position_ >= right.position_;
     }
 
     template <typename T>
-    bool Array<T>::Iterator::operator<=(const Iterator& right) const
+    constexpr bool Array<T>::Iterator::operator<=(const Iterator& right) const
     {
         return position_ <= right.position_;
     }
 
     template <typename T>
-    bool Array<T>::Iterator::operator!=(const Iterator& right) const
+    constexpr bool Array<T>::Iterator::operator!=(const Iterator& right) const
     {
         return position_ != right.position_;
     }
 
     template <typename T>
-    bool Array<T>::Iterator::operator==(const Iterator& right) const
+    constexpr bool Array<T>::Iterator::operator==(const Iterator& right) const
     {
         return position_ == right.position_;
     }

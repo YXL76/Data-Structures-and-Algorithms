@@ -22,10 +22,10 @@ namespace yxl
         using iitask = std::function<void(int&, const int&)>;
         using ittask = std::function<void(int&, T*&)>;
 
-        BinaryTree() = default;
+        constexpr BinaryTree() = default;
         virtual ~BinaryTree() = default;
-        BinaryTree(const BinaryTree& that) = default;
-        BinaryTree(BinaryTree&& that) noexcept = default;
+        constexpr BinaryTree(const BinaryTree& that) = default;
+        constexpr BinaryTree(BinaryTree&& that) noexcept = default;
 
         virtual bool empty(T*& node) = 0;
         virtual int size(T*& node) = 0;

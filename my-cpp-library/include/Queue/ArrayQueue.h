@@ -19,7 +19,7 @@ namespace yxl
                              public Array<T>
     {
     public:
-        ArrayQueue() = default;
+        constexpr ArrayQueue() = default;
         ArrayQueue(const ArrayQueue<T>& that);
         ArrayQueue(ArrayQueue<T>&& that) noexcept;
         ~ArrayQueue() override = default;

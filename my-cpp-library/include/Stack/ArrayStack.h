@@ -18,7 +18,7 @@ namespace yxl
                              public Array<T>
     {
     public:
-        ArrayStack() = default;
+        constexpr ArrayStack() = default;
         ArrayStack(const ArrayStack<T>& that);
         ArrayStack(ArrayStack<T>&& that) noexcept;
         ~ArrayStack() override = default;

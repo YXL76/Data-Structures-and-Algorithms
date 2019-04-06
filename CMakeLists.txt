@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 project(my_cpp_library)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
 include_directories(my-cpp-library/include)
 include_directories(my-cpp-library/include/Algorithm)

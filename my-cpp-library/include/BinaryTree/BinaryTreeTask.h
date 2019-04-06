@@ -18,9 +18,9 @@ namespace yxl
     class BinaryTreeTask
     {
     public:
-        BinaryTreeTask() = default;
-        BinaryTreeTask(const BinaryTreeTask& that) = default;
-        BinaryTreeTask(BinaryTreeTask&& that) noexcept = default;
+        constexpr BinaryTreeTask() = default;
+        constexpr BinaryTreeTask(const BinaryTreeTask& that) = default;
+        constexpr BinaryTreeTask(BinaryTreeTask&& that) noexcept = default;
         ~BinaryTreeTask() = default;
 
         struct TTask
