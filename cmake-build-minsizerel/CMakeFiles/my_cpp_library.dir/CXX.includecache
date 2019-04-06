@@ -6,125 +6,125 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp
 iostream
 -
 include/List/Array.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
 include/List/Link.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h
 include/Queue/ArrayQueue.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h
 include/Stack/ArrayStack.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h
 include/Algorithm.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h
 include/Polynomial/ArrayPolynomial.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/ArrayPolynomial.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/ArrayPolynomial.h
 include/Polynomial/LinkedPolynomial.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/LinkedPolynomial.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/LinkedPolynomial.h
 include/BinaryTree/LinkedBinaryTree.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
 include/BinarySearchTree/BinarySearchTree.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h
 Algorithm/StringAlgorithm.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h
 ../List/Array.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
 ../Dictionary/Dictionary.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
 ../BinaryTree/LinkedBinaryTree.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
 utility
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h
 functional
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTreeTask.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTreeTask.h
 iostream
 -
 functional
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
 BinaryTree.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h
 BinaryTreeTask.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTreeTask.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTreeTask.h
 LinkedBinaryTreeNode.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
 ../Queue/ArrayQueue.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h
 ../Stack/ArrayStack.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h
 utility
 -
 functional
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
 iostream
 -
 utility
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
 utility
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
 List.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/List.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/List.h
 ostream
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h
 List.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/List.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/List.h
 LinkNode.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/LinkNode.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/LinkNode.h
 ostream
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/LinkNode.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/LinkNode.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/List.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/List.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/ArrayPolynomial.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/ArrayPolynomial.h
 Polynomial.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h
 ../List/Array.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
 complex
 -
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/LinkedPolynomial.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/LinkedPolynomial.h
 Polynomial.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h
 ../List/Link.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h
 Queue.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/Queue.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/Queue.h
 ../List/Array.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/Queue.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/Queue.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h
 Stack.h
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/Stack.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/Stack.h
 
-C:/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/Stack.h
+/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/Stack.h
 

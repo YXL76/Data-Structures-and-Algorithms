@@ -22,9 +22,9 @@ namespace yxl
         constexpr LinkNode(const T& value, LinkNode* next);
 
         template <typename Tt>
-        constexpr friend std::ostream& operator<<(std::ostream& out, const LinkNode<Tt>& item);
+        friend std::ostream& operator<<(std::ostream& out, const LinkNode<Tt>& item);
         template <typename Tt>
-        constexpr friend std::ostream& operator<<(std::ostream& out, const LinkNode<Tt>* item);
+        friend std::ostream& operator<<(std::ostream& out, const LinkNode<Tt>* item);
     };
 
     template <typename T>
@@ -43,14 +43,14 @@ namespace yxl
     }
 
     template <typename T>
-    constexpr std::ostream& operator<<(std::ostream& out, const LinkNode<T>& item)
+    std::ostream& operator<<(std::ostream& out, const LinkNode<T>& item)
     {
         out << item.value;
         return out;
     }
 
     template <typename T>
-    constexpr std::ostream& operator<<(std::ostream& out, const LinkNode<T>* item)
+    std::ostream& operator<<(std::ostream& out, const LinkNode<T>* item)
     {
         out << item->value;
         return out;

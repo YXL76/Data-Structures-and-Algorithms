@@ -225,8 +225,7 @@ namespace yxl
     template <typename T>
     constexpr T& Array<T>::operator[](const int& index) const
     {
-        if (check_index(index)) { return array_[index]; }
-        return array_[0];
+        return array_[(check_index(index) ? index : 0)];
     }
 
     template <typename T>

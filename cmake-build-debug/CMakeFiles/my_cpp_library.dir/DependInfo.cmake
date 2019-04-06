@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp" "C:/Users/chenx/my-cpp-library/cmake-build-debug/CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.obj"
+  "/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp" "/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

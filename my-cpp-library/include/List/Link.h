@@ -55,7 +55,7 @@ namespace yxl
         LinkNode<T>* head_node_ = nullptr;
         LinkNode<T>* rear_node_ = nullptr;
 
-        constexpr bool check_index(Iterator& index);
+        constexpr bool check_index(Iterator& index) const;
         constexpr bool check_index(const int& index) const;
     };
 
@@ -301,7 +301,7 @@ namespace yxl
     }
 
     template <typename T>
-    constexpr bool Link<T>::check_index(Iterator& index)
+    constexpr bool Link<T>::check_index(Iterator& index) const
     {
         return !index.is_null() && index != end();
     }
