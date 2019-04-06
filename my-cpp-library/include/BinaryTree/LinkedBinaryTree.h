@@ -53,9 +53,6 @@ namespace yxl
         void clear() { return clear(root_); }
         void print(const int& type);
 
-        void remove_left_subtree();
-        void remove_right_subtree();
-
         void unite(const T& value, LinkedBinaryTree& left, LinkedBinaryTree& right);
 
         bool empty(tree_node*& node) override;
@@ -66,6 +63,9 @@ namespace yxl
         void build(tree_node*& node, tree_node* const& that) override;
         void traversal(tree_node*& node, ttask& pre, ttask& in, ttask& post) override;
         void level_traversal(tree_node*& node, int& count, ittask& point, iitask& line, itask& plane) override;
+
+        bool operator!=(const LinkedBinaryTree& right);
+        bool operator==(const LinkedBinaryTree& right);
 
         LinkedBinaryTree& operator=(const LinkedBinaryTree& right);
         LinkedBinaryTree& operator=(LinkedBinaryTree&& right) noexcept;
@@ -126,8 +126,7 @@ namespace yxl
         int type_{};
         tree_node* cursor_;
         tree_node* position_;
-        ArrayQueue<tree_node*> q_;
-        ArrayStack<std::pair<tree_node*, bool>> s_;
+        ArrayQueue<std::pair<tree_node*, bool>> q_;
 
         void initialize();
     };
@@ -202,20 +201,6 @@ namespace yxl
         {
             std::cout << static_cast<tree_node*>(l)->value << ' ';
         }
-    }
-
-    template <typename T>
-    void LinkedBinaryTree<T>::remove_left_subtree()
-    {
-        clear(root_->left);
-        root_->left = nullptr;
-    }
-
-    template <typename T>
-    void LinkedBinaryTree<T>::remove_right_subtree()
-    {
-        clear(root_->right);
-        root_->right = nullptr;
     }
 
     template <typename T>
@@ -334,6 +319,27 @@ namespace yxl
     }
 
     template <typename T>
+    bool LinkedBinaryTree<T>::operator!=(const LinkedBinaryTree& right)
+    {
+        return !(*this == right);
+    }
+
+    template <typename T>
+    bool LinkedBinaryTree<T>::operator==(const LinkedBinaryTree& right)
+    {
+        if (size_ != right.size_) { return false; }
+        auto l_begin = begin(kPre);
+        auto r_begin = right.begin(kPre);
+        while (static_cast<tree_node*>(l_begin) != nullptr)
+        {
+            if (l_begin != r_begin) { return false; }
+            ++l_begin;
+            ++r_begin;
+        }
+        return true;
+    }
+
+    template <typename T>
     LinkedBinaryTree<T>& LinkedBinaryTree<T>::operator=(const LinkedBinaryTree& right)
     {
         this->size_ = right.size_;
@@ -379,7 +385,8 @@ namespace yxl
     }
 
     template <typename T>
-    LinkedBinaryTree<T>::Iterator::Iterator(tree_node* that, const int& type): type_(type), cursor_(that), position_(that)
+    LinkedBinaryTree<T>::Iterator::Iterator(tree_node* that, const int& type): type_(type), cursor_(that),
+                                                                               position_(that)
     {
         initialize();
     }
@@ -438,10 +445,10 @@ namespace yxl
                 auto len = q_.size();
                 while ((len--) != 0)
                 {
-                    position_ = q_.front();
+                    position_ = q_.front().first;
                     q_.pop_front();
-                    if (position_->left != nullptr) { q_.push_back(position_->left); }
-                    if (position_->right != nullptr) { q_.push_back(position_->right); }
+                    if (position_->left != nullptr) { q_.push_back({position_->left, true}); }
+                    if (position_->right != nullptr) { q_.push_back({position_->right, true}); }
                     return *this;
                 }
             }
@@ -452,26 +459,26 @@ namespace yxl
             {
                 while (cursor_ != nullptr)
                 {
-                    s_.push({cursor_, true});
+                    q_.push_back({cursor_, true});
                     if (type_ == kPre) { position_ = cursor_; }
                     cursor_ = cursor_->left;
                     if (type_ == kPre) { return *this; }
                 }
-                while (!s_.empty() && !s_.top().second)
+                while (!q_.empty() && !q_.back().second)
                 {
-                    if (type_ == kPost) { position_ = s_.top().first; }
-                    s_.pop();
+                    if (type_ == kPost) { position_ = q_.back().first; }
+                    q_.pop_back();
                     if (type_ == kPost) { return *this; }
                 }
-                if (!s_.empty() && s_.top().second)
+                if (!q_.empty() && q_.back().second)
                 {
-                    if (type_ == kIn) { position_ = s_.top().first; }
-                    cursor_ = s_.top().first->right;
-                    s_.top().second = false;
+                    if (type_ == kIn) { position_ = q_.back().first; }
+                    cursor_ = q_.back().first->right;
+                    q_.back().second = false;
                     if (type_ == kIn) { return *this; }
                 }
             }
-            while (!s_.empty());
+            while (!q_.empty());
         }
         position_ = nullptr;
         return *this;
@@ -503,7 +510,7 @@ namespace yxl
         type_ = right.type_;
         cursor_ = right.cursor_;
         position_ = right.position_;
-        s_ = right.s_;
+        q_ = right.q_;
         return *this;
     }
 
@@ -515,14 +522,14 @@ namespace yxl
         right.cursor_ = nullptr;
         position_ = right.position_;
         right.position_ = nullptr;
-        s_ = std::move(right.s_);
+        q_ = std::move(right.q_);
         return *this;
     }
 
     template <typename T>
     void LinkedBinaryTree<T>::Iterator::initialize()
     {
-        if (type_ == kLevel) { q_.push_back(position_); }
+        if (type_ == kLevel) { q_.push_back({position_, true}); }
         if (cursor_ != nullptr) { ++(*this); }
     }
 } // namespace yxl

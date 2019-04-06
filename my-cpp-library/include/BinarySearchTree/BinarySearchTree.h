@@ -24,11 +24,30 @@ namespace yxl
         using parent = LinkedBinaryTree<v_type>;
         using tree_node = LinkedBinaryTreeNode<v_type>;
 
+        BinarySearchTree() = default;
+        BinarySearchTree(const BinarySearchTree& that) = default;
+        BinarySearchTree(BinarySearchTree&& that) = default;
+        ~BinarySearchTree() override = default;
+
         bool empty() override;
         int size() override;
         void erase(const K& key) override;
         void insert(const v_type& element) override;
         v_type* find(const K& key) const override;
+
+        BinarySearchTree& operator=(const BinarySearchTree& right) = default;
+        BinarySearchTree& operator=(BinarySearchTree&& right) noexcept = default;
+
+    private:
+        void unite(const v_type& value, typename LinkedBinaryTree<std::pair<const K, V>>::tree_node*& /*left*/,
+                   typename LinkedBinaryTree<std::pair<const K, V>>::tree_node*& /*right*/)
+        {
+        }
+
+        void build(typename LinkedBinaryTree<std::pair<const K, V>>::tree_node*& /*node*/,
+                   typename LinkedBinaryTree<std::pair<const K, V>>::tree_node* const& /*that*/) override
+        {
+        }
     };
 
     template <class K, class V>
