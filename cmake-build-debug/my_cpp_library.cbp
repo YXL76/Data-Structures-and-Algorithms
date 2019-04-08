@@ -8,41 +8,41 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="my_cpp_library">
-				<Option output="/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/my_cpp_library" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/my_cpp_library" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Queue"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Stack"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -53,28 +53,28 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 my_cpp_library"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 my_cpp_library"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="my_cpp_library/fast">
-				<Option output="/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/my_cpp_library" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug"/>
+				<Option output="/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/my_cpp_library" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue"/>
-					<Add directory="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Queue"/>
+					<Add directory="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Stack"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -85,84 +85,84 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 my_cpp_library/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 my_cpp_library/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug"/>
+				<Option working_dir="/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/mnt/c/Users/chenx/my-cpp-library/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm/StringAlgorithm.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTree.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTreeTask.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/BinaryTreeTask.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/LinkNode.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List/LinkNode.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/List/List.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List/List.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/ArrayPolynomial.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/ArrayPolynomial.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/LinkedPolynomial.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/LinkedPolynomial.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Polynomial/Polynomial.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/ArrayQueue.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/Queue.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Queue/Queue.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/ArrayStack.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/Stack.h">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Stack/Stack.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/media/yxl/Windows/Users/chenx/my-cpp-library/CMakeLists.txt">
+		<Unit filename="/mnt/c/Users/chenx/my-cpp-library/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

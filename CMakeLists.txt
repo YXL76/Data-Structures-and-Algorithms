@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 3.13)
+cmake_minimum_required(VERSION 3.10.2)
 project(my_cpp_library)
 
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_COMPILER "clang++")
+# set(CMAKE_CXX_COMPILER "clang++")
 # set(CMAKE_CXX_COMPILER "g++")
 
 include_directories(my-cpp-library/include)

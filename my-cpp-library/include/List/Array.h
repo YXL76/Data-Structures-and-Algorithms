@@ -70,7 +70,7 @@ namespace yxl
         using reference = T &;
         using const_reference = const T &;
 
-        constexpr Iterator() = default;
+        constexpr Iterator();
         constexpr explicit Iterator(T* that);
         constexpr explicit Iterator(const T* that);
         Iterator(const Iterator& that);
@@ -273,6 +273,11 @@ namespace yxl
     constexpr bool Array<T>::check_index(const int& index) const
     {
         return index >= 0 && index < size_;
+    }
+
+    template <typename T>
+    constexpr Array<T>::Iterator::Iterator() : position_(nullptr)
+    {
     }
 
     template <typename T>

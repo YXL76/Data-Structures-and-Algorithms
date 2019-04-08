@@ -1,4 +1,4 @@
-/home/yxl/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/191.6183.77/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -G "CodeBlocks - Unix Makefiles" /media/yxl/Windows/Users/chenx/my-cpp-library
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -G "CodeBlocks - Unix Makefiles" /mnt/c/Users/chenx/my-cpp-library
 -- Configuring done
 -- Generating done
--- Build files have been written to: /media/yxl/Windows/Users/chenx/my-cpp-library/cmake-build-relwithdebinfo
+-- Build files have been written to: /mnt/c/Users/chenx/my-cpp-library/cmake-build-relwithdebinfo
