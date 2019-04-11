@@ -2,6 +2,26 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
+      <paths name="Artix (9a78a0a3-754e-4528-bd4b-22b1838348b3)">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Remote Host (b2136926-0ac4-4ee2-abcb-e19137ac6bbe)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/tmp.Kwm7gLKstb" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-minsizerel" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-relwithdebinfo" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
       <paths name="WSL (1e5fa6e2-7394-485a-8535-48e57b7b2767)">
         <serverdata>
           <mappings>
