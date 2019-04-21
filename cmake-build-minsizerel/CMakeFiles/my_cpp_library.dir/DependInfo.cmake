@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/tmp/tmp.Kwm7gLKstb/my-cpp-library/Source.cpp" "/tmp/tmp.Kwm7gLKstb/cmake-build-minsizerel/CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o"
+  "/tmp/tmp.27A2idwg3b/my-cpp-library/Source.cpp" "/tmp/tmp.27A2idwg3b/cmake-build-minsizerel/CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,6 +15,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../my-cpp-library/include/BinarySearchTree"
   "../my-cpp-library/include/BinaryTree"
   "../my-cpp-library/include/Dictionary"
+  "../my-cpp-library/include/Heap"
+  "../my-cpp-library/include/Huffman"
   "../my-cpp-library/include/List"
   "../my-cpp-library/include/Polynomial"
   "../my-cpp-library/include/Queue"

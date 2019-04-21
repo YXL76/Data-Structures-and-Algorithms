@@ -165,6 +165,10 @@
     <ClInclude Include="include\BinaryTree\LinkedBinaryTree.h" />
     <ClInclude Include="include\BinaryTree\LinkedBinaryTreeNode.h" />
     <ClInclude Include="include\Dictionary\Dictionary.h" />
+    <ClInclude Include="include\Heap\Heap.h" />
+    <ClInclude Include="include\Heap\MaxHeap.h" />
+    <ClInclude Include="include\Heap\MinHeap.h" />
+    <ClInclude Include="include\Huffman\HuffmanTree.h" />
     <ClInclude Include="include\List\Array.h" />
     <ClInclude Include="include\List\Link.h" />
     <ClInclude Include="include\List\LinkNode.h" />

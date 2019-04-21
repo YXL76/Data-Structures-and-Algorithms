@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp
+fstream
+-
 iostream
 -
 include/List/Array.h
@@ -27,6 +29,8 @@ include/BinaryTree/LinkedBinaryTree.h
 /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
 include/BinarySearchTree/BinarySearchTree.h
 /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h
+include/Huffman/HuffmanTree.h
+/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Huffman/HuffmanTree.h
 
 /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Algorithm.h
 Algorithm/StringAlgorithm.h
@@ -78,6 +82,26 @@ utility
 
 /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
 utility
+-
+
+/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Heap/Heap.h
+
+/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Heap/MinHeap.h
+Heap.h
+/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Heap/Heap.h
+ostream
+-
+
+/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Huffman/HuffmanTree.h
+../Heap/MinHeap.h
+/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Heap/MinHeap.h
+../BinaryTree/LinkedBinaryTree.h
+/mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
+string
+-
+utility
+-
+unordered_map
 -
 
 /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h

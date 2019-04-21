@@ -160,6 +160,7 @@ namespace yxl
     void Array<T>::clear()
     {
         delete [] array_;
+        array_ = nullptr;
         max_size_ = size_ = 0;
     }
 

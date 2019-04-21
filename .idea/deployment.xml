@@ -2,20 +2,17 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="Artix (9a78a0a3-754e-4528-bd4b-22b1838348b3)">
+      <paths name="Remote Host (fb595aa2-678e-419d-afec-b346d3b9a50d)">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="Remote Host (b2136926-0ac4-4ee2-abcb-e19137ac6bbe)">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/tmp/tmp.Kwm7gLKstb" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/tmp.27A2idwg3b" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-minsizerel" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-minsizerel" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-relwithdebinfo" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-relwithdebinfo" />

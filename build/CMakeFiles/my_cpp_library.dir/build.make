@@ -60,15 +60,15 @@ include CMakeFiles/my_cpp_library.dir/flags.make
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: CMakeFiles/my_cpp_library.dir/flags.make
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/Source.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/c/Users/chenx/my-cpp-library/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o"
-	/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o -c /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o -c /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp
 
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp > CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.i
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp > CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.i
 
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp -o CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.s
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/Source.cpp -o CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.s
 
 # Object files for target my_cpp_library
 my_cpp_library_OBJECTS = \

@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -DNDEBUG   CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o  -o my_cpp_library 
+clang++  -O3 -DNDEBUG   CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o  -o my_cpp_library 

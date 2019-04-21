@@ -33,9 +33,12 @@ namespace yxl
         using iitask = std::function<void(int&, const int&)>;
         using ittask = std::function<void(int&, tree_node*&)>;
 
+        friend class HuffmanTree;
+
         constexpr LinkedBinaryTree();
         explicit LinkedBinaryTree(const T& value);
-        LinkedBinaryTree(T that[], const int& size);
+        LinkedBinaryTree(const T& value, LinkedBinaryTree<T>& left, LinkedBinaryTree<T>& right);
+        LinkedBinaryTree(const T& value, LinkedBinaryTree<T>&& left, LinkedBinaryTree<T>&& right);
         LinkedBinaryTree(const LinkedBinaryTree<T>& that);
         LinkedBinaryTree(LinkedBinaryTree<T>&& that) noexcept;
         ~LinkedBinaryTree() override;
@@ -50,10 +53,8 @@ namespace yxl
         virtual int size() { return size(root_); }
         int height() { return height(root_); }
         int width() { return width(root_); }
-        void clear() { return clear(root_); }
+        virtual void clear() { return clear(root_); }
         void print(const int& type);
-
-        void unite(const T& value, LinkedBinaryTree& left, LinkedBinaryTree& right);
 
         bool empty(tree_node*& node) override;
         int size(tree_node*& node) override;
@@ -64,22 +65,20 @@ namespace yxl
         void traversal(tree_node*& node, ttask& pre, ttask& in, ttask& post) override;
         void level_traversal(tree_node*& node, int& count, ittask& point, iitask& line, itask& plane) override;
 
-        bool operator!=(const LinkedBinaryTree& right);
-        bool operator==(const LinkedBinaryTree& right);
+        bool operator!=(const LinkedBinaryTree<T>& right);
+        bool operator==(const LinkedBinaryTree<T>& right);
 
-        LinkedBinaryTree& operator=(const LinkedBinaryTree& right);
-        LinkedBinaryTree& operator=(LinkedBinaryTree&& right) noexcept;
+        LinkedBinaryTree& operator=(const LinkedBinaryTree<T>& right);
+        LinkedBinaryTree& operator=(LinkedBinaryTree<T>&& right) noexcept;
 
     protected:
         int size_{0};
         tree_node* root_;
 
+    private:
         typename traversal_task::ITask i_task_;
         typename traversal_task::IiTask ii_task_;
         typename traversal_task::ItTask it_task_;
-
-    private:
-        void build(tree_node*& node, T that[], int index);
     };
 
     template <typename T>
@@ -137,21 +136,34 @@ namespace yxl
     }
 
     template <typename T>
-    LinkedBinaryTree<T>::LinkedBinaryTree(const T& value): root_(nullptr)
+    LinkedBinaryTree<T>::LinkedBinaryTree(const T& value): size_(1)
     {
-        size_ = 1;
         root_ = new tree_node(value);
     }
 
     template <typename T>
-    LinkedBinaryTree<T>::LinkedBinaryTree(T that[], const int& size)
+    LinkedBinaryTree<T>::LinkedBinaryTree(const T& value, LinkedBinaryTree<T>& left, LinkedBinaryTree<T>& right)
     {
-        size_ = size;
-        build(root_, that, 1);
+        size_ = left.size_ + right.size_ + 1;
+        root_ = new tree_node(value);
+        root_->left = new tree_node();
+        LinkedBinaryTree<T>::build(root_->left, left.root_);
+        root_->right = new tree_node();
+        LinkedBinaryTree<T>::build(root_->left, right.root_);
     }
 
     template <typename T>
-    LinkedBinaryTree<T>::LinkedBinaryTree(const LinkedBinaryTree<T>& that)
+    LinkedBinaryTree<T>::LinkedBinaryTree(const T& value, LinkedBinaryTree<T>&& left, LinkedBinaryTree<T>&& right)
+    {
+        size_ = left.size_ + right.size_ + 1;
+        root_ = new tree_node(value, left.root_, right.root_);
+        left.root_ = nullptr;
+        right.root_ = nullptr;
+        left.size_ = right.size_ = 0;
+    }
+
+    template <typename T>
+    LinkedBinaryTree<T>::LinkedBinaryTree(const LinkedBinaryTree<T>& that): root_(nullptr)
     {
         *this = that;
     }
@@ -165,7 +177,7 @@ namespace yxl
     template <typename T>
     LinkedBinaryTree<T>::~LinkedBinaryTree()
     {
-        clear();
+        LinkedBinaryTree<T>::clear();
     }
 
     template <typename T>
@@ -202,16 +214,6 @@ namespace yxl
             std::cout << static_cast<tree_node*>(l)->value << ' ';
         }
         std::cout << std::endl;
-    }
-
-    template <typename T>
-    void LinkedBinaryTree<T>::unite(const T& value, LinkedBinaryTree& left, LinkedBinaryTree& right)
-    {
-        clear(root_);
-        root_ = new tree_node(value);
-        size_ = left.size_ + right.size_ + 1;
-        build(root_->left, left);
-        build(root_->right, right);
     }
 
     template <typename T>
@@ -257,14 +259,15 @@ namespace yxl
     template <typename T>
     void LinkedBinaryTree<T>::build(tree_node*& node, tree_node* const& that)
     {
-        clear(node);
-        node = new tree_node(that->value, that->left, that->right);
-        if (node->left != nullptr)
+        node = new tree_node(that->value);
+        if (that->left != nullptr)
         {
+            node->left = new tree_node();
             build(node->left, that->left);
         }
-        if (node->right != nullptr)
+        if (that->right != nullptr)
         {
+            node->right = new tree_node();
             build(node->right, that->right);
         }
     }
@@ -300,7 +303,7 @@ namespace yxl
     template <typename T>
     void LinkedBinaryTree<T>::level_traversal(tree_node*& node, int& count, ittask& point, iitask& line, itask& plane)
     {
-        if (node == nullptr) { return; }
+        if (node == nullptr || size_ == 0) { return; }
         ArrayQueue<tree_node*> q;
         q.push_back(node);
         while (!q.empty())
@@ -320,13 +323,13 @@ namespace yxl
     }
 
     template <typename T>
-    bool LinkedBinaryTree<T>::operator!=(const LinkedBinaryTree& right)
+    bool LinkedBinaryTree<T>::operator!=(const LinkedBinaryTree<T>& right)
     {
         return !(*this == right);
     }
 
     template <typename T>
-    bool LinkedBinaryTree<T>::operator==(const LinkedBinaryTree& right)
+    bool LinkedBinaryTree<T>::operator==(const LinkedBinaryTree<T>& right)
     {
         if (size_ != right.size_) { return false; }
         auto l_begin = begin(kPre);
@@ -341,30 +344,22 @@ namespace yxl
     }
 
     template <typename T>
-    LinkedBinaryTree<T>& LinkedBinaryTree<T>::operator=(const LinkedBinaryTree& right)
+    LinkedBinaryTree<T>& LinkedBinaryTree<T>::operator=(const LinkedBinaryTree<T>& right)
     {
+        clear(root_);
         this->size_ = right.size_;
         build(root_, right.root_);
         return *this;
     }
 
     template <typename T>
-    LinkedBinaryTree<T>& LinkedBinaryTree<T>::operator=(LinkedBinaryTree&& right) noexcept
+    LinkedBinaryTree<T>& LinkedBinaryTree<T>::operator=(LinkedBinaryTree<T>&& right) noexcept
     {
         this->size_ = right.size_;
         this->root_ = right.root_;
         right.size_ = 0;
         right.root_ = nullptr;
         return *this;
-    }
-
-    template <typename T>
-    void LinkedBinaryTree<T>::build(tree_node*& node, T that[], const int index)
-    {
-        if (index > size_) { return; }
-        node = new tree_node(that[index - 1]);
-        build(node->left, that, index << 1);
-        build(node->right, that, index << 1 | 1);
     }
 
     template <typename T>

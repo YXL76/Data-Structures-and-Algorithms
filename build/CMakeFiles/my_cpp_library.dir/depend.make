@@ -10,6 +10,9 @@ CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/inc
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/Dictionary/Dictionary.h
+CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/Heap/Heap.h
+CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/Heap/MinHeap.h
+CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/Huffman/HuffmanTree.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/List/Array.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/List/Link.h
 CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o: ../my-cpp-library/include/List/LinkNode.h

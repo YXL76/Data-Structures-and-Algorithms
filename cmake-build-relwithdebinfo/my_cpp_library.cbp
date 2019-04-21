@@ -8,41 +8,43 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo"/>
+				<Option working_dir="/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo"/>
+				<Option working_dir="/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="my_cpp_library">
-				<Option output="/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/my_cpp_library" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo"/>
+				<Option output="/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/my_cpp_library" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Algorithm"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinarySearchTree"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinaryTree"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Dictionary"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/List"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Polynomial"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Queue"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Stack"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Algorithm"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinarySearchTree"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinaryTree"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Dictionary"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Heap"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Huffman"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/List"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Polynomial"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Queue"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Stack"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
@@ -52,28 +54,30 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 my_cpp_library"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 my_cpp_library"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="my_cpp_library/fast">
-				<Option output="/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/my_cpp_library" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo"/>
+				<Option output="/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/my_cpp_library" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Algorithm"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinarySearchTree"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinaryTree"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Dictionary"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/List"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Polynomial"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Queue"/>
-					<Add directory="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Stack"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Algorithm"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinarySearchTree"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinaryTree"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Dictionary"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Heap"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Huffman"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/List"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Polynomial"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Queue"/>
+					<Add directory="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Stack"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/x86_64-pc-linux-gnu"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/8.2.1/../../../../include/c++/8.2.1/backward"/>
@@ -83,84 +87,96 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 my_cpp_library/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 my_cpp_library/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo"/>
+				<Option working_dir="/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.Kwm7gLKstb/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/tmp/tmp.27A2idwg3b/cmake-build-relwithdebinfo/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/Source.cpp">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/Source.cpp">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Algorithm.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Algorithm.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Algorithm/StringAlgorithm.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Algorithm/StringAlgorithm.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinarySearchTree/BinarySearchTree.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinaryTree/BinaryTree.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinaryTree/BinaryTree.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinaryTree/BinaryTreeTask.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinaryTree/BinaryTreeTask.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Dictionary/Dictionary.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Dictionary/Dictionary.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/List/Array.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Heap/Heap.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/List/Link.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Heap/MaxHeap.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/List/LinkNode.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Heap/MinHeap.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/List/List.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Huffman/HuffmanTree.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Polynomial/ArrayPolynomial.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/List/Array.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Polynomial/LinkedPolynomial.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/List/Link.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Polynomial/Polynomial.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/List/LinkNode.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Queue/ArrayQueue.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/List/List.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Queue/Queue.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Polynomial/ArrayPolynomial.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Stack/ArrayStack.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Polynomial/LinkedPolynomial.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/my-cpp-library/include/Stack/Stack.h">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Polynomial/Polynomial.h">
 			<Option target="my_cpp_library"/>
 		</Unit>
-		<Unit filename="/tmp/tmp.Kwm7gLKstb/CMakeLists.txt">
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Queue/ArrayQueue.h">
+			<Option target="my_cpp_library"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Queue/Queue.h">
+			<Option target="my_cpp_library"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Stack/ArrayStack.h">
+			<Option target="my_cpp_library"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.27A2idwg3b/my-cpp-library/include/Stack/Stack.h">
+			<Option target="my_cpp_library"/>
+		</Unit>
+		<Unit filename="/tmp/tmp.27A2idwg3b/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

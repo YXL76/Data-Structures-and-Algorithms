@@ -11,6 +11,9 @@ CMakeFiles/my_cpp_library.dir/my-cpp-library/Source.cpp.o
  /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
  /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
  /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Dictionary/Dictionary.h
+ /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Heap/Heap.h
+ /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Heap/MinHeap.h
+ /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/Huffman/HuffmanTree.h
  /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List/Array.h
  /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List/Link.h
  /mnt/c/Users/chenx/my-cpp-library/my-cpp-library/include/List/LinkNode.h

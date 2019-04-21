@@ -1,14 +1,16 @@
-cmake_minimum_required(VERSION 3.14.1)
+cmake_minimum_required(VERSION 3.14)
 project(my_cpp_library)
 
 set(CMAKE_CXX_STANDARD 11)
-# set(CMAKE_CXX_COMPILER "clang++")
+set(CMAKE_CXX_COMPILER "clang++")
 
 include_directories(my-cpp-library/include)
 include_directories(my-cpp-library/include/Algorithm)
 include_directories(my-cpp-library/include/BinarySearchTree)
 include_directories(my-cpp-library/include/BinaryTree)
 include_directories(my-cpp-library/include/Dictionary)
+include_directories(my-cpp-library/include/Heap)
+include_directories(my-cpp-library/include/Huffman)
 include_directories(my-cpp-library/include/List)
 include_directories(my-cpp-library/include/Polynomial)
 include_directories(my-cpp-library/include/Queue)
@@ -22,6 +24,10 @@ add_executable(my_cpp_library
         my-cpp-library/include/BinaryTree/LinkedBinaryTree.h
         my-cpp-library/include/BinaryTree/LinkedBinaryTreeNode.h
         my-cpp-library/include/Dictionary/Dictionary.h
+        my-cpp-library/include/Heap/Heap.h
+        my-cpp-library/include/Heap/MaxHeap.h
+        my-cpp-library/include/Heap/MinHeap.h
+        my-cpp-library/include/Huffman/HuffmanTree.h
         my-cpp-library/include/List/Array.h
         my-cpp-library/include/List/Link.h
         my-cpp-library/include/List/LinkNode.h

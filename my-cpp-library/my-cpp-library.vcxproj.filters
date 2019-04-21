@@ -37,6 +37,12 @@
     <Filter Include="Header Files\Dictionary">
       <UniqueIdentifier>{63d89916-9b8e-477c-8560-afda47bc8178}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Heap">
+      <UniqueIdentifier>{9d700e19-7209-4935-bed5-0a64bbfa93f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Huffman">
+      <UniqueIdentifier>{a5489b3f-a61f-4526-b926-1738ccfaf3f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -100,6 +106,18 @@
     </ClInclude>
     <ClInclude Include="include\Dictionary\Dictionary.h">
       <Filter>Header Files\Dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Heap\Heap.h">
+      <Filter>Header Files\Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Heap\MinHeap.h">
+      <Filter>Header Files\Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Heap\MaxHeap.h">
+      <Filter>Header Files\Heap</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Huffman\HuffmanTree.h">
+      <Filter>Header Files\Huffman</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

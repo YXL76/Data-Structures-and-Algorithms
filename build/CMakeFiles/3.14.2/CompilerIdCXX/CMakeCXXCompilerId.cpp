@@ -184,7 +184,7 @@
 #elif defined(__SCO_VERSION__)
 # define COMPILER_ID "SCO"
 
-#elif defined(__ARMCC_VERSION)
+#elif defined(__ARMCC_VERSION) && !defined(__clang__)
 # define COMPILER_ID "ARMCC"
 #if __ARMCC_VERSION >= 1000000
   /* __ARMCC_VERSION = VRRPPPP */

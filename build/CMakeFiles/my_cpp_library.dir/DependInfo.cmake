@@ -15,6 +15,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../my-cpp-library/include/BinarySearchTree"
   "../my-cpp-library/include/BinaryTree"
   "../my-cpp-library/include/Dictionary"
+  "../my-cpp-library/include/Heap"
+  "../my-cpp-library/include/Huffman"
   "../my-cpp-library/include/List"
   "../my-cpp-library/include/Polynomial"
   "../my-cpp-library/include/Queue"
