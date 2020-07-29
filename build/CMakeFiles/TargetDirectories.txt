@@ -1,3 +1,0 @@
-/mnt/c/Users/chenx/my-cpp-library/build/CMakeFiles/rebuild_cache.dir
-/mnt/c/Users/chenx/my-cpp-library/build/CMakeFiles/my_cpp_library.dir
-/mnt/c/Users/chenx/my-cpp-library/build/CMakeFiles/edit_cache.dir
